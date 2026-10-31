@@ -1,9 +1,9 @@
 Put your photos and videos in this folder.
 File names the page already expects (rename your files or change the names in index.html):
 
-signbridge-1.jpg, signbridge-2.jpg, signbridge-hand.mp4
-qorgan-1.jpg, qorgan-demo.mp4
-ropros-1.png
+signbridge-wiring.jpg (wiring diagram: flex sensors, voltage dividers, ESP32 pins; a photo of a hand drawing is fine)
+qorgan-detection.jpg (frame with detection boxes, faces blurred), then add it to QORĞAN "media" in index.html
+ropros-site.png (screenshot of the site or one guide), then add it to ropros "media" in index.html
 aila-poster.webp (done)
 teaching-1.jpg
 obstacle-robot.jpg, face-tracking.mp4, ohmmeter.jpg, conrad.jpg
