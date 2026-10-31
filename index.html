@@ -200,9 +200,22 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--copper);outline-off
   font-size:clamp(2.6rem,6.2vw,4.6rem);line-height:.95;letter-spacing:-.01em;margin:0 0 18px;
 }
 .hero .line{font-family:"Archivo",sans-serif;font-stretch:100%;font-size:1rem;color:#cfdcd4;margin:0 0 20px}
-.hero .intro{max-width:52ch;margin:0 0 20px}
-.hero .intro p{margin:0 0 .8em}
-.hero .intro p:last-child{margin-bottom:0}
+.hero .intro{max-width:50ch;margin:0 0 24px}
+.hero .intro p{margin:0}
+/* first paragraph: the lead, larger */
+.hero .intro p:first-child{font-size:1.2rem;line-height:1.6;color:var(--silk)}
+/* following paragraphs: hang off a copper trace that starts at a solder pad */
+.hero .intro p + p{
+  position:relative;margin-top:18px;padding:2px 0 2px 22px;
+  font-size:1rem;color:#cfdcd4;border-left:2px solid var(--copper);
+}
+.hero .intro p + p::before{
+  content:"";position:absolute;left:-7px;top:-6px;width:12px;height:12px;border-radius:50%;
+  background:var(--mask);border:2px solid var(--copper-soft);box-sizing:border-box;
+}
+.hero .intro p + p::after{
+  content:"";position:absolute;left:-5px;bottom:-4px;width:8px;height:8px;background:var(--copper);
+}
 .hero .links{display:flex;gap:18px;flex-wrap:wrap;font-family:"Archivo",sans-serif}
 .hero .links a{color:var(--silk)}
 
