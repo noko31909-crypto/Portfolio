@@ -29,7 +29,10 @@
 const SITE = {
   name: "Nabi Makhamejanov",
   line: "Grade 10, Bilim-Innovation Lyceum for Gifted Boys, Astana, Kazakhstan",
-  intro: "",                     // one or two sentences about you, your words
+  intro: [                      // your words; each string is one paragraph
+    "I like building things that move and react: a glove that reads a hand, a hand that moves its fingers. Most of what I know comes from video courses, guides and broken parts, three burned sensors included. One day I want to make robots and build kits for schools, so a student can open a kit and find the guide for it on ropros.",
+    "Electronics, because that’s where my open questions are: why the same finger angle gives different numbers, why a servo buzzes when it should hold still. But AILA taught me that a working technical side isn’t enough. Our reminders went out the whole time, and students left anyway.",
+  ],
   links: [
     // { label: "GitHub", url: "https://github.com/your-name" },
     // { label: "Email", url: "mailto:you@example.com" },
@@ -65,7 +68,7 @@ const PROJECTS = [
       ["Hardware", "ESP32 glove with flex sensors; 5 servos pulling spring-loaded tendons"],
       ["Next", "Jig test for sensor hysteresis and drift; 2×2 servo test for jitter"],
     ],
-    text: "",
+    text: "SignBridge is a glove that reads gestures and a robotic hand that repeats them, built to make it easier for people to communicate. My part is the glove with its flex sensors, the hand with five servos pulling spring-loaded tendons, and the firmware. At the same 45° the sensor read 390–412 when bending and 355–378 when straightening, so only 6 of 10 readings fell inside my window and the glove sometimes mixed up gestures. Next I’m printing a jig with fixed 0°, 45° and 90° positions to find out whether the spread comes from the sensor or from how the glove fits a hand.",
     // add the wiring diagram as media/signbridge-wiring.jpg (flex sensors,
     // voltage dividers, ESP32 pins; a photo of a hand drawing is fine)
     media: ["signbridge-1.webp", "signbridge-2.webp", "signbridge-test.mp4", "signbridge-wiring.jpg"],
@@ -88,7 +91,7 @@ const PROJECTS = [
       ["Classes", ""],                 // what the model detects, e.g. "weapon, fight, fall"
       ["Test frames", ""],             // where the 1,000 frames came from and how they were labelled
     ],
-    text: "",
+    text: "QORĞAN AI watches school CCTV in real time with a YOLO model and sends alerts, evacuation maps and an SOS when it sees a threat. I started it in February 2026 and lead the technical side; a pilot is now running at NIS. On a 1,000-frame test it was right 88% of the time, which still leaves about 120 wrong frames.",
     // screenshot with detection boxes, faces blurred: media/qorgan-detection.jpg
     media: [],
     code: [
@@ -105,7 +108,7 @@ const PROJECTS = [
       ["Site", "ropros.vercel.app"],
       ["Instagram, TikTok", "@ropros.build"],
     ],
-    text: "",
+    text: "In September 2026 I started ropros, a site with build guides for Arduino, ESP32 and Raspberry Pi. I write the guides myself in Kazakh, Russian and English, because most good build guides exist only in English and a lot of students here read Kazakh or Russian more easily.",
     media: ["ropros-site.webp", "ropros-guide.webp"],
     link: "https://ropros.vercel.app",
   },
@@ -120,7 +123,7 @@ const PROJECTS = [
       ["June–July 2026", "180 signed up, 150 finished; 7 coordinators, 13 volunteers, 140 work hours"],
       ["Now", "6th cohort, with Future Builders Academy"],
     ],
-    text: "",
+    text: "AILA Academy was a friend’s idea; I wrote the course programs and built the website and the bots for registration and class reminders. In June–July 2026, 180 students signed up and 30 didn’t finish. I think our programs were simply too long, so we cut them down and split students into small groups, each with a curator who notices when someone falls behind, and more students started reaching the end. Neither change needed any new code.",
     media: ["aila-poster.webp"],
   },
   {
@@ -132,7 +135,7 @@ const PROJECTS = [
       ["What", "14 students, once a week, at my school's request"],
       ["Result", "One student won 1st place at the national Daryn LEGO robotics competition, spring 2026"],
     ],
-    text: "",
+    text: "In 2025 my school’s deputy principal asked me to teach LEGO and Arduino once a week at an inclusive school, and I taught 14 students for the whole year. Lessons often didn’t go the way I planned, so I didn’t start with explanations: I showed a step, they built it, and when something didn’t work we looked for the reason together. One student finished the code before I did, so I let him build whatever he wanted, and in spring 2026 he took 1st place at the republican Daryn LEGO competition with the project we built together. The most useful thing I did for him was to stop teaching him like everyone else.",
     media: [],
   },
 ];
@@ -197,7 +200,9 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--copper);outline-off
   font-size:clamp(2.6rem,6.2vw,4.6rem);line-height:.95;letter-spacing:-.01em;margin:0 0 18px;
 }
 .hero .line{font-family:"Archivo",sans-serif;font-stretch:100%;font-size:1rem;color:#cfdcd4;margin:0 0 20px}
-.hero .intro{max-width:46ch;margin:0 0 20px}
+.hero .intro{max-width:52ch;margin:0 0 20px}
+.hero .intro p{margin:0 0 .8em}
+.hero .intro p:last-child{margin-bottom:0}
 .hero .links{display:flex;gap:18px;flex-wrap:wrap;font-family:"Archivo",sans-serif}
 .hero .links a{color:var(--silk)}
 
@@ -311,7 +316,7 @@ footer{border-top:1px solid var(--rule);padding:28px 0 48px;color:var(--muted);f
       </figure>
       <h1 id="name"></h1>
       <p class="line" id="line"></p>
-      <p class="intro" id="intro"></p>
+      <div class="intro" id="intro"></div>
       <nav class="links" id="links" aria-label="Contact"></nav>
       <nav class="index" aria-label="Projects"><ul id="index"></ul></nav>
     </div>
@@ -370,7 +375,8 @@ function mediaEl(file, wide){
 /* header */
 $("#name").textContent = SITE.name;
 $("#line").textContent = SITE.line;
-if(SITE.intro) $("#intro").textContent = SITE.intro;
+const intro = [].concat(SITE.intro || []).filter(Boolean);
+if(intro.length) $("#intro").innerHTML = intro.map(t => `<p>${esc(t)}</p>`).join("");
 else $("#intro").remove();
 $("#links").innerHTML = SITE.links.map(l => `<a href="${esc(l.url)}">${esc(l.label)}</a>`).join("");
 if(!SITE.links.length) $("#links").remove();
