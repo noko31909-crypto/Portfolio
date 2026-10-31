@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nabi Makhamejanov — Projects</title>
+<meta name="description" content="Robotics and electronics projects by Nabi Makhamejanov, Astana.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Literata:opsz,wght@7..72,400;7..72,600&display=swap" rel="stylesheet">
+
+<script>
+/* ================================================================
+   EDIT YOUR CONTENT HERE. You only need to change this block.
+
+   - "text": write 2–4 sentences about the project IN YOUR OWN WORDS.
+     Leave it as "" and the page shows a reminder box instead.
+   - "media": put photos/videos in the media/ folder and list the
+     file names. .jpg/.png/.webp show as photos, .mp4/.webm as video.
+     A YouTube link also works: "https://youtu.be/XXXX".
+   - Facts lines are short: date, role, result. Keep them true.
+   ================================================================ */
+const SITE = {
+  name: "Nabi Makhamejanov",
+  line: "Grade 10, Bilim-Innovation Lyceum for Gifted Boys, Astana, Kazakhstan",
+  intro: "",                     // one or two sentences about you, your words
+  links: [
+    // { label: "GitHub", url: "https://github.com/your-name" },
+    // { label: "Email", url: "mailto:you@example.com" },
+  ],
+};
+
+const SENSOR = {               // your measured numbers from SignBridge
+  bending:      [390, 412],    // ADC counts at 45°, bending into the angle
+  straightening:[355, 378],    // ADC counts at 45°, straightening back
+  window:       [360, 400],    // what the code currently accepts as 45°
+  inside: 6, total: 10,        // readings at 45° that fall inside the window
+  baselineStart: 648, baselineEnd: 615, cycles: 5,
+};
+
+const PROJECTS = [
+  {
+    id: "signbridge",
+    title: "SignBridge",
+    sub: "Flex-sensor glove and a tendon-driven robotic hand",
+    facts: [
+      ["When", "2025–2026"],
+      ["Team", "5 students, mentor Dastan Satuov"],
+      ["My role", "System architecture, code, hardware–software integration"],
+      ["Result", "1st place, HealthTech, Fibonacci International Robotics Olympiad, final in Turkey, Apr 2026"],
+      ["Hardware", "ESP32 glove with flex sensors; 5 servos pulling spring-loaded tendons"],
+      ["Next", "Jig test for sensor hysteresis and drift; 2×2 servo test for jitter"],
+    ],
+    text: "",
+    media: ["signbridge-1.webp", "signbridge-2.webp", "signbridge-test.mp4"],
+    chart: true,
+  },
+  {
+    id: "qorgan",
+    title: "QORĞAN AI",
+    sub: "School-safety platform on CCTV computer vision",
+    facts: [
+      ["When", "Feb 2026–present"],
+      ["My role", "Founder, technical lead"],
+      ["What it does", "Real-time threat detection (YOLO), automated alerts, evacuation maps, SOS"],
+      ["Status", "Pilot under way at NIS"],
+      ["Test", "88% detection accuracy on a 1,000-frame test set"],
+    ],
+    text: "",
+    media: [],
+  },
+  {
+    id: "ropros",
+    title: "ropros",
+    sub: "Build guides for Arduino, ESP32 and Raspberry Pi in Kazakh, Russian and English",
+    facts: [
+      ["When", "Sep 2026–present"],
+      ["My role", "Founder; I write the guides and built the site"],
+      ["Site", "ropros.vercel.app"],
+      ["Instagram, TikTok", "@ropros.build"],
+    ],
+    text: "",
+    media: [],
+    link: "https://ropros.vercel.app",
+  },
+  {
+    id: "aila",
+    title: "AILA Academy",
+    sub: "Student-run AI and robotics courses for school students",
+    facts: [
+      ["When", "Jan 2026–present"],
+      ["My role", "Co-founder; course programs, website, registration and reminder bots"],
+      ["Reach", "5 cohorts, about 800 sign-ups in total"],
+      ["June–July 2026", "180 signed up, 150 finished; 7 coordinators, 13 volunteers, 140 work hours"],
+      ["Now", "6th cohort, with Future Builders Academy"],
+    ],
+    text: "",
+    media: ["aila-poster.webp"],
+  },
+  {
+    id: "teaching",
+    title: "LEGO and Arduino at an inclusive school",
+    sub: "Weekly volunteer classes",
+    facts: [
+      ["When", "Sep 2025–Jun 2026"],
+      ["What", "14 students, once a week, at my school's request"],
+      ["Result", "One student won 1st place at the national Daryn LEGO robotics competition, spring 2026"],
+    ],
+    text: "",
+    media: [],
+  },
+];
+
+const SMALL_BUILDS = [
+  // [name, date, one short fact line, media file or ""]
+  ["Obstacle-avoidance robot", "Aug–Dec 2025", "MYP Personal Project", ""],
+  ["AI face-tracking robot", "2025", "Camera-based face tracking", ""],
+  ["Digital ohmmeter", "2025", "Arduino, LCD readout of resistance and voltage", "ohmmeter.mp4"],
+  ["Drone programming", "2025", "Flight programming", ""],
+  ["CO₂ capture on aircraft, Conrad Challenge", "Sep 2025–Feb 2026", "Semifinalist, team; my part: technical design and 3D model", ""],
+  ["Robosoccer, National Robotics Championship", "Nov 2025", "Champion, about 100 teams", ""],
+  ["TrafiQ: RL traffic-light simulation", "2026, in progress", "RL-based adaptive traffic-light control", ""],
+];
+</script>
+
+<style>
+:root{
+  --mask:#12452f;      /* solder mask green */
+  --mask-deep:#0c3123;
+  --copper:#b8792f;    /* copper trace */
+  --copper-soft:#e2b47a;
+  --silk:#f2f4ef;      /* silkscreen white */
+  --paper:#fbfcfa;
+  --ink:#1b211d;
+  --muted:#5b6a62;
+  --rule:#d9e0db;
+  --hold:#eef2ee;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --paper:#111915; --ink:#e7ece8; --muted:#9aaba1; --rule:#26352d; --hold:#18231d;
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font:400 1.0625rem/1.65 "Literata",Georgia,serif;
+}
+a{color:inherit;text-decoration-color:var(--copper);text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--copper);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+
+/* ---------- hero ---------- */
+.hero{background:var(--mask);color:var(--silk);position:relative;overflow:hidden}
+.hero::before{
+  /* faint copper traces, the only decoration on the page */
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.18;
+  background:
+    linear-gradient(90deg,transparent 0 62%,var(--copper) 62% calc(62% + 2px),transparent 0) 0 0/100% 100%;
+}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1fr 1.1fr;gap:48px;padding-top:72px;padding-bottom:64px;align-items:end}
+.hero h1{
+  font-family:"Archivo",system-ui,sans-serif;font-stretch:72%;font-weight:800;
+  font-size:clamp(2.6rem,6.2vw,4.6rem);line-height:.95;letter-spacing:-.01em;margin:0 0 18px;
+}
+.hero .line{font-family:"Archivo",sans-serif;font-stretch:100%;font-size:1rem;color:#cfdcd4;margin:0 0 20px}
+.hero .intro{max-width:46ch;margin:0 0 20px}
+.hero .links{display:flex;gap:18px;flex-wrap:wrap;font-family:"Archivo",sans-serif}
+.hero .links a{color:var(--silk)}
+
+.me{margin:0 0 22px;display:flex;align-items:center;gap:16px}
+.me img{width:104px;height:104px;object-fit:cover;border-radius:50%;border:2px solid var(--copper);display:block;flex:none}
+.me figcaption{font:400 .9rem/1.4 "Archivo",sans-serif;color:#b9cbc1;max-width:22ch}
+.index{margin-top:28px}
+.index ul{list-style:none;margin:0;padding:0;display:grid;gap:2px;max-width:46ch}
+.index a{display:grid;grid-template-columns:9.5rem 1fr;gap:12px;align-items:baseline;padding:8px 0;text-decoration:none;color:var(--silk);border-top:1px solid #2a6148;font-family:"Archivo",sans-serif}
+.index li:last-child a{border-bottom:1px solid #2a6148}
+.index .t{font-weight:650;font-stretch:90%}
+.index .d{font-size:.88rem;color:#b9cbc1;line-height:1.4}
+.index a:hover .t,.index a:focus-visible .t{color:var(--copper-soft)}
+.zoom{display:block;padding:0;border:0;background:none;cursor:zoom-in;border-radius:6px;overflow:hidden}
+.zoom img{transition:transform .25s ease}
+.zoom:hover img{transform:scale(1.02)}
+dialog#viewer{border:0;padding:0;background:transparent;max-width:min(96vw,1400px);max-height:92vh}
+dialog#viewer::backdrop{background:rgba(6,20,14,.86)}
+#viewer-img{display:block;max-width:100%;max-height:84vh;object-fit:contain;border-radius:6px;background:#000}
+#viewer-close{margin:12px auto 0;display:block;min-height:44px;padding:0 22px;border-radius:22px;border:1px solid var(--copper-soft);background:var(--mask-deep);color:var(--silk);font:600 1rem "Archivo",sans-serif;cursor:pointer}
+.chart-card{margin:0;background:var(--mask-deep);border:1px solid #1f5a40;border-radius:6px;padding:20px 20px 14px}
+.chart-card h2{font:600 1rem/1.3 "Archivo",sans-serif;margin:0 0 4px;color:var(--silk)}
+.chart-card p{font-size:.9rem;color:#b9cbc1;margin:0 0 10px}
+.chart-card svg{width:100%;height:auto;display:block}
+.chart-card .note{font-size:.82rem;color:#9fb6a9;margin:8px 0 0}
+
+/* ---------- projects ---------- */
+main{padding-block:24px 80px}
+.project{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:40px;padding:56px 0;border-bottom:1px solid var(--rule)}
+.project:last-of-type{border-bottom:0}
+.project.wide-media{grid-template-columns:1fr}
+.project.wide-media > div:first-child{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);column-gap:40px;align-items:start}
+.project.wide-media h2,.project.wide-media .sub{grid-column:1}
+.project.wide-media dl.facts{grid-column:2;grid-row:1 / span 3}
+.project.no-media{grid-template-columns:1fr}
+.project.no-media > div{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);column-gap:40px;align-items:start}
+.project.no-media h2,.project.no-media .sub{grid-column:1}
+.project.no-media dl.facts{grid-column:2;grid-row:1 / span 3}
+.project.no-media .visit,.project.no-media .text{grid-column:1}
+.project h2{
+  font-family:"Archivo",sans-serif;font-stretch:80%;font-weight:750;
+  font-size:clamp(1.9rem,3.6vw,2.6rem);line-height:1;margin:0 0 8px;
+}
+.project .sub{color:var(--muted);margin:0 0 22px;max-width:40ch}
+dl.facts{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 16px;font-family:"Archivo",sans-serif;font-size:.95rem}
+dl.facts dt{color:var(--muted)}
+dl.facts dd{margin:0}
+.project .text{margin:22px 0 0;max-width:62ch}
+.todo{
+  margin:22px 0 0;padding:14px 16px;border:1.5px dashed var(--copper);border-radius:6px;
+  font-family:"Archivo",sans-serif;font-size:.92rem;color:var(--copper);background:transparent;
+}
+.project .visit{display:inline-block;margin-top:16px;font-family:"Archivo",sans-serif}
+
+.media{display:grid;grid-template-columns:repeat(var(--n,3),minmax(0,1fr));gap:10px;align-content:start}
+.media[data-n="1"]{max-width:380px}
+.media img,.media video,.media iframe{width:100%;display:block;border-radius:6px;background:var(--hold);aspect-ratio:3/4;object-fit:cover;border:0;max-width:100%}
+.media img[src*="poster"]{object-fit:contain;background:#fff}
+.media video{object-fit:contain;background:#000}
+.missing{
+  aspect-ratio:4/3;border-radius:6px;background:var(--hold);border:1px solid var(--rule);
+  display:flex;align-items:center;justify-content:center;text-align:center;padding:12px;
+  font:500 .85rem/1.4 "Archivo",sans-serif;color:var(--muted)
+}
+
+
+/* ---------- small builds ---------- */
+.builds{padding-block:56px 0}
+.builds h2{font-family:"Archivo",sans-serif;font-stretch:80%;font-weight:750;font-size:clamp(1.6rem,3vw,2.1rem);margin:0 0 20px}
+.builds table{width:100%;border-collapse:collapse;font-family:"Archivo",sans-serif;font-size:.95rem}
+.builds th,.builds td{text-align:left;padding:12px 10px;border-top:1px solid var(--rule);vertical-align:top}
+.builds th{font-weight:600;color:var(--muted);border-top:0}
+.builds td.when{white-space:nowrap;color:var(--muted)}
+.builds img,.builds video{width:90px;aspect-ratio:3/4;object-fit:contain;background:#000;border-radius:4px;display:block}
+
+footer{border-top:1px solid var(--rule);padding:28px 0 48px;color:var(--muted);font:400 .9rem/1.5 "Archivo",sans-serif}
+
+@media (max-width:820px){
+  .hero .wrap{grid-template-columns:1fr;gap:32px;padding-top:48px;padding-bottom:40px}
+  .project{grid-template-columns:1fr;gap:24px;padding:40px 0}
+  .project.no-media > div,.project.wide-media > div:first-child{display:block}
+  .index a{grid-template-columns:1fr;gap:2px}
+  .builds .col-media{display:none}
+}
+@media (max-width:480px){
+  .builds th:nth-child(2),.builds td.when{display:none}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <figure class="me">
+        <img src="media/me.webp" alt="Nabi Makhamejanov at the CUHK-Shenzhen summer camp" width="360" height="360" onerror="this.closest('figure').remove()">
+        <figcaption>CUHK-Shenzhen SSE summer camp, July 2026</figcaption>
+      </figure>
+      <h1 id="name"></h1>
+      <p class="line" id="line"></p>
+      <p class="intro" id="intro"></p>
+      <nav class="links" id="links" aria-label="Contact"></nav>
+      <nav class="index" aria-label="Projects"><ul id="index"></ul></nav>
+    </div>
+    <figure class="chart-card" aria-labelledby="chart-title">
+      <h2 id="chart-title">SignBridge glove: same 45° bend, different readings</h2>
+      <p>Raw ADC counts (0–4095) from one flex sensor at 45°.</p>
+      <div id="chart"></div>
+      <p class="note" id="chart-note"></p>
+    </figure>
+  </div>
+</header>
+
+<main class="wrap" id="projects"></main>
+
+<section class="wrap builds" aria-labelledby="builds-title">
+  <h2 id="builds-title">Smaller builds and competitions</h2>
+  <table>
+    <thead><tr><th>Project</th><th>When</th><th>Detail</th><th class="col-media"></th></tr></thead>
+    <tbody id="builds"></tbody>
+  </table>
+</section>
+
+<dialog id="viewer" aria-label="Photo">
+  <img id="viewer-img" alt="">
+  <button type="button" id="viewer-close">Close</button>
+</dialog>
+
+<footer>
+  <div class="wrap" id="foot"></div>
+</footer>
+
+<script>
+const $ = (s) => document.querySelector(s);
+const esc = (s) => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const isVideo = f => /\.(mp4|webm|mov)$/i.test(f);
+const isImg = f => /\.(jpe?g|png|webp|avif)$/i.test(f);
+const ytId = f => (f.match(/(?:youtu\.be\/|v=)([\w-]{11})/) || [])[1];
+
+function mediaEl(file, wide){
+  if(!file) return "";
+  const id = ytId(file);
+  if(id) return `<iframe src="https://www.youtube-nocookie.com/embed/${id}" title="Video" allowfullscreen loading="lazy"></iframe>`;
+  const src = "media/" + file;
+  const miss = `this.remove()`;
+  if(isVideo(file)) return `<video src="${esc(src)}#t=0.1" controls muted preload="metadata" playsinline onerror="${miss}"></video>`;
+  const alt = esc(file.replace(/[-_]/g," ").replace(/\.\w+$/,""));
+  return `<button type="button" class="zoom${wide?' first-wide':''}" data-src="${esc(src)}" aria-label="Open photo: ${alt}"><img src="${esc(src)}" alt="${alt}" loading="lazy" onerror="${miss}"></button>`;
+}
+
+/* header */
+$("#name").textContent = SITE.name;
+$("#line").textContent = SITE.line;
+if(SITE.intro) $("#intro").textContent = SITE.intro;
+else $("#intro").remove();
+$("#links").innerHTML = SITE.links.map(l => `<a href="${esc(l.url)}">${esc(l.label)}</a>`).join("");
+if(!SITE.links.length) $("#links").remove();
+$("#index").innerHTML = PROJECTS.map(p => `<li><a href="#${esc(p.id)}"><span class="t">${esc(p.title)}</span><span class="d">${esc((["Result","Status","Reach","My role"].map(k => p.facts.find(f => f[0]===k)).find(Boolean) || ["",""])[1])}</span></a></li>`).join("");
+
+/* sensor chart: ranges only, drawn from SENSOR numbers */
+(function(){
+  const S = SENSOR, W = 420, H = 260, L = 44, R = 8, T = 24, B = 40;
+  const lo = 340, hi = 420;
+  const y = v => T + (hi - v) / (hi - lo) * (H - T - B);
+  const ticks = [340, 360, 380, 400, 420];
+  const col = (x, r, label, fill) => `
+    <rect x="${x}" y="${y(r[1])}" width="70" height="${y(r[0]) - y(r[1])}" rx="3" fill="${fill}"/>
+    <text x="${x + 35}" y="${H - B + 20}" text-anchor="middle">${label}</text>
+    <text x="${x + 35}" y="${y(r[1]) - 6}" text-anchor="middle" class="v">${r[0]}–${r[1]}</text>`;
+  const svg = `
+  <svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Bending gives ${S.bending[0]} to ${S.bending[1]}, straightening gives ${S.straightening[0]} to ${S.straightening[1]}, accepted window ${S.window[0]} to ${S.window[1]}">
+    <style>
+      text{font:500 13px Archivo,sans-serif;fill:#cfdcd4}
+      .v{fill:#f2f4ef;font-weight:700;font-size:15px}
+      .ax{stroke:#2f6b50;stroke-width:1}
+    </style>
+    ${ticks.map(t => `<line class="ax" x1="${L}" x2="${W - R}" y1="${y(t)}" y2="${y(t)}"/><text x="${L - 8}" y="${y(t) + 4}" text-anchor="end">${t}</text>`).join("")}
+    <rect x="${L}" y="${y(S.window[1])}" width="${W - L - R}" height="${y(S.window[0]) - y(S.window[1])}" fill="none" stroke="#f2f4ef" stroke-dasharray="5 5" stroke-width="1.2"/>
+    <text x="${W - R - 4}" y="${y(S.window[1]) - 6}" text-anchor="end">code accepts ${S.window[0]}–${S.window[1]}</text>
+    ${col(L + 50, S.bending, "bending in", "#e2b47a")}
+    ${col(L + 210, S.straightening, "straightening back", "#b8792f")}
+  </svg>`;
+  $("#chart").innerHTML = svg;
+  const gap = Math.round(((S.bending[0]+S.bending[1]) - (S.straightening[0]+S.straightening[1])) / 2);
+  $("#chart-note").textContent =
+    `Gap between directions ≈ ${gap} counts. ${S.inside} of ${S.total} readings fall in the window. ` +
+    `0° baseline drifted from ${S.baselineStart} to ${S.baselineEnd} over ${S.cycles} cycles.`;
+})();
+
+/* projects */
+$("#projects").innerHTML = PROJECTS.map(p => `
+  <article class="project${p.media.length ? (p.media.length >= 3 ? " wide-media" : "") : " no-media"}" id="${esc(p.id)}" aria-labelledby="${esc(p.id)}-t">
+    <div>
+      <h2 id="${esc(p.id)}-t">${esc(p.title)}</h2>
+      <p class="sub">${esc(p.sub)}</p>
+      <dl class="facts">${p.facts.map(f => `<dt>${esc(f[0])}</dt><dd>${esc(f[1])}</dd>`).join("")}</dl>
+      ${p.text ? `<p class="text">${esc(p.text)}</p>` : ""}
+      ${p.link ? `<a class="visit" href="${esc(p.link)}">Open ${esc(p.title)}</a>` : ""}
+    </div>
+    ${p.media.length ? `<div class="media" data-n="${p.media.length}" style="--n:${Math.min(p.media.length,3)}">${p.media.map(m => mediaEl(m)).join("")}</div>` : ""}
+  </article>`).join("");
+
+/* small builds */
+$("#builds").innerHTML = SMALL_BUILDS.map(b => `
+  <tr><td>${esc(b[0])}</td><td class="when">${esc(b[1])}</td><td>${esc(b[2] || "")}</td>
+  <td class="col-media">${b[3] ? mediaEl(b[3]) : ""}</td></tr>`).join("");
+
+const viewer = $("#viewer");
+document.addEventListener("click", e => {
+  const b = e.target.closest(".zoom");
+  if(b){ $("#viewer-img").src = b.dataset.src; $("#viewer-img").alt = b.getAttribute("aria-label").replace("Open photo: ",""); viewer.showModal(); $("#viewer-close").focus(); }
+});
+$("#viewer-close").addEventListener("click", () => viewer.close());
+viewer.addEventListener("click", e => { if(e.target === viewer) viewer.close(); });
+
+$("#foot").textContent = `© ${new Date().getFullYear()} ${SITE.name}`;
+</script>
+</body>
+</html>
