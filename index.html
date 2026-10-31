@@ -73,7 +73,7 @@ const PROJECTS = [
     // voltage dividers, ESP32 pins; a photo of a hand drawing is fine)
     media: ["signbridge-1.webp", "signbridge-2.webp", "signbridge-test.mp4", "signbridge-wiring.jpg"],
     code: [
-      // { label: "Glove firmware (ESP32)", url: "" },
+      { label: "Glove calibration sketch on GitHub", url: "https://github.com/noko31909-crypto/PROJECT-TO-TURKEY" },
       // { label: "Hand firmware", url: "" },
     ],
     chart: true,
@@ -87,15 +87,15 @@ const PROJECTS = [
       ["My role", "Founder, technical lead"],
       ["What it does", "Real-time threat detection (YOLO), automated alerts, evacuation maps, SOS"],
       ["Status", "Pilot under way at NIS"],
-      ["Test", "88% detection accuracy on a 1,000-frame test set"],
-      ["Classes", ""],                 // what the model detects, e.g. "weapon, fight, fall"
-      ["Test frames", ""],             // where the 1,000 frames came from and how they were labelled
+      ["Detects", "Knife, gun, weapon"],
+      ["Test set", "47 labelled images: 32 with a weapon, 15 without (Apr 2026)"],
+      ["Test result", "At threshold 0.5: found 26 of 32 weapons (recall 81.2%); 26 of 29 alerts were real (precision 89.7%); 3 of 15 clean images raised an alarm"],
     ],
-    text: "QORĞAN AI watches school CCTV in real time with a YOLO model and sends alerts, evacuation maps and an SOS when it sees a threat. I started it in February 2026 and lead the technical side; a pilot is now running at NIS. On a 1,000-frame test it was right 88% of the time, which still leaves about 120 wrong frames.",
+    text: "QORĞAN AI watches school CCTV in real time with a YOLO model and sends alerts, evacuation maps and an SOS when it sees a threat. I started it in February 2026 and lead the technical side; a pilot is now running at NIS.",
     // screenshot with detection boxes, faces blurred: media/qorgan-detection.jpg
     media: [],
     code: [
-      // { label: "QORĞAN code", url: "" },
+      { label: "QORĞAN code on GitHub", url: "https://github.com/noko31909-crypto/QORGAN" },
     ],
   },
   {
