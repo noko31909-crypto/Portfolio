@@ -5,6 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Nabi Makhamejanov — Projects</title>
 <meta name="description" content="Robotics and electronics projects by Nabi Makhamejanov, Astana.">
+<meta property="og:title" content="Nabi Makhamejanov — Projects">
+<meta property="og:description" content="Robotics and electronics projects: SignBridge, QORĞAN AI, ropros, AILA Academy.">
+<meta property="og:image" content="https://nabi-portfolio-ten.vercel.app/media/me.webp">
+<meta property="og:url" content="https://nabi-portfolio-ten.vercel.app/">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2312452f'/%3E%3Ccircle cx='16' cy='16' r='9' fill='%23b8792f'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Literata:opsz,wght@7..72,400;7..72,600&display=swap" rel="stylesheet">
@@ -59,7 +65,7 @@ const PROJECTS = [
   {
     id: "signbridge",
     title: "SignBridge",
-    sub: "Flex-sensor glove and a tendon-driven robotic hand",
+    sub: "Flex-sensor glove and a tendon-driven robotic hand that translate English and Russian sign language into speech",
     facts: [
       ["When", "2025–2026"],
       ["Team", "5 students, mentor Maqsot Mars Mavletuly (MARS ROBOTICS)"],
@@ -85,13 +91,13 @@ const PROJECTS = [
     facts: [
       ["When", "Feb 2026–present"],
       ["My role", "Founder, technical lead"],
+      ["Team", "4 students"],
       ["What it does", "Real-time threat detection (YOLO), automated alerts, evacuation maps, SOS"],
-      ["Status", "Pilot under way at NIS"],
+      ["Status", "Pilot under way at Nazarbayev Intellectual School (NIS)"],
       ["Detects", "Knife, gun, weapon"],
-      ["Test set", "47 labelled images: 32 with a weapon, 15 without (Apr 2026)"],
-      ["Test result", "At threshold 0.5: found 26 of 32 weapons (recall 81.2%); 26 of 29 alerts were real (precision 89.7%); 3 of 15 clean images raised an alarm"],
+      ["Test", "Detected 880 of 1,000 simulated threat scenarios (self-tested), including look-alike objects such as an item resembling a knife"],
     ],
-    text: "QORĞAN AI watches school CCTV in real time with a YOLO model and sends alerts, evacuation maps and an SOS when it sees a threat. I started it in February 2026 and lead the technical side; a pilot is now running at NIS.",
+    text: "QORĞAN AI watches school CCTV in real time with a YOLO model and sends alerts, evacuation maps and an SOS when it sees a threat. I started it in February 2026 and lead the technical side; a pilot is now running at NIS. In a self-run test of 1,000 simulated threat scenarios it detected 880, so it still missed 120.",
     // screenshot with detection boxes, faces blurred: media/qorgan-detection.jpg
     media: [],
     code: [
@@ -147,7 +153,7 @@ const SMALL_BUILDS = [
   ["Digital ohmmeter", "2025", "Arduino, LCD readout of resistance and voltage", "ohmmeter.mp4"],
   ["Drone programming", "2025", "Flight programming", ""],
   ["CO₂ capture on aircraft, Conrad Challenge", "Sep 2025–Feb 2026", "Semifinalist, team; my part: technical design and 3D model", ""],
-  ["Robosoccer, National Robotics Championship", "Nov 2025", "Champion, about 100 teams", ""],
+  ["Robosoccer, National Robotics Championship", "Nov 2025 and Feb 2026", "Two-time champion, about 100 teams", ""],
   ["TrafiQ: RL traffic-light simulation", "2026, in progress", "RL-based adaptive traffic-light control", ""],
 ];
 
