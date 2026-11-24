@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://*.supabase.co; connect-src 'self' https://*.supabase.co; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <title>Parts catalog, FTC Silkroad</title>
+  <meta name="description" content="Standard names and part numbers for common FTC parts from goBILDA, REV Robotics, Studica and others, with the listings for each part.">
+  <meta name="theme-color" content="#E9EDF0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F171D" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600&family=Unbounded:wght@500;700&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="js/catalog-page.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#catalog">Skip to catalog</a>
+
+  <header class="plate plate-short">
+    <div class="plate-inner">
+      <nav class="topbar" aria-label="Main">
+        <a class="wordmark" href="./">FTC Silkroad</a>
+        <ul class="nav-links">
+          <li><a href="./">Listings</a></li>
+          <li><a href="catalog.html" aria-current="page">Parts catalog</a></li>
+          <li><a href="./#how">How it works</a></li>
+        </ul>
+      </nav>
+      <div class="hero">
+        <h1>Parts catalog</h1>
+        <p class="hero-sub" id="catalog-sub">The bot offers these names when a team posts, so the same motor is called the same thing in every listing. Anything missing can still be posted as free text.</p>
+        <form class="search" role="search" id="catalog-search">
+          <label for="cq">Filter the catalog</label>
+          <div class="search-field">
+            <span class="search-icon" data-icon="search"></span>
+            <input id="cq" type="search" autocomplete="off" spellcheck="false" placeholder="Part name, part number or nickname">
+          </div>
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <main class="catalog" id="catalog" tabindex="-1">
+    <nav class="brand-nav" aria-label="Brands" id="brand-nav"></nav>
+    <p class="results-count" id="catalog-count" aria-live="polite">Loading catalog…</p>
+    <div id="brands"></div>
+    <div class="empty" id="catalog-empty" hidden>
+      <h2>No parts match</h2>
+      <p>Try the part number from the vendor’s site, or a shorter name. Parts that aren’t in the catalog can still be posted in the bot as free text.</p>
+    </div>
+    <div class="error" id="catalog-error" role="alert" hidden></div>
+  </main>
+
+  <footer class="footer">
+    <p>Part numbers are copied from the vendors’ sites. If one is wrong or a part is missing, tell the channel admins.</p>
+    <p>A community project by FTC teams in Kazakhstan. Not affiliated with <i>FIRST</i>®, goBILDA, REV Robotics or Studica.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "name": "ftc-silkroad",
+  "private": true,
+  "description": "Website for FTC Silkroad, the spare-parts exchange for FTC teams in Kazakhstan.",
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "catalog:sql": "node scripts/catalog-to-sql.mjs",
+    "serve": "python3 -m http.server 8080 --directory site"
+  }
+}

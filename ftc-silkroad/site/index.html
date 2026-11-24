@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://*.supabase.co; connect-src 'self' https://*.supabase.co; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <title>FTC Silkroad: spare FTC parts in Kazakhstan</title>
+  <meta name="description" content="Find spare FTC robot parts from teams across Kazakhstan: goBILDA, REV, Studica and more. Message the team on Telegram to trade, buy or pick up for free.">
+  <meta property="og:title" content="FTC Silkroad">
+  <meta property="og:description" content="Spare FTC parts from teams across Kazakhstan. Search by part, city or team, then message the team on Telegram.">
+  <meta name="theme-color" content="#E9EDF0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F171D" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600&family=Unbounded:wght@500;700&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="js/listings-page.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#results">Skip to listings</a>
+
+  <header class="plate">
+    <div class="plate-inner">
+      <nav class="topbar" aria-label="Main">
+        <a class="wordmark" href="./" aria-current="page">FTC Silkroad</a>
+        <ul class="nav-links">
+          <li><a href="./" aria-current="page">Listings</a></li>
+          <li><a href="catalog.html">Parts catalog</a></li>
+          <li><a href="#how">How it works</a></li>
+        </ul>
+      </nav>
+
+      <div class="hero">
+        <h1>Spare FTC parts from teams across Kazakhstan</h1>
+        <p class="hero-sub">Find the part, then message the team on Telegram. Trade, buy, or pick it up for free.</p>
+        <form class="search" role="search" id="search-form">
+          <label for="q">Search by part, SKU, team or city</label>
+          <div class="search-field">
+            <span class="search-icon" data-icon="search"></span>
+            <input id="q" name="q" type="search" autocomplete="off" spellcheck="false" placeholder="Core Hex, 5203-2402-0019, мотор">
+          </div>
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <div class="demo-note" id="demo-note" hidden>
+    <p>These are example listings, so the teams and Telegram links are made up. Real listings appear here once teams start posting through the bot.</p>
+  </div>
+
+  <main class="browse" id="main">
+    <aside class="filters" id="filters" aria-label="Filters">
+      <div class="filters-head">
+        <h2>Filters</h2>
+        <button type="button" class="link-button" id="clear-filters" hidden>Clear all</button>
+      </div>
+
+      <fieldset class="filter-group">
+        <legend>Listing type</legend>
+        <div class="type-toggles" id="type-toggles"></div>
+      </fieldset>
+
+      <div class="filter-group">
+        <label for="f-city">City</label>
+        <select id="f-city" data-filter="city"><option value="">Any city</option></select>
+      </div>
+      <div class="filter-group">
+        <label for="f-brand">Brand</label>
+        <select id="f-brand" data-filter="brand"><option value="">Any brand</option></select>
+      </div>
+      <div class="filter-group">
+        <label for="f-category">Category</label>
+        <select id="f-category" data-filter="category"><option value="">Any category</option></select>
+      </div>
+      <div class="filter-group">
+        <label for="f-condition">Condition</label>
+        <select id="f-condition" data-filter="condition"><option value="">Any condition</option></select>
+      </div>
+      <div class="filter-group">
+        <label for="f-team">Team</label>
+        <select id="f-team" data-filter="team"><option value="">Any team</option></select>
+      </div>
+    </aside>
+
+    <section class="results" id="results" aria-labelledby="results-count" tabindex="-1">
+      <div class="results-head">
+        <p class="results-count" id="results-count" aria-live="polite">Loading listings…</p>
+        <div class="results-tools">
+          <button type="button" class="filters-toggle" id="filters-toggle" aria-controls="filters" aria-expanded="false">
+            <span data-icon="filter"></span><span id="filters-toggle-label">Filters</span>
+          </button>
+          <label class="sort">
+            <span>Sort</span>
+            <select id="sort">
+              <option value="newest">Newest first</option>
+              <option value="price">Price, low to high</option>
+            </select>
+          </label>
+        </div>
+      </div>
+      <div class="active-part" id="active-part" hidden></div>
+      <ul class="cards" id="cards"></ul>
+      <div class="empty" id="empty" hidden>
+        <h2>No listings match</h2>
+        <p>Try a shorter search or clear a filter. If nobody has the part yet, post a “wanted” listing in the bot so teams who have it can find you.</p>
+        <button type="button" class="button" id="empty-clear">Clear filters</button>
+      </div>
+      <div class="error" id="error" role="alert" hidden></div>
+    </section>
+  </main>
+
+  <section class="how" id="how" aria-labelledby="how-title">
+    <h2 id="how-title">How it works</h2>
+    <ol class="steps">
+      <li>
+        <h3>Post in the Telegram bot</h3>
+        <p>The bot asks what you have, what you want for it, and for a photo. Your team name, city and Telegram username come from your team’s registration.</p>
+      </li>
+      <li>
+        <h3>Teams find it here</h3>
+        <p>Every active listing shows on this site. Anyone can search by part, city or team without an account.</p>
+      </li>
+      <li>
+        <h3>Agree in a private chat</h3>
+        <p>Tap the username on a listing to open a Telegram chat with that team. You agree on the price and the hand-over between yourselves.</p>
+      </li>
+    </ol>
+    <p class="bot-cta" id="bot-cta"></p>
+  </section>
+
+  <footer class="footer">
+    <p>FTC Silkroad doesn’t handle payments or delivery. Teams agree on both in Telegram.</p>
+    <p>A community project by FTC teams in Kazakhstan. Not affiliated with <i>FIRST</i>®, goBILDA, REV Robotics or Studica.</p>
+  </footer>
+
+  <dialog class="detail" id="detail" aria-labelledby="detail-title"></dialog>
+</body>
+</html>
