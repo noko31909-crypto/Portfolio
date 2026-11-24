@@ -1,6 +1,8 @@
 import { config } from './config.js';
 import { loadCatalog, loadListings, LISTING_TYPES, CONDITIONS, telegramLink } from './data.js';
-import { h, svg, byId as $, debounce, showError, drawIconPlaceholders, imageOrFallback, SEARCH_DEBOUNCE_MS } from './dom.js';
+import {
+  h, svg, byId as $, debounce, showError, drawIconPlaceholders, imageOrFallback, replaceUrl, SEARCH_DEBOUNCE_MS,
+} from './dom.js';
 import { iconForCategory, UI_ICONS } from './icons.js';
 import {
   emptyState, stateFromParams, paramsFromState, applyFilters, filterOptions,
@@ -154,8 +156,7 @@ function update(patch) {
 function setUrl(listingId) {
   const params = paramsFromState(state);
   if (listingId) params.set('listing', listingId);
-  const qs = params.toString();
-  history.replaceState(null, '', qs ? `?${qs}` : location.pathname);
+  replaceUrl(params);
 }
 
 // ---- Results -------------------------------------------------------------
@@ -210,7 +211,7 @@ function media(listing, { large = false } = {}) {
   if (part?.image) {
     return imageOrFallback(
       { src: part.image, alt: `${partLabel(part)}, catalog photo`, loading, width: 400, height: 300 },
-      h('figure', { class: 'catalog-photo' }, h('figcaption', null, 'Catalog photo')), glyph);
+      h('figure', { class: 'catalog-photo' }, h('figcaption', null, `Catalog photo, ${photoSource(part)}`)), glyph);
   }
   return glyph();
 }
@@ -324,10 +325,15 @@ function openDetail(id, { fromUrl = false } = {}) {
   setUrl(id);
 }
 
+/** Where a catalog photo comes from, named by the maker's site ("gobilda.com"), for the credit line. */
+function photoSource(part) {
+  return part.url ? new URL(part.url).hostname.replace(/^www\./, '') : part.brand;
+}
+
 /** When the dialog shows the vendor's photo instead of the team's, say whose it is. */
 function photoCredit(listing, part) {
   if (listing.photos.length || !part?.image) return null;
-  const source = part.url ? new URL(part.url).hostname.replace(/^www\./, '') : part.brand;
+  const source = photoSource(part);
   return h('p', { class: 'photo-credit' },
     'The photo is the maker’s catalog picture, not this team’s part. Source: ',
     part.url ? h('a', { href: part.url, target: '_blank', rel: 'noopener noreferrer' }, source) : source, '.');

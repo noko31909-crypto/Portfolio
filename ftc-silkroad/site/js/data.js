@@ -38,9 +38,14 @@ export const PART_IMAGE_HOSTS = [
   'gmedia.playstation.com',
 ];
 
-/** A catalog photo URL, only over https from an allowed vendor host. */
+// Self-hosted copies live in site/photos/. Use them only for makers who gave written
+// permission (see reports/ for why hotlinking is the default).
+const LOCAL_PHOTO_RE = /^photos\/[a-z0-9-]+\.(?:jpg|png|webp)$/;
+
+/** A catalog photo URL: https from an allowed vendor host, or a file in photos/. */
 export function safePartImage(value) {
   if (typeof value !== 'string') return null;
+  if (LOCAL_PHOTO_RE.test(value)) return value;
   try {
     const url = new URL(value);
     return url.protocol === 'https:' && PART_IMAGE_HOSTS.includes(url.hostname) ? url.href : null;

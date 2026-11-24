@@ -1,6 +1,8 @@
 import { config } from './config.js';
 import { loadCatalog, loadListings } from './data.js';
-import { h, svg, byId as $, debounce, showError, drawIconPlaceholders, imageOrFallback, SEARCH_DEBOUNCE_MS } from './dom.js';
+import {
+  h, svg, byId as $, debounce, showError, drawIconPlaceholders, imageOrFallback, replaceUrl, SEARCH_DEBOUNCE_MS,
+} from './dom.js';
 import { iconForCategory, UI_ICONS } from './icons.js';
 import { fold, listingCountsByPart, CATEGORY_KEYWORDS } from './filter.js';
 import { plural } from './format.js';
@@ -32,7 +34,7 @@ async function init() {
   input.value = new URLSearchParams(location.search).get('q') ?? '';
   input.addEventListener('input', debounce(() => {
     const q = input.value.trim();
-    history.replaceState(null, '', q ? `?${new URLSearchParams({ q })}` : location.pathname);
+    replaceUrl(new URLSearchParams(q ? { q } : {}));
     render();
   }, SEARCH_DEBOUNCE_MS));
   $('catalog-search').addEventListener('submit', (e) => {

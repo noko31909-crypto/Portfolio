@@ -37,8 +37,10 @@
   --gutter: 16px;
 }
 
+/* Dark palette: follows the OS setting unless the viewer explicitly picked light,
+   and also applies when a host sets data-theme="dark". */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme='light']) {
     color-scheme: dark;
     --plate: #18232b;
     --plate-hole: #0b1217;
@@ -55,6 +57,23 @@
     --focus: #5cc6ce;
     --backdrop: rgb(0 0 0 / 0.7);
   }
+}
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --plate: #18232b;
+  --plate-hole: #0b1217;
+  --bg: #0f171d;
+  --surface: #17222a;
+  --ink: #e6ecef;
+  --ink-2: #a3b1bb;
+  --line: #2b3944;
+  --tile: #5cc6ce;
+  --tile-ink: #0b1a1d;
+  --tile-soft: #12363a;
+  --free: #6cc27a;
+  --free-soft: #173022;
+  --focus: #5cc6ce;
+  --backdrop: rgb(0 0 0 / 0.7);
 }
 
 @media (min-width: 720px) {

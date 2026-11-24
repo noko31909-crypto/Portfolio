@@ -44,6 +44,20 @@ export function debounce(fn, ms) {
   };
 }
 
+/**
+ * Puts the current filters in the address bar so the view can be shared. Some
+ * embedding frames refuse history changes; the page keeps working without it.
+ * @param {URLSearchParams} params
+ */
+export function replaceUrl(params) {
+  const qs = params.toString();
+  try {
+    history.replaceState(null, '', qs ? `?${qs}` : location.pathname);
+  } catch {
+    // Not allowed here (sandboxed frame): the filters still apply, they just aren't in the URL.
+  }
+}
+
 /** Shows a message in an alert region that starts hidden. */
 export function showError(elementId, message) {
   const el = byId(elementId);
