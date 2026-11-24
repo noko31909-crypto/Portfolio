@@ -707,6 +707,9 @@ select {
 }
 
 .detail-notes { color: var(--ink-2); white-space: pre-line; }
+.photo-credit { font-size: var(--step--1); color: var(--ink-2); }
+.part-name a { color: var(--ink); text-decoration-color: var(--line); }
+.part-name a:hover { color: var(--tile); text-decoration-color: currentColor; }
 
 .facts {
   display: grid;

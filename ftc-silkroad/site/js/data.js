@@ -41,6 +41,17 @@ export function safePartImage(value) {
   }
 }
 
+/** Any https URL (vendor product pages), or null. */
+export function safeHttpsUrl(value) {
+  if (typeof value !== 'string') return null;
+  try {
+    const url = new URL(value);
+    return url.protocol === 'https:' ? url.href : null;
+  } catch {
+    return null;
+  }
+}
+
 /** Contact link for a validated username, or null. */
 export function telegramLink(username) {
   const name = safeUsername(username);
@@ -153,6 +164,7 @@ export function normalizeCatalog(raw) {
           category: typeof p.category === 'string' ? p.category : 'other',
           aliases: Array.isArray(p.aliases) ? p.aliases.filter((a) => typeof a === 'string') : [],
           image: safePartImage(p.image),
+          url: safeHttpsUrl(p.url),
         }))
     : [];
   return { brands, categories, parts, partsById: new Map(parts.map((p) => [p.id, p])) };
@@ -191,7 +203,7 @@ export async function loadListings(catalog, config) {
 /**
  * @typedef {'trade'|'sell'|'wanted'|'giveaway'} ListingType
  * @typedef {'new'|'like_new'|'used'|'for_parts'} Condition
- * @typedef {{ id: string, name: string, brand: string, sku: string|null, category: string, aliases: string[], image: string|null }} Part
+ * @typedef {{ id: string, name: string, brand: string, sku: string|null, category: string, aliases: string[], image: string|null, url: string|null }} Part
  * @typedef {{ brands: string[], categories: {id: string, name: string}[], parts: Part[], partsById: Map<string, Part> }} Catalog
  * @typedef {{
  *   id: string, type: ListingType,

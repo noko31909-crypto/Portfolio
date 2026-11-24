@@ -101,7 +101,8 @@ function partRow(part, count) {
     : glyph();
   return h('li', { class: 'part-row' },
     thumb,
-    h('span', { class: 'part-name' }, part.name),
+    h('span', { class: 'part-name' },
+      part.url ? h('a', { href: part.url, target: '_blank', rel: 'noopener noreferrer', title: 'Product page on the maker’s site' }, part.name) : part.name),
     h('span', { class: 'part-sku' }, part.sku ?? ''),
     count
       ? h('a', { class: 'part-count', href: `./?part=${encodeURIComponent(part.id)}` }, plural(count, 'listing', 'listings'))

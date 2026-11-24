@@ -311,6 +311,7 @@ function openDetail(id, { fromUrl = false } = {}) {
         listing.condition ? fact('Condition', CONDITION_LABELS[listing.condition]) : null,
         part?.sku ? fact('Part number', part.sku) : null,
         fact('Posted', formatAge(listing.createdAt))),
+      photoCredit(listing, part),
       h('div', { class: 'detail-actions' },
         contact(listing),
         part ? h('a', { class: 'link-button', href: `?part=${encodeURIComponent(part.id)}` }, 'Other listings with this part') : null),
@@ -321,6 +322,15 @@ function openDetail(id, { fromUrl = false } = {}) {
   ));
   if (!dialog.open) dialog.showModal();
   setUrl(id);
+}
+
+/** When the dialog shows the vendor's photo instead of the team's, say whose it is. */
+function photoCredit(listing, part) {
+  if (listing.photos.length || !part?.image) return null;
+  const source = part.url ? new URL(part.url).hostname.replace(/^www\./, '') : part.brand;
+  return h('p', { class: 'photo-credit' },
+    'The photo is the maker’s catalog picture, not this team’s part. Source: ',
+    part.url ? h('a', { href: part.url, target: '_blank', rel: 'noopener noreferrer' }, source) : source, '.');
 }
 
 function fact(label, value) {
