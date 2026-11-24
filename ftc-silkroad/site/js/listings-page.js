@@ -233,7 +233,7 @@ function terms(listing) {
   const row = (label, value) => h('div', { class: 'ex-row' }, h('dt', null, label), h('dd', null, value));
   const rows = isWanted
     ? [want && have ? row('Can trade', have) : null, budget ? row('Budget', budget) : null]
-    : [have && want ? row('Wants', want) : null];
+    : [have && want ? row(listing.type === 'sell' && !listing.want?.part && !listing.want?.text ? 'Price' : 'Wants', want) : null];
   return rows.some(Boolean) ? h('dl', { class: 'exchange' }, rows) : null;
 }
 
@@ -256,7 +256,9 @@ function card(listing) {
   const isWanted = listing.type === 'wanted';
   const title = isWanted ? want ?? have : have ?? want;
   const kicker = isWanted ? 'Looking for' : have ? 'Has' : 'Wants';
-  const [askLabel, askValue] = isWanted ? ['Budget', budgetLabel(listing)] : ['Wants', have ? want : null];
+  // A sale asks a price; a trade asks for a part (or a price).
+  const sellLabel = listing.type === 'sell' && !listing.want?.part && !listing.want?.text ? 'Price' : 'Wants';
+  const [askLabel, askValue] = isWanted ? ['Budget', budgetLabel(listing)] : [sellLabel, have ? want : null];
   const ask = askValue
     ? h('div', { class: 'card-ask' }, svg(UI_ICONS.swap, { size: 16 }), h('span', null, h('span', { class: 'ask-label' }, `${askLabel} `), askValue))
     : null;
