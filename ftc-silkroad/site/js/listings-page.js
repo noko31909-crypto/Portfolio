@@ -242,8 +242,9 @@ function contact(listing) {
   if (!href) {
     return h('span', { class: 'contact is-disabled' }, demo ? 'Example listing' : 'No Telegram username');
   }
-  return h('a', { class: 'contact', href, target: '_blank', rel: 'noopener noreferrer' },
-    svg(UI_ICONS.telegram, { size: 18 }), `Message @${listing.username}`);
+  // The button names the team; the link still opens the poster's own Telegram chat.
+  return h('a', { class: 'contact', href, target: '_blank', rel: 'noopener noreferrer', title: `Telegram: @${listing.username}` },
+    svg(UI_ICONS.telegram, { size: 18 }), `Message ${listing.team.name}`);
 }
 
 /**
