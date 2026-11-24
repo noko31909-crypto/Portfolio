@@ -54,8 +54,10 @@ export function budgetLabel(listing) {
   return listing.type === 'wanted' && listing.want?.priceKzt != null ? formatPrice(listing.want.priceKzt) : null;
 }
 
+/** "FTC 12345 Steppe Gears", the way the bot shows a team; no program for the examples. */
 export function teamLabel(team) {
-  return team.number ? `${team.number} ${team.name}` : team.name;
+  const number = team.number ? `${team.number} ` : '';
+  return `${team.program ? `${team.program} ` : ''}${number}${team.name}`;
 }
 
 export function plural(n, one, many) {

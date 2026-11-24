@@ -34,11 +34,14 @@ The tests use Node's built-in runner (Node 22 or newer) and have no dependencies
 
 ## Connect the database
 
-1. Create a Supabase project (the free tier is enough).
-2. In the SQL editor, run `supabase/schema.sql`, then `supabase/seed-parts.sql`. To regenerate the seed after editing the catalog, run `npm run catalog:sql`.
-3. In `site/js/config.js`, set `supabaseUrl`, `supabaseAnonKey` and `botUsername`.
+The database belongs to the Telegram bot, [Quantelteam/SilkRoad](https://github.com/Quantelteam/SilkRoad) ([@ftc_silkroad_bot](https://t.me/ftc_silkroad_bot)). The bot writes listings; the site reads the bot's `listings_public` view and shows only rows with `status = active`. `normalizeBotRow()` in `site/js/data.js` translates the bot's fields (types, conditions, categories) to the site's.
 
-The anon key is meant to be public. The schema only lets it read active listings, team names and numbers, and the parts catalog. The service-role key belongs to the bot's server and must never go in this folder.
+1. In `site/js/config.js`, `supabaseUrl` and `botUsername` are already set. Paste the project's anon (publishable) key into `supabaseAnonKey`: Supabase → Project Settings → API.
+2. Reload the page. The example-listings note disappears and the bot's listings show.
+
+The anon key is meant to be public: the bot's Row Level Security lets it read only `listings_public` and `parts`. The service-role key belongs to the bot's server and must never go in this folder.
+
+`supabase/schema.sql` and `seed-parts.sql` here are the site's first design, kept for reference. They are not used; the bot's schema is the real one.
 
 ## Intro video
 
@@ -48,9 +51,9 @@ The listings page has a slot for a 30-second vertical intro (1080×1920). It sta
 
 `site/` is plain static files, so any static host works. On Vercel or Netlify, set the root directory to `ftc-silkroad/site` with no build command. `site/vercel.json` sets the security headers on Vercel. On other hosts, copy the same headers from it.
 
-## For the bot
+## Notes from the site's first design
 
-The bot writes to `listings` with the service-role key. For each listing:
+These described a schema the bot didn't end up using. The bot's own README is current. The original notes:
 
 - Take `have_part_id` and `want_part_id` from `parts.id` (the same ids as the catalog JSON). For anything not in the catalog, use `have_text` or `want_text` and set `category`.
 - Copy `city` from the team and `tg_username` from the user at posting time.

@@ -152,6 +152,74 @@ export function normalizeListing(row, ctx) {
   };
 }
 
+// The Telegram bot (github.com/Quantelteam/SilkRoad) owns the database. Its public view,
+// listings_public, names things its own way; these tables translate them.
+const BOT_TYPES = { trade: 'trade', sell: 'sell', wanted: 'wanted', give: 'giveaway' };
+const BOT_CONDITIONS = { new: 'new', used: 'used', broken: 'for_parts' };
+const BOT_CATEGORIES = {
+  Motors: 'motors', Servos: 'servos', 'Control & Electronics': 'control', Sensors: 'sensors',
+  Power: 'batteries', Structure: 'structure', Motion: 'motion', Wheels: 'wheels', Hardware: 'hardware',
+  'Game & Field': 'other',
+};
+
+/**
+ * One side of a bot listing. A catalog part (it has a brand) becomes a part with no id,
+ * since the bot's catalog ids don't match the site's; free text stays text.
+ */
+function botSide(name, brand, category) {
+  const text = cleanText(name);
+  if (!text) return null;
+  const b = cleanText(brand, 40);
+  if (!b) return { part: null, text };
+  return { part: { id: null, name: text, brand: b, sku: null, category: BOT_CATEGORIES[category] ?? 'other', aliases: [], image: null, url: null }, text: null };
+}
+
+/**
+ * Turns one row of the bot's listings_public view into a listing, or null if it fails
+ * validation or isn't active.
+ * @param {Record<string, unknown>} row
+ * @param {{ supabaseUrl?: string }} ctx
+ * @returns {Listing | null}
+ */
+export function normalizeBotRow(row, ctx) {
+  if (!row || typeof row !== 'object' || row.status !== 'active') return null;
+  const id = typeof row.id === 'number' || typeof row.id === 'string' ? String(row.id) : null;
+  const type = BOT_TYPES[/** @type {string} */ (row.type)] ?? null;
+  const createdAt = cleanDate(row.created_at);
+  const teamName = cleanText(row.team_name, 60);
+  const city = cleanText(row.city, 40);
+  if (!id || !type || !createdAt || !teamName || !city) return null;
+
+  const have = type === 'wanted' ? null : botSide(row.have, row.have_brand, row.have_category);
+  let want = botSide(row.want, row.want_brand, row.want_category);
+  const price = cleanPrice(row.price_kzt);
+  if (type === 'sell') want = { part: null, text: price === null ? 'Price negotiable' : null, priceKzt: price };
+  else if (want) want = { ...want, priceKzt: null };
+  else if (type === 'trade') want = { part: null, text: 'Any offer', priceKzt: null };
+  if (!have && !want) return null;
+
+  const teamNumber = Number.isInteger(row.team_number) && /** @type {number} */ (row.team_number) > 0 ? /** @type {number} */ (row.team_number) : null;
+  const category = (type === 'wanted' ? want?.part?.category : have?.part?.category) ?? BOT_CATEGORIES[/** @type {string} */ (row.have_category ?? row.want_category)] ?? null;
+  const photos = Array.isArray(row.photos)
+    ? row.photos.map((p) => safePhotoUrl(p, ctx.supabaseUrl)).filter(Boolean).slice(0, MAX_PHOTOS)
+    : [];
+
+  return {
+    id,
+    type,
+    have,
+    want,
+    condition: BOT_CONDITIONS[/** @type {string} */ (row.condition)] ?? null,
+    category,
+    notes: cleanText(row.note, 500),
+    city,
+    team: { number: teamNumber, name: teamName, program: row.team_program === 'FLL' ? 'FLL' : 'FTC' },
+    username: safeUsername(row.username),
+    photos: /** @type {string[]} */ (photos),
+    createdAt,
+  };
+}
+
 /** @returns {Promise<Catalog>} */
 export async function loadCatalog() {
   const res = await fetch('data/parts-catalog.json');
@@ -195,8 +263,8 @@ export async function loadListings(catalog, config) {
   const live = Boolean(config.supabaseUrl && config.supabaseAnonKey);
   let rows;
   if (live) {
-    const url = new URL('/rest/v1/public_listings', config.supabaseUrl);
-    url.search = new URLSearchParams({ select: '*', order: 'created_at.desc', limit: String(MAX_LISTINGS) }).toString();
+    const url = new URL('/rest/v1/listings_public', config.supabaseUrl);
+    url.search = new URLSearchParams({ select: '*', status: 'eq.active', order: 'created_at.desc', limit: String(MAX_LISTINGS) }).toString();
     const res = await fetch(url, {
       headers: { apikey: config.supabaseAnonKey, Authorization: `Bearer ${config.supabaseAnonKey}` },
     });
@@ -209,7 +277,8 @@ export async function loadListings(catalog, config) {
   }
   if (!Array.isArray(rows)) throw new Error('Listings: expected an array');
   const ctx = { partsById: catalog.partsById, supabaseUrl: live ? config.supabaseUrl : undefined };
-  const listings = rows.map((row) => normalizeListing(row, ctx)).filter(Boolean);
+  // Live rows come from the bot's view; the bundled examples use the site's own shape.
+  const listings = rows.map((row) => (live ? normalizeBotRow(row, ctx) : normalizeListing(row, ctx))).filter(Boolean);
   return { listings: /** @type {Listing[]} */ (listings), demo: !live };
 }
 
@@ -223,7 +292,7 @@ export async function loadListings(catalog, config) {
  *   have: { part: Part|null, text: string|null } | null,
  *   want: { part: Part|null, text: string|null, priceKzt: number|null } | null,
  *   condition: Condition|null, category: string|null, notes: string|null, city: string,
- *   team: { number: number|null, name: string }, username: string|null,
+ *   team: { number: number|null, name: string, program?: 'FTC'|'FLL' }, username: string|null,
  *   photos: string[], createdAt: string
  * }} Listing
  */

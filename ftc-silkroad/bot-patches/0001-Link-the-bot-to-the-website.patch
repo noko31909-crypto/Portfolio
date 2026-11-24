@@ -1,0 +1,232 @@
+From 454c9808718d6fbfdfc3f724a0b43b0b006a470c Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Tue, 24 Nov 2026 17:13:44 +0000
+Subject: [PATCH] Link the bot to the website
+
+- Main menu gets a Website button and a /site command (only when SITE_URL is set).
+- After publishing, a 'View on the website' button opens the new listing
+  directly (SITE_URL/?listing=<id>); each entry in My listings gets the same.
+- /help names the project SilkRoad Exchange and links the site.
+- SITE_URL must be https (Telegram URL buttons need it); a trailing slash is dropped.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01AsQJVsZAe25vUgXiPC22gg
+---
+ README.md                          |  5 ++++-
+ bot/.env.example                   |  3 ++-
+ bot/app/config.py                  |  9 +++++++-
+ bot/app/handlers/common.py         | 20 ++++++++++++++----
+ bot/app/handlers/listing_create.py |  9 ++++----
+ bot/app/keyboards.py               | 34 +++++++++++++++++++++++++-----
+ bot/app/main.py                    |  3 ++-
+ 7 files changed, 66 insertions(+), 17 deletions(-)
+
+diff --git a/README.md b/README.md
+index 0528ca8..6abeab0 100644
+--- a/README.md
++++ b/README.md
+@@ -17,6 +17,7 @@ and the **database schema** the website will read from.
+ | ➕ New listing | Type (trade / sell / wanted / give away) → part from the catalog or free text → what you want in return or the price → condition → up to 3 photos → optional note → preview → publish. |
+ | 📋 My listings | Shows active listings with Edit (part, price, condition, note, photos) and Close. |
+ | `/cancel`, `/help` | Stop the current step, short explanation. |
++| 🌐 Website, `/site` | A button that opens the website (only when `SITE_URL` is set). |
+ 
+ Photos are uploaded to Supabase Storage, so the website can show them straight
+ from the database. A closed listing disappears from the site.
+@@ -30,7 +31,9 @@ from the database. A closed listing disappears from the site.
+    - `BOT_TOKEN` — from @BotFather
+    - `SUPABASE_URL` and `SUPABASE_SERVICE_KEY` — Supabase → Project settings → API
+      (the `service_role` key; it is secret, `.env` is git-ignored)
+-   - `SITE_URL` — optional, shown after a listing is published
++   - `SITE_URL` — optional, the website (https). When set, the menu gets a 🌐 Website
++     button and a `/site` command, and every published listing and every entry in
++     📋 My listings gets a button that opens that listing on the site (`/?listing=<id>`).
+ 3. **Run.**
+    ```bash
+    cd bot
+diff --git a/bot/.env.example b/bot/.env.example
+index b321ea5..90ee0aa 100644
+--- a/bot/.env.example
++++ b/bot/.env.example
+@@ -3,5 +3,6 @@ BOT_TOKEN=
+ SUPABASE_URL=https://your-project.supabase.co
+ # service_role key: the bot writes data and uploads photos, keep it secret
+ SUPABASE_SERVICE_KEY=
+-# Public website URL, shown after a listing is published (optional)
++# Public website URL, https only (optional). When set, the bot adds a Website menu button,
++# a /site command, and "View on the website" buttons that open each listing on the site.
+ SITE_URL=
+diff --git a/bot/app/config.py b/bot/app/config.py
+index 889015d..9a2adce 100644
+--- a/bot/app/config.py
++++ b/bot/app/config.py
+@@ -14,6 +14,13 @@ class Settings:
+     site_url: str
+ 
+ 
++def _site_url() -> str:
++    value = os.getenv("SITE_URL", "").strip().rstrip("/")
++    if value and not value.startswith("https://"):
++        raise RuntimeError("SITE_URL must start with https://, for example https://silkroad.example")
++    return value
++
++
+ def _required(name: str) -> str:
+     value = os.getenv(name, "").strip()
+     if not value:
+@@ -25,7 +32,7 @@ settings = Settings(
+     bot_token=_required("BOT_TOKEN"),
+     supabase_url=_required("SUPABASE_URL"),
+     supabase_service_key=_required("SUPABASE_SERVICE_KEY"),
+-    site_url=os.getenv("SITE_URL", "").strip(),
++    site_url=_site_url(),
+ )
+ 
+ PHOTO_BUCKET = "listings"
+diff --git a/bot/app/handlers/common.py b/bot/app/handlers/common.py
+index 5f59dc2..7a5c1bf 100644
+--- a/bot/app/handlers/common.py
++++ b/bot/app/handlers/common.py
+@@ -3,7 +3,8 @@ from aiogram.filters import Command
+ from aiogram.fsm.context import FSMContext
+ from aiogram.types import CallbackQuery, Message
+ 
+-from app.keyboards import main_menu
++from app.config import settings
++from app.keyboards import WEBSITE, main_menu, website_kb
+ 
+ # Commands work inside any step, so this router is included before the flows.
+ commands = Router()
+@@ -11,10 +12,11 @@ commands = Router()
+ fallback = Router()
+ 
+ HELP = (
+-    "<b>FTC KZ Parts Exchange</b>\n\n"
++    "<b>SilkRoad Exchange</b>\n\n"
+     "➕ New listing — post a part you have, need, sell or give away.\n"
+-    "📋 My listings — edit or close your listings.\n\n"
+-    "Deals happen in Telegram: teams see your @username on the website and write to you.\n"
++    "📋 My listings — edit or close your listings.\n"
++    + ("🌐 Website — search every team's listings: " + settings.site_url + "\n" if settings.site_url else "")
++    + "\nDeals happen in Telegram: teams see your @username on the website and write to you.\n"
+     "/cancel — stop what you are doing."
+ )
+ 
+@@ -24,6 +26,16 @@ async def help_command(message: Message) -> None:
+     await message.answer(HELP, reply_markup=main_menu)
+ 
+ 
++@commands.message(Command("site"))
++@commands.message(F.text == WEBSITE)
++async def website(message: Message) -> None:
++    kb = website_kb()
++    if kb is None:
++        await message.answer("The website isn't online yet.", reply_markup=main_menu)
++        return
++    await message.answer("Search every team's listings by part, city or team:", reply_markup=kb)
++
++
+ @commands.message(Command("cancel"))
+ async def cancel_command(message: Message, state: FSMContext) -> None:
+     await state.clear()
+diff --git a/bot/app/handlers/listing_create.py b/bot/app/handlers/listing_create.py
+index b6e8f35..d8e44b0 100644
+--- a/bot/app/handlers/listing_create.py
++++ b/bot/app/handlers/listing_create.py
+@@ -5,10 +5,10 @@ from aiogram.fsm.context import FSMContext
+ from aiogram.types import CallbackQuery, Message
+ 
+ from app import db
+-from app.config import MAX_PHOTOS, settings
++from app.config import MAX_PHOTOS
+ from app.filters import PLAIN_TEXT
+ from app.handlers.parts_picker import RESOLVERS, ask_part
+-from app.keyboards import (NEW_LISTING, condition_kb, confirm_kb, listing_type_kb,
++from app.keyboards import (NEW_LISTING, website_kb, condition_kb, confirm_kb, listing_type_kb,
+                            main_menu, note_kb, photos_kb, price_kb)
+ from app.photos import upload_telegram_photos
+ from app.states import NewListing
+@@ -212,6 +212,7 @@ async def publish(call: CallbackQuery, state: FSMContext, bot: Bot, user: dict)
+     await state.clear()
+ 
+     text = f"Published.\n\n{format_listing({**listing, 'have_part': have_part, 'want_part': want_part})}"
+-    if settings.site_url:
+-        text += f"\n\n{settings.site_url}"
+     await call.message.answer(text, reply_markup=main_menu)
++    kb = website_kb("🌐 View on the website", listing["id"])
++    if kb:
++        await call.message.answer("It's live on the website now:", reply_markup=kb)
+diff --git a/bot/app/keyboards.py b/bot/app/keyboards.py
+index 9656df5..fd727b8 100644
+--- a/bot/app/keyboards.py
++++ b/bot/app/keyboards.py
+@@ -1,15 +1,35 @@
+ from aiogram.types import (InlineKeyboardButton, InlineKeyboardMarkup,
+                            KeyboardButton, ReplyKeyboardMarkup)
+ 
++from urllib.parse import urlencode
++
++from app.config import settings
+ from app.texts import CONDITION_LABELS, TYPE_LABELS
+ 
+ NEW_LISTING = "➕ New listing"
+ MY_LISTINGS = "📋 My listings"
++WEBSITE = "🌐 Website"
++
++_menu_rows = [[KeyboardButton(text=NEW_LISTING)], [KeyboardButton(text=MY_LISTINGS)]]
++if settings.site_url:
++    _menu_rows.append([KeyboardButton(text=WEBSITE)])
++main_menu = ReplyKeyboardMarkup(keyboard=_menu_rows, resize_keyboard=True)
++
++
++def site_link(listing_id: int | None = None) -> str | None:
++    """The website, or one listing on it (the site opens ?listing=<id> in a dialog)."""
++    if not settings.site_url:
++        return None
++    if listing_id is None:
++        return settings.site_url + "/"
++    return settings.site_url + "/?" + urlencode({"listing": listing_id})
++
+ 
+-main_menu = ReplyKeyboardMarkup(
+-    keyboard=[[KeyboardButton(text=NEW_LISTING)], [KeyboardButton(text=MY_LISTINGS)]],
+-    resize_keyboard=True,
+-)
++def website_kb(text: str = "🌐 Open the website", listing_id: int | None = None) -> InlineKeyboardMarkup | None:
++    url = site_link(listing_id)
++    if not url:
++        return None
++    return InlineKeyboardMarkup(inline_keyboard=[[InlineKeyboardButton(text=text, url=url)]])
+ 
+ 
+ def inline(rows: list[list[tuple[str, str]]]) -> InlineKeyboardMarkup:
+@@ -53,7 +73,11 @@ def confirm_kb() -> InlineKeyboardMarkup:
+ 
+ 
+ def listing_actions_kb(listing_id: int) -> InlineKeyboardMarkup:
+-    return inline([[("✏️ Edit", f"edit:{listing_id}"), ("✅ Close", f"close:{listing_id}")]])
++    kb = inline([[("✏️ Edit", f"edit:{listing_id}"), ("✅ Close", f"close:{listing_id}")]])
++    url = site_link(listing_id)
++    if url:
++        kb.inline_keyboard.append([InlineKeyboardButton(text="🌐 On the website", url=url)])
++    return kb
+ 
+ 
+ def edit_menu_kb(listing: dict) -> InlineKeyboardMarkup:
+diff --git a/bot/app/main.py b/bot/app/main.py
+index 506d9ca..001f189 100644
+--- a/bot/app/main.py
++++ b/bot/app/main.py
+@@ -37,7 +37,8 @@ async def main() -> None:
+             await message.answer("Something broke on our side. Try again or send /cancel.")
+         return True
+ 
+-    await bot.set_my_commands(COMMANDS)
++    commands = COMMANDS + ([BotCommand(command="site", description="Open the website")] if settings.site_url else [])
++    await bot.set_my_commands(commands)
+     await bot.delete_webhook(drop_pending_updates=True)
+     logging.info("bot started")
+     await dp.start_polling(bot)
+-- 
+2.43.0
+

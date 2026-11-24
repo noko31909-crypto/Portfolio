@@ -157,7 +157,8 @@ export function filterOptions(listings) {
 export function listingCountsByPart(listings) {
   const counts = new Map();
   for (const l of listings) {
-    for (const id of new Set(listingParts(l).map((p) => p.id))) counts.set(id, (counts.get(id) ?? 0) + 1);
+    // Parts named by the bot carry no catalog id, so they aren't counted against a catalog row.
+    for (const id of new Set(listingParts(l).map((p) => p.id).filter(Boolean))) counts.set(id, (counts.get(id) ?? 0) + 1);
   }
   return counts;
 }

@@ -1,3 +1,6 @@
+-- NOT USED. The database belongs to the Telegram bot (github.com/Quantelteam/SilkRoad,
+-- supabase/schema.sql there). This file is the site's first design, kept for reference.
+--
 -- SilkRoad Exchange database schema (Supabase / PostgreSQL 15+).
 --
 -- Who can do what:

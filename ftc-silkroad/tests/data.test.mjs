@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { normalizeListing, normalizeCatalog, safeUsername, safePhotoUrl, telegramLink } from '../site/js/data.js';
+import { normalizeListing, normalizeBotRow, normalizeCatalog, safeUsername, safePhotoUrl, telegramLink } from '../site/js/data.js';
 
 const catalog = normalizeCatalog({
   brands: ['goBILDA'],
@@ -82,6 +82,41 @@ test('catalog photos only from allowed vendor hosts, exact host match', () => {
   ] });
   assert.deepEqual(c.parts.map((p) => p.image), ['https://cdn11.bigcommerce.com/s-x/images/a.jpg', null, null, null]);
   assert.equal(c.parts[3].url, null);
+});
+
+test('bot rows from listings_public translate to site listings', () => {
+  const botRow = (over = {}) => ({
+    id: 17, type: 'give', status: 'active', condition: 'broken', price_kzt: null, note: 'Pick up after school',
+    photos: [`${SUPA}/storage/v1/object/public/listings/a.jpg`, 'https://evil.example/x.jpg'], created_at: '2026-11-24T08:00:00Z',
+    have: 'Core Hex Motor', have_brand: 'REV Robotics', have_category: 'Motors', want: null, want_brand: null, want_category: null,
+    team_program: 'FTC', team_number: 24567, team_name: 'Nomads', city: 'Astana', username: 'nomads_bot_team', ...over,
+  });
+  const g = normalizeBotRow(botRow(), { supabaseUrl: SUPA });
+  assert.equal(g.id, '17');
+  assert.equal(g.type, 'giveaway');
+  assert.equal(g.condition, 'for_parts');
+  assert.equal(g.category, 'motors');
+  assert.deepEqual([g.have.part.brand, g.have.part.name, g.have.part.id], ['REV Robotics', 'Core Hex Motor', null]);
+  assert.equal(g.want, null);
+  assert.equal(g.photos.length, 1);
+  assert.equal(g.team.program, 'FTC');
+
+  const sell = normalizeBotRow(botRow({ type: 'sell', price_kzt: 25000 }), { supabaseUrl: SUPA });
+  assert.equal(sell.want.priceKzt, 25000);
+  assert.equal(normalizeBotRow(botRow({ type: 'sell' }), {}).want.text, 'Price negotiable');
+  assert.equal(normalizeBotRow(botRow({ type: 'trade' }), {}).want.text, 'Any offer');
+
+  const wanted = normalizeBotRow(botRow({ type: 'wanted', have: null, have_brand: null, want: 'Expansion Hub', want_brand: 'REV Robotics', want_category: 'Control & Electronics' }), {});
+  assert.equal(wanted.have, null);
+  assert.equal(wanted.want.part.name, 'Expansion Hub');
+  assert.equal(wanted.category, 'control');
+
+  const free = normalizeBotRow(botRow({ have: 'Grey bracket', have_brand: null, have_category: null }), {});
+  assert.equal(free.have.text, 'Grey bracket');
+
+  assert.equal(normalizeBotRow(botRow({ status: 'closed' }), {}), null);
+  assert.equal(normalizeBotRow(botRow({ type: 'auction' }), {}), null);
+  assert.equal(normalizeBotRow(botRow({ username: 'x y' }), {}).username, null);
 });
 
 test('catalog loader skips malformed parts', () => {

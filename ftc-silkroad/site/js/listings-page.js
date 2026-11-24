@@ -315,7 +315,7 @@ function openDetail(id, { fromUrl = false } = {}) {
       photoCredit(listing, part),
       h('div', { class: 'detail-actions' },
         contact(listing),
-        part ? h('a', { class: 'link-button', href: `?part=${encodeURIComponent(part.id)}` }, 'Other listings with this part') : null),
+        part?.id ? h('a', { class: 'link-button', href: `?part=${encodeURIComponent(part.id)}` }, 'Other listings with this part') : null),
     ),
     // autofocus keeps the dialog scrolled to the top instead of jumping to the first link.
     h('button', { type: 'button', class: 'detail-close', 'aria-label': 'Close', autofocus: true, onclick: () => dialog.close() },
