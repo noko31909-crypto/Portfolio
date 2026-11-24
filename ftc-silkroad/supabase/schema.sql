@@ -1,4 +1,4 @@
--- FIRST SilkRoad database schema (Supabase / PostgreSQL 15+).
+-- SilkRoad Exchange database schema (Supabase / PostgreSQL 15+).
 --
 -- Who can do what:
 --   * The Telegram bot writes with the service-role key (server-side only). It bypasses RLS.

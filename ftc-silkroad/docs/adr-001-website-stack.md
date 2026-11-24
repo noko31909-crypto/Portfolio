@@ -2,7 +2,7 @@
 
 **Status:** Accepted
 **Date:** 2026-11-24
-**Deciders:** FIRST SilkRoad maintainers
+**Deciders:** SilkRoad Exchange maintainers
 
 ## Context
 
