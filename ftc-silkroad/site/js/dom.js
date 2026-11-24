@@ -58,6 +58,20 @@ export function drawIconPlaceholders(icons, size = 20) {
   }
 }
 
+/**
+ * An <img> inside `wrapper` that swaps the whole wrapper for `fallback` if the image
+ * fails to load (vendor URLs can move or disappear).
+ * @param {Record<string, unknown>} imgAttrs
+ * @param {HTMLElement} wrapper element the image goes into; replaced on failure
+ * @param {() => Node} fallback
+ */
+export function imageOrFallback(imgAttrs, wrapper, fallback) {
+  const img = h('img', { decoding: 'async', referrerpolicy: 'no-referrer', ...imgAttrs });
+  img.addEventListener('error', () => wrapper.replaceWith(fallback()), { once: true });
+  wrapper.prepend(img);
+  return wrapper;
+}
+
 const SVG_NS = 'http://www.w3.org/2000/svg';
 
 /** Builds an SVG from trusted, hard-coded path data in icons.js. */

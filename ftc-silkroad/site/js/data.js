@@ -26,6 +26,21 @@ export function safeUsername(value) {
   return USERNAME_RE.test(name) ? name : null;
 }
 
+// Hosts allowed to serve official catalog photos (the vendors' own image CDNs).
+// Keep in sync with img-src in the Content-Security-Policy (HTML meta and vercel.json).
+export const PART_IMAGE_HOSTS = [];
+
+/** A catalog photo URL, only over https from an allowed vendor host. */
+export function safePartImage(value) {
+  if (typeof value !== 'string') return null;
+  try {
+    const url = new URL(value);
+    return url.protocol === 'https:' && PART_IMAGE_HOSTS.includes(url.hostname) ? url.href : null;
+  } catch {
+    return null;
+  }
+}
+
 /** Contact link for a validated username, or null. */
 export function telegramLink(username) {
   const name = safeUsername(username);
@@ -137,6 +152,7 @@ export function normalizeCatalog(raw) {
           sku: typeof p.sku === 'string' ? p.sku : null,
           category: typeof p.category === 'string' ? p.category : 'other',
           aliases: Array.isArray(p.aliases) ? p.aliases.filter((a) => typeof a === 'string') : [],
+          image: safePartImage(p.image),
         }))
     : [];
   return { brands, categories, parts, partsById: new Map(parts.map((p) => [p.id, p])) };
@@ -175,7 +191,7 @@ export async function loadListings(catalog, config) {
 /**
  * @typedef {'trade'|'sell'|'wanted'|'giveaway'} ListingType
  * @typedef {'new'|'like_new'|'used'|'for_parts'} Condition
- * @typedef {{ id: string, name: string, brand: string, sku: string|null, category: string, aliases: string[] }} Part
+ * @typedef {{ id: string, name: string, brand: string, sku: string|null, category: string, aliases: string[], image: string|null }} Part
  * @typedef {{ brands: string[], categories: {id: string, name: string}[], parts: Part[], partsById: Map<string, Part> }} Catalog
  * @typedef {{
  *   id: string, type: ListingType,

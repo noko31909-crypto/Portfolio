@@ -1,6 +1,6 @@
 import { config } from './config.js';
 import { loadCatalog, loadListings, LISTING_TYPES, CONDITIONS, telegramLink } from './data.js';
-import { h, svg, byId as $, debounce, showError, drawIconPlaceholders, SEARCH_DEBOUNCE_MS } from './dom.js';
+import { h, svg, byId as $, debounce, showError, drawIconPlaceholders, imageOrFallback, SEARCH_DEBOUNCE_MS } from './dom.js';
 import { iconForCategory, UI_ICONS } from './icons.js';
 import {
   emptyState, stateFromParams, paramsFromState, applyFilters, filterOptions,
@@ -187,14 +187,32 @@ function renderActivePart() {
   );
 }
 
+/** The part a listing is about: what it offers, or what a wanted listing looks for. */
+function mainPart(listing) {
+  return listing.type === 'wanted'
+    ? listing.want?.part ?? listing.have?.part ?? null
+    : listing.have?.part ?? listing.want?.part ?? null;
+}
+
+/**
+ * The team's own photo if there is one; otherwise the vendor's catalog photo of the
+ * part, labelled so nobody mistakes it for the actual item; otherwise a category drawing.
+ */
 function media(listing, { large = false } = {}) {
+  const loading = large ? 'eager' : 'lazy';
+  const glyph = () => h('div', { class: 'glyph' }, svg(iconForCategory(listing.category ?? 'other'), { size: large ? 96 : 64 }));
   if (listing.photos.length) {
-    return h('img', {
-      src: listing.photos[0], alt: haveLabel(listing) ?? wantLabel(listing) ?? 'Listing photo',
-      loading: large ? 'eager' : 'lazy', decoding: 'async', width: 400, height: 300,
-    });
+    return imageOrFallback(
+      { src: listing.photos[0], alt: haveLabel(listing) ?? wantLabel(listing) ?? 'Listing photo', loading, width: 400, height: 300 },
+      h('div', { class: 'team-photo' }), glyph);
   }
-  return h('div', { class: 'glyph' }, svg(iconForCategory(listing.category ?? 'other'), { size: large ? 96 : 64 }));
+  const part = mainPart(listing);
+  if (part?.image) {
+    return imageOrFallback(
+      { src: part.image, alt: `${partLabel(part)}, catalog photo`, loading, width: 400, height: 300 },
+      h('figure', { class: 'catalog-photo' }, h('figcaption', null, 'Catalog photo')), glyph);
+  }
+  return glyph();
 }
 
 function typeChip(type) {
@@ -271,7 +289,7 @@ function openDetail(id, { fromUrl = false } = {}) {
   const title = listing.type === 'wanted'
     ? wantLabel(listing) ?? haveLabel(listing)
     : haveLabel(listing) ?? wantLabel(listing);
-  const part = listing.have?.part ?? listing.want?.part;
+  const part = mainPart(listing);
   const photos = listing.photos.length > 1
     ? h('div', { class: 'detail-thumbs' }, listing.photos.slice(1).map((src, i) =>
         h('img', { src, alt: `${title}, photo ${i + 2}`, loading: 'lazy', width: 160, height: 120 })))

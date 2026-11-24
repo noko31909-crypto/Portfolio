@@ -1,6 +1,6 @@
 import { config } from './config.js';
 import { loadCatalog, loadListings } from './data.js';
-import { h, svg, byId as $, debounce, showError, drawIconPlaceholders, SEARCH_DEBOUNCE_MS } from './dom.js';
+import { h, svg, byId as $, debounce, showError, drawIconPlaceholders, imageOrFallback, SEARCH_DEBOUNCE_MS } from './dom.js';
 import { iconForCategory, UI_ICONS } from './icons.js';
 import { fold, listingCountsByPart, CATEGORY_KEYWORDS } from './filter.js';
 import { plural } from './format.js';
@@ -94,7 +94,13 @@ function brandSection(brand, parts, categories, counts) {
 }
 
 function partRow(part, count) {
+  const glyph = () => h('span', { class: 'part-thumb is-glyph' }, svg(iconForCategory(part.category), { size: 24 }));
+  // The part name sits right next to the thumbnail, so the image itself is decorative (alt="").
+  const thumb = part.image
+    ? imageOrFallback({ src: part.image, alt: '', loading: 'lazy', width: 56, height: 56 }, h('span', { class: 'part-thumb' }), glyph)
+    : glyph();
   return h('li', { class: 'part-row' },
+    thumb,
     h('span', { class: 'part-name' }, part.name),
     h('span', { class: 'part-sku' }, part.sku ?? ''),
     count

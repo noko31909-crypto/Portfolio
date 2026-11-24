@@ -452,11 +452,37 @@ select {
   aspect-ratio: 3 / 2;
   background: var(--plate);
 }
-.card-media img,
-.detail-media img {
+.team-photo,
+.catalog-photo {
+  height: 100%;
+  margin: 0;
+}
+.team-photo img,
+.catalog-photo img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+/* Vendor photos are product shots on white: show the whole part, on white in both
+   themes, and label them so nobody takes them for the actual item. */
+.catalog-photo {
+  position: relative;
+  background: #fff;
+}
+.catalog-photo img {
+  object-fit: contain;
+  padding: 8%;
+}
+.catalog-photo figcaption {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: rgb(22 33 43 / 0.72);
+  color: #fff;
+  font-size: 0.75rem;
 }
 
 .glyph {
@@ -577,6 +603,9 @@ select {
     overflow: hidden;
   }
   .card-media .glyph .icon { width: 36px; height: 36px; padding: 6px; }
+  .card-media .catalog-photo img { padding: 6%; }
+  /* Too small for a caption; the dialog shows it. */
+  .card-media .catalog-photo figcaption { display: none; }
   .card-body { grid-area: body; gap: 8px; padding: 12px 12px 10px; }
   .card .chip { position: static; align-self: flex-start; }
   .card-foot { grid-area: foot; padding: 0 12px 12px; }
@@ -844,21 +873,37 @@ select {
 
 .part-row {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 2px 16px;
+  grid-template-columns: 56px minmax(0, 1fr) auto;
+  gap: 2px 14px;
   align-items: center;
-  padding: 10px 16px;
-  min-height: 52px;
+  padding: 8px 16px 8px 8px;
+  min-height: 72px;
 }
 .part-row + .part-row { border-top: 1px solid var(--line); }
-.part-name { grid-column: 1 / -1; font-weight: 500; }
+
+.part-thumb {
+  grid-row: span 2;
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-s);
+}
+.part-thumb img { width: 100%; height: 100%; object-fit: contain; padding: 4px; }
+.part-thumb.is-glyph { background: var(--plate); color: var(--ink-2); }
+
+.part-name { grid-column: 2 / -1; font-weight: 500; }
 .part-sku { color: var(--ink-2); font-size: var(--step--1); }
 .part-count { justify-self: end; font-size: var(--step--1); font-weight: 500; white-space: nowrap; }
 a.part-count { display: inline-flex; align-items: center; min-height: 44px; margin: -12px 0; }
 .part-count.is-zero { color: var(--ink-2); font-weight: 400; }
 
 @media (min-width: 720px) {
-  .part-row { grid-template-columns: minmax(0, 1fr) 11rem 7rem; }
+  .part-row { grid-template-columns: 56px minmax(0, 1fr) 11rem 7rem; }
+  .part-thumb { grid-row: auto; }
   .part-name { grid-column: auto; }
 }
 
