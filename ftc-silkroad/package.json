@@ -1,7 +1,7 @@
 {
-  "name": "ftc-silkroad",
+  "name": "first-silkroad",
   "private": true,
-  "description": "Website for FTC Silkroad, the spare-parts exchange for FTC teams in Kazakhstan.",
+  "description": "Website for FIRST SilkRoad, the spare-parts exchange for FTC teams in Kazakhstan.",
   "type": "module",
   "engines": { "node": ">=22" },
   "scripts": {

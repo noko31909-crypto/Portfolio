@@ -1,6 +1,6 @@
-# FTC Silkroad
+# FIRST SilkRoad
 
-The website for FTC Silkroad, a spare-parts exchange for FTC teams in Kazakhstan. Teams post parts through a Telegram bot. This site lists them with search and filters, and links each listing to the team's Telegram so the deal happens in a private chat. The site doesn't handle money or delivery.
+The website for FIRST SilkRoad, a spare-parts exchange for FTC teams in Kazakhstan. Teams post parts through a Telegram bot. This site lists them with search and filters, and links each listing to the team's Telegram so the deal happens in a private chat. The site doesn't handle money or delivery.
 
 This folder holds the website, the database schema and the parts catalog. The bot isn't built yet.
 
@@ -42,7 +42,7 @@ The anon key is meant to be public. The schema only lets it read active listings
 
 ## Intro video
 
-The listings page has a slot for a 30-second vertical intro (1080×1920). It stays hidden until `site/assets/intro.mp4` exists. To add it, open the FTC Silkroad intro film on claude.ai, use Export to save an MP4, and save it as `site/assets/intro.mp4`. Keep it small (a few MB) because it loads on the home page. On wide screens it plays muted in the header; on phones a "Watch the 30-second intro" button opens it.
+The listings page has a slot for a 30-second vertical intro (1080×1920). It stays hidden until `site/assets/intro.mp4` exists. To add it, open the FIRST SilkRoad intro film on claude.ai, use Export to save an MP4, and save it as `site/assets/intro.mp4`. Keep it small (a few MB) because it loads on the home page. On wide screens it plays muted in the header; on phones a "Watch the 30-second intro" button opens it.
 
 ## Deploy
 
