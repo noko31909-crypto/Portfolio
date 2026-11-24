@@ -51,6 +51,7 @@ create table parts (
   category          text not null,
   aliases           text[] not null default '{}',
   url               text,
+  image             text,   -- the maker's product photo, loaded from the maker's site
   typical_price_kzt integer check (typical_price_kzt >= 0)
 );
 create index parts_brand_category on parts (brand, category);

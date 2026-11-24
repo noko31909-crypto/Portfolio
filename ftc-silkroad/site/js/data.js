@@ -28,7 +28,15 @@ export function safeUsername(value) {
 
 // Hosts allowed to serve official catalog photos (the vendors' own image CDNs).
 // Keep in sync with img-src in the Content-Security-Policy (HTML meta and vercel.json).
-export const PART_IMAGE_HOSTS = [];
+export const PART_IMAGE_HOSTS = [
+  'cdn11.bigcommerce.com', // goBILDA and REV Robotics stores
+  'andymark.com',
+  'www.pitsco.com', // TETRIX
+  'limelightvision.io',
+  'resource.logitech.com',
+  'resource.logitechg.com',
+  'gmedia.playstation.com',
+];
 
 /** A catalog photo URL, only over https from an allowed vendor host. */
 export function safePartImage(value) {

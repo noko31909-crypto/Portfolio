@@ -73,6 +73,17 @@ test('photos only from this project’s public storage path', () => {
   assert.deepEqual(l.photos, [ok]);
 });
 
+test('catalog photos only from allowed vendor hosts, exact host match', () => {
+  const c = normalizeCatalog({ parts: [
+    { id: 'a', name: 'A', brand: 'goBILDA', image: 'https://cdn11.bigcommerce.com/s-x/images/a.jpg' },
+    { id: 'b', name: 'B', brand: 'goBILDA', image: 'https://cdn11.bigcommerce.com.evil.example/a.jpg' },
+    { id: 'c', name: 'C', brand: 'goBILDA', image: 'http://andymark.com/cdn/shop/a.jpg' },
+    { id: 'd', name: 'D', brand: 'goBILDA', image: 'javascript:alert(1)', url: 'javascript:alert(1)' },
+  ] });
+  assert.deepEqual(c.parts.map((p) => p.image), ['https://cdn11.bigcommerce.com/s-x/images/a.jpg', null, null, null]);
+  assert.equal(c.parts[3].url, null);
+});
+
 test('catalog loader skips malformed parts', () => {
   const c = normalizeCatalog({ brands: ['A', 3], categories: [{ id: 'x' }], parts: [{ id: 'p' }, { id: 'q', name: 'Q', brand: 'A' }] });
   assert.deepEqual(c.brands, ['A']);
