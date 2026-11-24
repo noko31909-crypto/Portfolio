@@ -49,8 +49,9 @@ test('filters combine', () => {
   assert.deepEqual(run({ team: '200' }), ['b']);
 });
 
-test('price sort puts priced listings first, cheapest first', () => {
-  assert.deepEqual(run({ sort: 'price' }), ['d', 'a', 'c', 'b']);
+test('price sort puts asking prices first, cheapest first; wanted budgets are not prices', () => {
+  const cheap = L('e', { have: { part: wheel, text: null }, want: { part: null, text: null, priceKzt: 5000 } });
+  assert.deepEqual(ids(applyFilters([...listings, cheap], { ...emptyState(), sort: 'price' })), ['e', 'a', 'c', 'd', 'b']);
 });
 
 test('URL state round-trips and rejects junk', () => {

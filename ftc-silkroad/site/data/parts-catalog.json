@@ -1,0 +1,2758 @@
+{
+  "version": 1,
+  "brands": [
+    "goBILDA",
+    "REV Robotics",
+    "Studica",
+    "AndyMark",
+    "Axon",
+    "TETRIX",
+    "Other"
+  ],
+  "categories": [
+    {
+      "id": "motors",
+      "name": "Motors"
+    },
+    {
+      "id": "servos",
+      "name": "Servos"
+    },
+    {
+      "id": "control",
+      "name": "Control & Power"
+    },
+    {
+      "id": "sensors",
+      "name": "Sensors"
+    },
+    {
+      "id": "batteries",
+      "name": "Batteries & Chargers"
+    },
+    {
+      "id": "structure",
+      "name": "Structure"
+    },
+    {
+      "id": "motion",
+      "name": "Motion"
+    },
+    {
+      "id": "wheels",
+      "name": "Wheels"
+    },
+    {
+      "id": "linear",
+      "name": "Linear Motion"
+    },
+    {
+      "id": "hardware",
+      "name": "Hardware"
+    },
+    {
+      "id": "cables",
+      "name": "Cables & Connectors"
+    },
+    {
+      "id": "other",
+      "name": "Other"
+    }
+  ],
+  "parts": [
+    {
+      "id": "gobilda-5203-2402-0001",
+      "brand": "goBILDA",
+      "name": "Yellow Jacket motor, 6000 RPM (1:1, no gearbox), 8mm REX shaft",
+      "sku": "5203-2402-0001",
+      "category": "motors",
+      "aliases": [
+        "yellow jacket",
+        "6000 rpm",
+        "5203",
+        "gobilda motor"
+      ],
+      "url": "https://www.gobilda.com/5203-series-yellow-jacket-motor-1-1-ratio-24mm-length-8mm-rex-shaft-6000-rpm-3-3-5v-encoder/"
+    },
+    {
+      "id": "gobilda-5203-2402-0005",
+      "brand": "goBILDA",
+      "name": "Yellow Jacket planetary motor, 1150 RPM (5.2:1), 8mm REX shaft",
+      "sku": "5203-2402-0005",
+      "category": "motors",
+      "aliases": [
+        "yellow jacket",
+        "1150 rpm",
+        "5203",
+        "gobilda motor"
+      ],
+      "url": "https://www.gobilda.com/5203-series-yellow-jacket-planetary-gear-motor-5-2-1-ratio-24mm-length-8mm-rex-shaft-1150-rpm-3-3-5v-encoder/"
+    },
+    {
+      "id": "gobilda-5203-2402-0051",
+      "brand": "goBILDA",
+      "name": "Yellow Jacket planetary motor, 117 RPM (50.9:1), 8mm REX shaft",
+      "sku": "5203-2402-0051",
+      "category": "motors",
+      "aliases": [
+        "yellow jacket",
+        "117 rpm",
+        "5203",
+        "gobilda motor"
+      ],
+      "url": "https://www.gobilda.com/5203-series-yellow-jacket-planetary-gear-motor-50-9-1-ratio-24mm-length-8mm-rex-shaft-117-rpm-3-3-5v-encoder/"
+    },
+    {
+      "id": "gobilda-5203-2402-0003",
+      "brand": "goBILDA",
+      "name": "Yellow Jacket planetary motor, 1620 RPM (3.7:1), 8mm REX shaft",
+      "sku": "5203-2402-0003",
+      "category": "motors",
+      "aliases": [
+        "yellow jacket",
+        "1620 rpm",
+        "5203",
+        "gobilda motor"
+      ],
+      "url": "https://www.gobilda.com/5203-series-yellow-jacket-planetary-gear-motor-3-7-1-ratio-1620-rpm-3-3-5v-encoder/"
+    },
+    {
+      "id": "gobilda-5203-2402-0027",
+      "brand": "goBILDA",
+      "name": "Yellow Jacket planetary motor, 223 RPM (26.9:1), 8mm REX shaft",
+      "sku": "5203-2402-0027",
+      "category": "motors",
+      "aliases": [
+        "yellow jacket",
+        "223 rpm",
+        "5203",
+        "gobilda motor"
+      ],
+      "url": "https://www.gobilda.com/5203-series-yellow-jacket-planetary-gear-motor-26-9-1-ratio-24mm-length-8mm-rex-shaft-223-rpm-3-3-5v-encoder/"
+    },
+    {
+      "id": "gobilda-5203-2402-0188",
+      "brand": "goBILDA",
+      "name": "Yellow Jacket planetary motor, 30 RPM (188:1), 8mm REX shaft",
+      "sku": "5203-2402-0188",
+      "category": "motors",
+      "aliases": [
+        "yellow jacket",
+        "30 rpm",
+        "5203",
+        "gobilda motor"
+      ],
+      "url": "https://www.gobilda.com/5203-series-yellow-jacket-planetary-gear-motor-188-1-ratio-24mm-length-8mm-rex-shaft-30-rpm-3-3-5v-encoder/"
+    },
+    {
+      "id": "gobilda-5203-2402-0019",
+      "brand": "goBILDA",
+      "name": "Yellow Jacket planetary motor, 312 RPM (19.2:1), 8mm REX shaft",
+      "sku": "5203-2402-0019",
+      "category": "motors",
+      "aliases": [
+        "yellow jacket",
+        "312 rpm",
+        "5203",
+        "gobilda motor"
+      ],
+      "url": "https://www.gobilda.com/5203-series-yellow-jacket-planetary-gear-motor-19-2-1-ratio-24mm-length-8mm-rex-shaft-312-rpm-3-3-5v-encoder/"
+    },
+    {
+      "id": "gobilda-5203-2402-0014",
+      "brand": "goBILDA",
+      "name": "Yellow Jacket planetary motor, 435 RPM (13.7:1), 8mm REX shaft",
+      "sku": "5203-2402-0014",
+      "category": "motors",
+      "aliases": [
+        "yellow jacket",
+        "435 rpm",
+        "5203",
+        "gobilda motor"
+      ],
+      "url": "https://www.gobilda.com/5203-series-yellow-jacket-planetary-gear-motor-13-7-1-ratio-24mm-length-8mm-rex-shaft-435-rpm-3-3-5v-encoder/"
+    },
+    {
+      "id": "gobilda-5203-2402-0100",
+      "brand": "goBILDA",
+      "name": "Yellow Jacket planetary motor, 60 RPM (99.5:1), 8mm REX shaft",
+      "sku": "5203-2402-0100",
+      "category": "motors",
+      "aliases": [
+        "yellow jacket",
+        "60 rpm",
+        "5203",
+        "gobilda motor"
+      ],
+      "url": "https://www.gobilda.com/5203-series-yellow-jacket-planetary-gear-motor-99-5-1-ratio-24mm-length-8mm-rex-shaft-60-rpm-3-3-5v-encoder/"
+    },
+    {
+      "id": "gobilda-5203-2402-0071",
+      "brand": "goBILDA",
+      "name": "Yellow Jacket planetary motor, 84 RPM (71.2:1), 8mm REX shaft",
+      "sku": "5203-2402-0071",
+      "category": "motors",
+      "aliases": [
+        "yellow jacket",
+        "84 rpm",
+        "5203",
+        "gobilda motor"
+      ],
+      "url": "https://www.gobilda.com/5203-series-yellow-jacket-planetary-gear-motor-71-2-1-ratio-24mm-length-8mm-rex-shaft-84-rpm-3-3-5v-encoder/"
+    },
+    {
+      "id": "gobilda-2000-0025-0502",
+      "brand": "goBILDA",
+      "name": "5-Turn Dual Mode Servo, Torque (25-2)",
+      "sku": "2000-0025-0502",
+      "category": "servos",
+      "aliases": [
+        "5 turn servo",
+        "multi turn servo",
+        "gobilda servo"
+      ],
+      "url": "https://www.gobilda.com/2000-series-5-turn-dual-mode-servo-25-2-torque/"
+    },
+    {
+      "id": "gobilda-2000-0025-0003",
+      "brand": "goBILDA",
+      "name": "Dual Mode Servo, Speed (25-3)",
+      "sku": "2000-0025-0003",
+      "category": "servos",
+      "aliases": [
+        "gobilda servo",
+        "speed servo",
+        "dual mode",
+        "25-3"
+      ],
+      "url": "https://www.gobilda.com/2000-series-dual-mode-servo-25-3-speed/"
+    },
+    {
+      "id": "gobilda-2000-0025-0004",
+      "brand": "goBILDA",
+      "name": "Dual Mode Servo, Super Speed (25-4)",
+      "sku": "2000-0025-0004",
+      "category": "servos",
+      "aliases": [
+        "gobilda servo",
+        "super speed servo",
+        "dual mode",
+        "25-4"
+      ],
+      "url": "https://www.gobilda.com/2000-series-dual-mode-servo-25-4-super-speed/"
+    },
+    {
+      "id": "gobilda-2000-0025-0002",
+      "brand": "goBILDA",
+      "name": "Dual Mode Servo, Torque (25-2)",
+      "sku": "2000-0025-0002",
+      "category": "servos",
+      "aliases": [
+        "gobilda servo",
+        "torque servo",
+        "dual mode",
+        "25-2"
+      ],
+      "url": "https://www.gobilda.com/2000-series-dual-mode-servo-25-2-torque/"
+    },
+    {
+      "id": "gobilda-3103-0005-0001",
+      "brand": "goBILDA",
+      "name": "Floodgate power switch (XT30, current sensing)",
+      "sku": "3103-0005-0001",
+      "category": "control",
+      "aliases": [
+        "power switch",
+        "floodgate",
+        "main switch"
+      ],
+      "url": "https://www.gobilda.com/floodgate-power-switch-xt30-current-sensing/"
+    },
+    {
+      "id": "gobilda-3102-0001-0001",
+      "brand": "goBILDA",
+      "name": "Servo Programmer for Dual Mode Servo",
+      "sku": "3102-0001-0001",
+      "category": "control",
+      "aliases": [
+        "servo programmer",
+        "gobilda programmer"
+      ],
+      "url": "https://www.gobilda.com/servo-programmer-for-2000-series-dual-mode-servo/"
+    },
+    {
+      "id": "gobilda-3108-2833-0802",
+      "brand": "goBILDA",
+      "name": "XT30 power distribution board (8 x XT30 outputs)",
+      "sku": "3108-2833-0802",
+      "category": "control",
+      "aliases": [
+        "pdb",
+        "power distribution",
+        "xt30 board"
+      ],
+      "url": "https://www.gobilda.com/xt30-power-distribution-board-xt30-input-8-x-xt30-outputs/"
+    },
+    {
+      "id": "gobilda-3110-0001-0002",
+      "brand": "goBILDA",
+      "name": "4-Bar odometry pod (32mm wheel)",
+      "sku": "3110-0001-0002",
+      "category": "sensors",
+      "aliases": [
+        "odometry pod",
+        "dead wheel",
+        "4 bar pod"
+      ],
+      "url": "https://www.gobilda.com/4-bar-odometry-pod-32mm-wheel/"
+    },
+    {
+      "id": "gobilda-3124-0001-0001",
+      "brand": "goBILDA",
+      "name": "Laser distance sensor (1m range)",
+      "sku": "3124-0001-0001",
+      "category": "sensors",
+      "aliases": [
+        "laser sensor",
+        "distance sensor"
+      ],
+      "url": "https://www.gobilda.com/laser-distance-sensor-1m-range-3-3-5v-digital-or-analog-output/"
+    },
+    {
+      "id": "gobilda-3103-0001-0001",
+      "brand": "goBILDA",
+      "name": "Micro limit switch, roller lever (2 pack)",
+      "sku": "3103-0001-0001",
+      "category": "sensors",
+      "aliases": [
+        "limit switch",
+        "micro switch"
+      ],
+      "url": "https://www.gobilda.com/micro-limit-switch-roller-lever-2-pack/"
+    },
+    {
+      "id": "gobilda-3110-0002-0002",
+      "brand": "goBILDA",
+      "name": "Pinpoint V2 odometry computer (IMU sensor fusion)",
+      "sku": "3110-0002-0002",
+      "category": "sensors",
+      "aliases": [
+        "pinpoint",
+        "odometry computer",
+        "gobilda pinpoint"
+      ],
+      "url": "https://www.gobilda.com/pinpoint-v2-odometry-computer-imu-sensor-fusion-for-2-wheel-odometry/"
+    },
+    {
+      "id": "gobilda-3110-0001-0001",
+      "brand": "goBILDA",
+      "name": "Swingarm odometry pod (48mm wheel)",
+      "sku": "3110-0001-0001",
+      "category": "sensors",
+      "aliases": [
+        "odometry pod",
+        "dead wheel",
+        "swingarm pod"
+      ],
+      "url": "https://www.gobilda.com/swingarm-odometry-pod-48mm-wheel/"
+    },
+    {
+      "id": "gobilda-3101-0012-0001",
+      "brand": "goBILDA",
+      "name": "12V NiMH battery charger (XT30)",
+      "sku": "3101-0012-0001",
+      "category": "batteries",
+      "aliases": [
+        "charger",
+        "battery charger",
+        "12v charger"
+      ],
+      "url": "https://www.gobilda.com/battery-charger-nicad-nimh-12-1/"
+    },
+    {
+      "id": "gobilda-3100-0012-0020",
+      "brand": "goBILDA",
+      "name": "12V NiMH nested battery, 3000mAh (XT30)",
+      "sku": "3100-0012-0020",
+      "category": "batteries",
+      "aliases": [
+        "12v battery",
+        "nimh battery",
+        "gobilda battery"
+      ],
+      "url": "https://www.gobilda.com/12v-nimh-nested-battery-3000mah-mh-fc-xt30-connector/"
+    },
+    {
+      "id": "gobilda-3121-0001-0020",
+      "brand": "goBILDA",
+      "name": "20A ATM mini blade fuse (4 pack)",
+      "sku": "3121-0001-0020",
+      "category": "batteries",
+      "aliases": [
+        "fuse",
+        "20a fuse",
+        "blade fuse"
+      ],
+      "url": "https://www.gobilda.com/20a-atm-series-mini-blade-fuse-4-pack/"
+    },
+    {
+      "id": "gobilda-1701-0032-0001",
+      "brand": "goBILDA",
+      "name": "Face tapped motor mount (32-1)",
+      "sku": "1701-0032-0001",
+      "category": "structure",
+      "aliases": [
+        "motor mount",
+        "yellow jacket mount"
+      ],
+      "url": "https://www.gobilda.com/1701-series-face-tapped-motor-mount-32-1/"
+    },
+    {
+      "id": "gobilda-1116-0088-0232",
+      "brand": "goBILDA",
+      "name": "Grid plate, 11 x 29 hole (88 x 232mm)",
+      "sku": "1116-0088-0232",
+      "category": "structure",
+      "aliases": [
+        "grid plate",
+        "1116"
+      ],
+      "url": "https://www.gobilda.com/1116-series-grid-plate-11-x-29-hole-88-x-232mm/"
+    },
+    {
+      "id": "gobilda-1116-0136-0232",
+      "brand": "goBILDA",
+      "name": "Grid plate, 17 x 29 hole (136 x 232mm)",
+      "sku": "1116-0136-0232",
+      "category": "structure",
+      "aliases": [
+        "grid plate",
+        "1116",
+        "big plate"
+      ],
+      "url": "https://www.gobilda.com/1116-series-grid-plate-17-x-29-hole-136-x-232mm/"
+    },
+    {
+      "id": "gobilda-1116-0040-0040",
+      "brand": "goBILDA",
+      "name": "Grid plate, 5 x 5 hole (40 x 40mm)",
+      "sku": "1116-0040-0040",
+      "category": "structure",
+      "aliases": [
+        "grid plate",
+        "1116"
+      ],
+      "url": "https://www.gobilda.com/1116-series-grid-plate-5-x-5-hole-40-x-40mm/"
+    },
+    {
+      "id": "gobilda-1204-0001-0001",
+      "brand": "goBILDA",
+      "name": "Gusseted angle mount (1-1), 2 pack",
+      "sku": "1204-0001-0001",
+      "category": "structure",
+      "aliases": [
+        "angle mount",
+        "gusset",
+        "bracket",
+        "1204"
+      ],
+      "url": "https://www.gobilda.com/1204-series-gusseted-angle-mount-1-1-2-pack/"
+    },
+    {
+      "id": "gobilda-1121-0005-0144",
+      "brand": "goBILDA",
+      "name": "Low-Side U-Channel, 5 hole (144mm)",
+      "sku": "1121-0005-0144",
+      "category": "structure",
+      "aliases": [
+        "low-side channel",
+        "low side u-channel",
+        "144mm channel",
+        "1121"
+      ],
+      "url": "https://www.gobilda.com/1121-series-low-side-u-channel-5-hole-144mm-length/"
+    },
+    {
+      "id": "gobilda-1121-0007-0192",
+      "brand": "goBILDA",
+      "name": "Low-Side U-Channel, 7 hole (192mm)",
+      "sku": "1121-0007-0192",
+      "category": "structure",
+      "aliases": [
+        "low-side channel",
+        "low side u-channel",
+        "192mm channel",
+        "1121"
+      ],
+      "url": "https://www.gobilda.com/1121-series-low-side-u-channel-7-hole-192mm-length/"
+    },
+    {
+      "id": "gobilda-1121-0009-0240",
+      "brand": "goBILDA",
+      "name": "Low-Side U-Channel, 9 hole (240mm)",
+      "sku": "1121-0009-0240",
+      "category": "structure",
+      "aliases": [
+        "low-side channel",
+        "low side u-channel",
+        "240mm channel",
+        "1121"
+      ],
+      "url": "https://www.gobilda.com/1121-series-low-side-u-channel-9-hole-240mm-length/"
+    },
+    {
+      "id": "gobilda-1501-0006-0240",
+      "brand": "goBILDA",
+      "name": "M4 standoff, 24mm (4 pack)",
+      "sku": "1501-0006-0240",
+      "category": "structure",
+      "aliases": [
+        "standoff",
+        "24mm standoff",
+        "1501"
+      ],
+      "url": "https://www.gobilda.com/1501-series-m4-x-0-7mm-standoff-6mm-od-24mm-length-4-pack/"
+    },
+    {
+      "id": "gobilda-1501-0006-0480",
+      "brand": "goBILDA",
+      "name": "M4 standoff, 48mm (4 pack)",
+      "sku": "1501-0006-0480",
+      "category": "structure",
+      "aliases": [
+        "standoff",
+        "48mm standoff",
+        "1501"
+      ],
+      "url": "https://www.gobilda.com/1501-series-m4-x-0-7mm-standoff-6mm-od-48mm-length-4-pack/"
+    },
+    {
+      "id": "gobilda-1702-0032-0001",
+      "brand": "goBILDA",
+      "name": "Quad block motor mount (32-1)",
+      "sku": "1702-0032-0001",
+      "category": "structure",
+      "aliases": [
+        "motor mount",
+        "quad block"
+      ],
+      "url": "https://www.gobilda.com/1702-series-quad-block-motor-mount-32-1/"
+    },
+    {
+      "id": "gobilda-1120-0011-0288",
+      "brand": "goBILDA",
+      "name": "U-Channel, 11 hole (288mm)",
+      "sku": "1120-0011-0288",
+      "category": "structure",
+      "aliases": [
+        "u-channel",
+        "u channel",
+        "288mm channel",
+        "1120"
+      ],
+      "url": "https://www.gobilda.com/1120-series-u-channel-11-hole-288mm-length/"
+    },
+    {
+      "id": "gobilda-1120-0013-0336",
+      "brand": "goBILDA",
+      "name": "U-Channel, 13 hole (336mm)",
+      "sku": "1120-0013-0336",
+      "category": "structure",
+      "aliases": [
+        "u-channel",
+        "u channel",
+        "336mm channel",
+        "1120"
+      ],
+      "url": "https://www.gobilda.com/1120-series-u-channel-13-hole-336mm-length/"
+    },
+    {
+      "id": "gobilda-1120-0017-0432",
+      "brand": "goBILDA",
+      "name": "U-Channel, 17 hole (432mm)",
+      "sku": "1120-0017-0432",
+      "category": "structure",
+      "aliases": [
+        "u-channel",
+        "u channel",
+        "432mm channel",
+        "1120"
+      ],
+      "url": "https://www.gobilda.com/1120-series-u-channel-17-hole-432mm-length/"
+    },
+    {
+      "id": "gobilda-1120-0005-0144",
+      "brand": "goBILDA",
+      "name": "U-Channel, 5 hole (144mm)",
+      "sku": "1120-0005-0144",
+      "category": "structure",
+      "aliases": [
+        "u-channel",
+        "u channel",
+        "144mm channel",
+        "1120"
+      ],
+      "url": "https://www.gobilda.com/1120-series-u-channel-5-hole-144mm-length/"
+    },
+    {
+      "id": "gobilda-1120-0007-0192",
+      "brand": "goBILDA",
+      "name": "U-Channel, 7 hole (192mm)",
+      "sku": "1120-0007-0192",
+      "category": "structure",
+      "aliases": [
+        "u-channel",
+        "u channel",
+        "192mm channel",
+        "1120"
+      ],
+      "url": "https://www.gobilda.com/1120-series-u-channel-7-hole-192mm-length/"
+    },
+    {
+      "id": "gobilda-1120-0009-0240",
+      "brand": "goBILDA",
+      "name": "U-Channel, 9 hole (240mm)",
+      "sku": "1120-0009-0240",
+      "category": "structure",
+      "aliases": [
+        "u-channel",
+        "u channel",
+        "240mm channel",
+        "1120"
+      ],
+      "url": "https://www.gobilda.com/1120-series-u-channel-9-hole-240mm-length/"
+    },
+    {
+      "id": "gobilda-3308-0008-0001",
+      "brand": "goBILDA",
+      "name": "8mm pitch chain connecting link (6 pack)",
+      "sku": "3308-0008-0001",
+      "category": "motion",
+      "aliases": [
+        "master link",
+        "connecting link",
+        "chain link"
+      ],
+      "url": "https://www.gobilda.com/8mm-pitch-steel-chain-connecting-link-6-pack/"
+    },
+    {
+      "id": "gobilda-3308-0008-1000",
+      "brand": "goBILDA",
+      "name": "8mm pitch steel chain, 1 m",
+      "sku": "3308-0008-1000",
+      "category": "motion",
+      "aliases": [
+        "chain",
+        "8mm chain"
+      ],
+      "url": "https://www.gobilda.com/8mm-pitch-steel-chain-1-meter-length/"
+    },
+    {
+      "id": "gobilda-2106-4008-0480",
+      "brand": "goBILDA",
+      "name": "8mm REX shaft with e-clip, 48mm",
+      "sku": "2106-4008-0480",
+      "category": "motion",
+      "aliases": [
+        "rex shaft",
+        "8mm shaft",
+        "d shaft"
+      ],
+      "url": "https://www.gobilda.com/8mm-rex-shaft-with-e-clip-stainless-steel-48mm-length/"
+    },
+    {
+      "id": "gobilda-2106-4008-0960",
+      "brand": "goBILDA",
+      "name": "8mm REX shaft with e-clip, 96mm",
+      "sku": "2106-4008-0960",
+      "category": "motion",
+      "aliases": [
+        "rex shaft",
+        "8mm shaft"
+      ],
+      "url": "https://www.gobilda.com/8mm-rex-shaft-with-e-clip-stainless-steel-96mm-length/"
+    },
+    {
+      "id": "gobilda-2312-0414-0060",
+      "brand": "goBILDA",
+      "name": "Acetal hub-mount gear, 60 tooth (MOD 0.8)",
+      "sku": "2312-0414-0060",
+      "category": "motion",
+      "aliases": [
+        "60t gear",
+        "hub mount gear",
+        "spur gear"
+      ],
+      "url": "https://www.gobilda.com/60-tooth-hub-mount-gear-mod-0-8-4mm-thick-acetal/"
+    },
+    {
+      "id": "gobilda-2302-0014-0100",
+      "brand": "goBILDA",
+      "name": "Aluminum hub-mount gear, 100 tooth, 14mm bore (MOD 0.8)",
+      "sku": "2302-0014-0100",
+      "category": "motion",
+      "aliases": [
+        "100t gear",
+        "big gear",
+        "spur gear"
+      ],
+      "url": "https://www.gobilda.com/2302-series-aluminum-mod-0-8-hub-mount-gear-14mm-bore-100-tooth/"
+    },
+    {
+      "id": "gobilda-3310-0014-0028",
+      "brand": "goBILDA",
+      "name": "Aluminum hub-mount sprocket, 28 tooth, 8mm pitch",
+      "sku": "3310-0014-0028",
+      "category": "motion",
+      "aliases": [
+        "sprocket",
+        "28t sprocket",
+        "8mm pitch"
+      ],
+      "url": "https://www.gobilda.com/3310-series-8mm-pitch-aluminum-hub-mount-sprocket-14mm-bore-28-tooth/"
+    },
+    {
+      "id": "gobilda-1611-0514-4008",
+      "brand": "goBILDA",
+      "name": "Flanged ball bearing, 8mm REX ID x 14mm OD (2 pack)",
+      "sku": "1611-0514-4008",
+      "category": "motion",
+      "aliases": [
+        "rex bearing",
+        "flanged bearing",
+        "bearing"
+      ],
+      "url": "https://www.gobilda.com/1611-series-flanged-ball-bearing-8mm-rex-id-x-14mm-od-5mm-thickness-2-pack/"
+    },
+    {
+      "id": "gobilda-3421-0014-0060",
+      "brand": "goBILDA",
+      "name": "GT2 hub-mount timing pulley, 60 tooth",
+      "sku": "3421-0014-0060",
+      "category": "motion",
+      "aliases": [
+        "gt2 pulley",
+        "timing pulley",
+        "60t pulley"
+      ],
+      "url": "https://www.gobilda.com/2mm-pitch-gt2-hub-mount-timing-belt-pulley-14mm-bore-60-tooth/"
+    },
+    {
+      "id": "gobilda-3422-4008-0020",
+      "brand": "goBILDA",
+      "name": "GT2 pinion timing pulley, 20 tooth, 8mm REX bore",
+      "sku": "3422-4008-0020",
+      "category": "motion",
+      "aliases": [
+        "gt2 pulley",
+        "timing pulley",
+        "20t pulley"
+      ],
+      "url": "https://www.gobilda.com/2mm-pitch-gt2-pinion-timing-pulley-8mm-rex-bore-20-tooth/"
+    },
+    {
+      "id": "gobilda-3423-0006-0328",
+      "brand": "goBILDA",
+      "name": "GT2 timing belt, 6mm wide, 164 tooth (328mm)",
+      "sku": "3423-0006-0328",
+      "category": "motion",
+      "aliases": [
+        "gt2 belt",
+        "timing belt",
+        "belt"
+      ],
+      "url": "https://www.gobilda.com/2mm-pitch-gt2-timing-belt-6mm-width-328mm-pitch-length-164-tooth/"
+    },
+    {
+      "id": "gobilda-3417-4008-0016",
+      "brand": "goBILDA",
+      "name": "HTD 5mm timing pulley, 16 tooth, 8mm REX bore",
+      "sku": "3417-4008-0016",
+      "category": "motion",
+      "aliases": [
+        "htd pulley",
+        "5mm htd",
+        "16t pulley"
+      ],
+      "url": "https://www.gobilda.com/3417-series-5mm-htd-pitch-set-screw-pinion-timing-belt-pulley-8mm-rex-bore-16-tooth/"
+    },
+    {
+      "id": "gobilda-1310-0016-4008",
+      "brand": "goBILDA",
+      "name": "Hyper Hub, 8mm REX bore",
+      "sku": "1310-0016-4008",
+      "category": "motion",
+      "aliases": [
+        "hyper hub",
+        "rex hub",
+        "hub"
+      ],
+      "url": "https://www.gobilda.com/1310-series-hyper-hub-8mm-rex-bore/"
+    },
+    {
+      "id": "gobilda-4001-0025-4008",
+      "brand": "goBILDA",
+      "name": "Servo to shaft coupler (25T spline to 8mm REX)",
+      "sku": "4001-0025-4008",
+      "category": "motion",
+      "aliases": [
+        "servo coupler",
+        "coupler",
+        "servo to rex"
+      ],
+      "url": "https://www.gobilda.com/4001-series-clamping-servo-to-shaft-coupler-25-tooth-spline-to-8mm-rex-bore/"
+    },
+    {
+      "id": "gobilda-1309-0016-4008",
+      "brand": "goBILDA",
+      "name": "Sonic Hub, 8mm REX bore",
+      "sku": "1309-0016-4008",
+      "category": "motion",
+      "aliases": [
+        "sonic hub",
+        "rex hub",
+        "hub"
+      ],
+      "url": "https://www.gobilda.com/1309-series-sonic-hub-8mm-rex-bore/"
+    },
+    {
+      "id": "gobilda-2322-4008-0020",
+      "brand": "goBILDA",
+      "name": "Steel pinion gear, 20 tooth, 8mm REX bore (MOD 0.8)",
+      "sku": "2322-4008-0020",
+      "category": "motion",
+      "aliases": [
+        "pinion",
+        "20t gear",
+        "spur gear"
+      ],
+      "url": "https://www.gobilda.com/slip-fit-steel-pinion-gear-8mm-rex-bore-mod-0-8-20t/"
+    },
+    {
+      "id": "gobilda-2322-4008-0040",
+      "brand": "goBILDA",
+      "name": "Steel pinion gear, 40 tooth, 8mm REX bore (MOD 0.8)",
+      "sku": "2322-4008-0040",
+      "category": "motion",
+      "aliases": [
+        "40t gear",
+        "spur gear"
+      ],
+      "url": "https://www.gobilda.com/slip-fit-steel-pinion-gear-8mm-rex-bore-mod-0-8-40t/"
+    },
+    {
+      "id": "gobilda-3307-4008-0010",
+      "brand": "goBILDA",
+      "name": "Steel sprocket, 10 tooth, 8mm pitch, 8mm REX bore",
+      "sku": "3307-4008-0010",
+      "category": "motion",
+      "aliases": [
+        "sprocket",
+        "10t sprocket",
+        "8mm pitch"
+      ],
+      "url": "https://www.gobilda.com/3307-series-8mm-pitch-steel-set-screw-sprocket-8mm-rex-bore-10-tooth/"
+    },
+    {
+      "id": "gobilda-3204-0001-0002",
+      "brand": "goBILDA",
+      "name": "Worm gear set, 28:1 (8mm REX worm)",
+      "sku": "3204-0001-0002",
+      "category": "motion",
+      "aliases": [
+        "worm gear",
+        "worm drive"
+      ],
+      "url": "https://www.gobilda.com/worm-gear-set-28-1-ratio-8mm-rex-bore-worm/"
+    },
+    {
+      "id": "gobilda-3613-4008-0048",
+      "brand": "goBILDA",
+      "name": "GripForce Gecko wheel, 48mm (8mm REX, 30A)",
+      "sku": "3613-4008-0048",
+      "category": "wheels",
+      "aliases": [
+        "gecko wheel",
+        "intake wheel"
+      ],
+      "url": "https://www.gobilda.com/gripforce-gecko-wheel-8mm-rex-bore-48mm-diameter-30a-durometer/"
+    },
+    {
+      "id": "gobilda-3625-0202-0104",
+      "brand": "goBILDA",
+      "name": "GripForce mecanum wheel set, 104mm (40A rollers)",
+      "sku": "3625-0202-0104",
+      "category": "wheels",
+      "aliases": [
+        "mecanum",
+        "gripforce",
+        "104mm mecanum"
+      ],
+      "url": "https://www.gobilda.com/gripforce-mecanum-wheel-set-o104mm-40a-durometer-rollers/"
+    },
+    {
+      "id": "gobilda-3626-0014-0096",
+      "brand": "goBILDA",
+      "name": "Hogback traction wheel, 96mm",
+      "sku": "3626-0014-0096",
+      "category": "wheels",
+      "aliases": [
+        "traction wheel",
+        "hogback"
+      ],
+      "url": "https://www.gobilda.com/hogback-traction-wheel-96mm-diameter-50a-durometer/"
+    },
+    {
+      "id": "gobilda-3213-3606-0003",
+      "brand": "goBILDA",
+      "name": "Mecanum wheel set, 140mm",
+      "sku": "3213-3606-0003",
+      "category": "wheels",
+      "aliases": [
+        "mecanum",
+        "140mm mecanum"
+      ],
+      "url": "https://www.gobilda.com/140mm-mecanum-wheel-set-70a-durometer-bearing-supported-rollers/"
+    },
+    {
+      "id": "gobilda-3213-3606-0002",
+      "brand": "goBILDA",
+      "name": "Mecanum wheel set, 96mm",
+      "sku": "3213-3606-0002",
+      "category": "wheels",
+      "aliases": [
+        "mecanum",
+        "96mm mecanum"
+      ],
+      "url": "https://www.gobilda.com/96mm-mecanum-wheel-set-70a-durometer-bearing-supported-rollers/"
+    },
+    {
+      "id": "gobilda-3624-4008-0048",
+      "brand": "goBILDA",
+      "name": "Omni wheel, 48mm (8mm REX bore)",
+      "sku": "3624-4008-0048",
+      "category": "wheels",
+      "aliases": [
+        "omni",
+        "48mm omni"
+      ],
+      "url": "https://www.gobilda.com/48mm-omni-wheel-8mm-rex-bore-50a-durometer/"
+    },
+    {
+      "id": "gobilda-3624-0014-0096",
+      "brand": "goBILDA",
+      "name": "Omni wheel, 96mm (14mm bore)",
+      "sku": "3624-0014-0096",
+      "category": "wheels",
+      "aliases": [
+        "omni",
+        "96mm omni"
+      ],
+      "url": "https://www.gobilda.com/96mm-omni-wheel-14mm-bore-50a-durometer/"
+    },
+    {
+      "id": "gobilda-3210-0001-0004",
+      "brand": "goBILDA",
+      "name": "Ball bearing slide pack for Low-Side U-Channel",
+      "sku": "3210-0001-0004",
+      "category": "linear",
+      "aliases": [
+        "channel slide",
+        "low side slide"
+      ],
+      "url": "https://www.gobilda.com/ball-bearing-slide-pack-for-1121-series-low-side-u-channel/"
+    },
+    {
+      "id": "gobilda-3501-0804-0300",
+      "brand": "goBILDA",
+      "name": "Lead screw, 8mm lead, 300mm",
+      "sku": "3501-0804-0300",
+      "category": "linear",
+      "aliases": [
+        "lead screw",
+        "leadscrew"
+      ],
+      "url": "https://www.gobilda.com/3501-series-lead-screw-8mm-lead-4-start-300mm-length/"
+    },
+    {
+      "id": "gobilda-3210-0003-0002",
+      "brand": "goBILDA",
+      "name": "Viper-Slide kit, 2 stage, belt-driven, 336mm",
+      "sku": "3210-0003-0002",
+      "category": "linear",
+      "aliases": [
+        "viper kit",
+        "viper slide",
+        "2 stage slide"
+      ],
+      "url": "https://www.gobilda.com/2-stage-viper-slide-kit-belt-driven-336mm-slides/"
+    },
+    {
+      "id": "gobilda-3210-0004-0004",
+      "brand": "goBILDA",
+      "name": "Viper-Slide kit, 4 stage, belt-driven, 240mm",
+      "sku": "3210-0004-0004",
+      "category": "linear",
+      "aliases": [
+        "viper kit",
+        "viper slide",
+        "4 stage slide"
+      ],
+      "url": "https://www.gobilda.com/4-stage-viper-slide-kit-belt-driven-240mm-slides/"
+    },
+    {
+      "id": "gobilda-3210-0003-0004",
+      "brand": "goBILDA",
+      "name": "Viper-Slide kit, 4 stage, belt-driven, 336mm",
+      "sku": "3210-0003-0004",
+      "category": "linear",
+      "aliases": [
+        "viper kit",
+        "viper slide",
+        "4 stage slide"
+      ],
+      "url": "https://www.gobilda.com/4-stage-viper-slide-kit-belt-driven-336mm-slides/"
+    },
+    {
+      "id": "gobilda-2500-0014-0336",
+      "brand": "goBILDA",
+      "name": "Viper-Slide, steel, 336mm (244mm travel)",
+      "sku": "2500-0014-0336",
+      "category": "linear",
+      "aliases": [
+        "viper slide",
+        "viper",
+        "slide"
+      ],
+      "url": "https://www.gobilda.com/steel-viper-slide-14-ball-carriage-336mm-length-244mm-travel/"
+    },
+    {
+      "id": "gobilda-1520-4012-0080",
+      "brand": "goBILDA",
+      "name": "8mm REX plastic spacer, 8mm long (12 pack)",
+      "sku": "1520-4012-0080",
+      "category": "hardware",
+      "aliases": [
+        "rex spacer",
+        "shaft spacer"
+      ],
+      "url": "https://www.gobilda.com/8mm-rex-plastic-spacer-12mm-rex-od-8mm-length-12-pack/"
+    },
+    {
+      "id": "gobilda-2910-0920-4008",
+      "brand": "goBILDA",
+      "name": "Clamping collar, 8mm REX bore",
+      "sku": "2910-0920-4008",
+      "category": "hardware",
+      "aliases": [
+        "collar",
+        "shaft collar",
+        "rex collar"
+      ],
+      "url": "https://www.gobilda.com/2910-series-aluminum-clamping-collar-8mm-rex-id-x-20mm-od-9mm-length/"
+    },
+    {
+      "id": "gobilda-3201-0010-0001",
+      "brand": "goBILDA",
+      "name": "M4 Hardware Starter Pack (2625 pcs)",
+      "sku": "3201-0010-0001",
+      "category": "hardware",
+      "aliases": [
+        "hardware kit",
+        "screw kit",
+        "m4 kit"
+      ],
+      "url": "https://www.gobilda.com/m4-hardware-starter-pack-2625-pcs/"
+    },
+    {
+      "id": "gobilda-2811-0004-0007",
+      "brand": "goBILDA",
+      "name": "M4 hex nut (25 pack)",
+      "sku": "2811-0004-0007",
+      "category": "hardware",
+      "aliases": [
+        "m4 nut",
+        "nut"
+      ],
+      "url": "https://www.gobilda.com/2811-series-zinc-plated-steel-hex-nut-m4-x-0-7mm-7mm-hex-25-pack/"
+    },
+    {
+      "id": "gobilda-2800-0004-0012",
+      "brand": "goBILDA",
+      "name": "M4 x 12mm socket head screw (25 pack)",
+      "sku": "2800-0004-0012",
+      "category": "hardware",
+      "aliases": [
+        "m4 screw",
+        "m4x12",
+        "shcs"
+      ],
+      "url": "https://www.gobilda.com/m4-x-0-7mm-zinc-plated-socket-head-screw-12mm-length/"
+    },
+    {
+      "id": "gobilda-2800-0004-0016",
+      "brand": "goBILDA",
+      "name": "M4 x 16mm socket head screw (25 pack)",
+      "sku": "2800-0004-0016",
+      "category": "hardware",
+      "aliases": [
+        "m4 screw",
+        "m4x16",
+        "shcs"
+      ],
+      "url": "https://www.gobilda.com/m4-x-0-7mm-zinc-plated-socket-head-screw-16mm-length/"
+    },
+    {
+      "id": "gobilda-2802-0004-0008",
+      "brand": "goBILDA",
+      "name": "M4 x 8mm button head screw (25 pack)",
+      "sku": "2802-0004-0008",
+      "category": "hardware",
+      "aliases": [
+        "m4 screw",
+        "button head",
+        "bhcs"
+      ],
+      "url": "https://www.gobilda.com/2802-series-zinc-plated-steel-button-head-screw-m4-x-0-7mm-8mm-length-25-pack/"
+    },
+    {
+      "id": "gobilda-2800-0004-0008",
+      "brand": "goBILDA",
+      "name": "M4 x 8mm socket head screw (25 pack)",
+      "sku": "2800-0004-0008",
+      "category": "hardware",
+      "aliases": [
+        "m4 screw",
+        "m4x8",
+        "shcs"
+      ],
+      "url": "https://www.gobilda.com/m4-x-0-7mm-zinc-plated-socket-head-screw-8mm-length/"
+    },
+    {
+      "id": "gobilda-2806-0005-0004",
+      "brand": "goBILDA",
+      "name": "M5 set screw, 4mm (25 pack)",
+      "sku": "2806-0005-0004",
+      "category": "hardware",
+      "aliases": [
+        "set screw",
+        "grub screw",
+        "m5"
+      ],
+      "url": "https://www.gobilda.com/2806-series-black-oxide-steel-cup-point-set-screw-m5-x-0-8mm-4mm-length-25-pack/"
+    },
+    {
+      "id": "gobilda-3801-0709-0300",
+      "brand": "goBILDA",
+      "name": "Motor encoder cable, JST PH 4-pin to JST XH 4-pin, 300mm",
+      "sku": "3801-0709-0300",
+      "category": "cables",
+      "aliases": [
+        "encoder cable",
+        "motor encoder cable",
+        "jst ph to xh"
+      ],
+      "url": "https://www.gobilda.com/4-pos-jst-ph-mh-fc-to-4-pos-jst-xh-mh-fc-adaptor-300mm-length/"
+    },
+    {
+      "id": "gobilda-3801-0613-0100",
+      "brand": "goBILDA",
+      "name": "Motor power adaptor, JST VH 2-pin to 3.5mm bullet, 100mm",
+      "sku": "3801-0613-0100",
+      "category": "cables",
+      "aliases": [
+        "motor cable",
+        "jst vh",
+        "bullet adapter"
+      ],
+      "url": "https://www.gobilda.com/2-pos-jst-vh-mh-fc-to-3-5mm-bullet-mh-fc-adaptor-100mm-length/"
+    },
+    {
+      "id": "gobilda-3802-1718-0300",
+      "brand": "goBILDA",
+      "name": "Servo extension, 300mm",
+      "sku": "3802-1718-0300",
+      "category": "cables",
+      "aliases": [
+        "servo extension",
+        "servo cable",
+        "pwm extension"
+      ],
+      "url": "https://www.gobilda.com/servo-extension-3-pos-tjc8-mh-fc-to-fh-mc-300mm-length/"
+    },
+    {
+      "id": "gobilda-3802-0102-0300",
+      "brand": "goBILDA",
+      "name": "XT30 extension, 300mm",
+      "sku": "3802-0102-0300",
+      "category": "cables",
+      "aliases": [
+        "xt30 extension",
+        "power extension"
+      ],
+      "url": "https://www.gobilda.com/xt30-extension-fh-mc-to-mh-fc-300mm-length/"
+    },
+    {
+      "id": "gobilda-4206-0070-0001",
+      "brand": "goBILDA",
+      "name": "7mm combination nut driver",
+      "sku": "4206-0070-0001",
+      "category": "other",
+      "aliases": [
+        "nut driver",
+        "7mm",
+        "tool"
+      ],
+      "url": "https://www.gobilda.com/7mm-combination-nut-driver/"
+    },
+    {
+      "id": "gobilda-3122-0001-0001",
+      "brand": "goBILDA",
+      "name": "HuskyLens AI camera with goBILDA case",
+      "sku": "3122-0001-0001",
+      "category": "other",
+      "aliases": [
+        "huskylens",
+        "ai camera",
+        "vision sensor"
+      ],
+      "url": "https://www.gobilda.com/huskylens-ai-camera-vision-sensor-with-gobilda-case/"
+    },
+    {
+      "id": "gobilda-3122-0003-0001",
+      "brand": "goBILDA",
+      "name": "USB camera, rolling shutter, with case (30 FPS)",
+      "sku": "3122-0003-0001",
+      "category": "other",
+      "aliases": [
+        "webcam",
+        "usb camera",
+        "camera"
+      ],
+      "url": "https://www.gobilda.com/rolling-shutter-usb-camera-with-gobilda-case-30-fps/"
+    },
+    {
+      "id": "rev-41-1300",
+      "brand": "REV Robotics",
+      "name": "Core Hex Motor",
+      "sku": "REV-41-1300",
+      "category": "motors",
+      "aliases": [
+        "core hex",
+        "rev motor"
+      ],
+      "url": "https://www.revrobotics.com/rev-41-1300/"
+    },
+    {
+      "id": "rev-41-1291",
+      "brand": "REV Robotics",
+      "name": "HD Hex Motor (no gearbox)",
+      "sku": "REV-41-1291",
+      "category": "motors",
+      "aliases": [
+        "hd hex",
+        "bare motor"
+      ],
+      "url": "https://www.revrobotics.com/REV-41-1291/"
+    },
+    {
+      "id": "rev-41-1301",
+      "brand": "REV Robotics",
+      "name": "HD Hex Motor, 40:1 spur gearbox",
+      "sku": "REV-41-1301",
+      "category": "motors",
+      "aliases": [
+        "hd hex",
+        "40:1",
+        "spur gearbox"
+      ],
+      "url": "https://www.revrobotics.com/rev-41-1301/"
+    },
+    {
+      "id": "rev-41-1601",
+      "brand": "REV Robotics",
+      "name": "UltraPlanetary cartridge, 3:1",
+      "sku": "REV-41-1601",
+      "category": "motors",
+      "aliases": [
+        "ultraplanetary",
+        "cartridge",
+        "3:1"
+      ],
+      "url": "https://www.revrobotics.com/rev-41-1601/"
+    },
+    {
+      "id": "rev-41-1602",
+      "brand": "REV Robotics",
+      "name": "UltraPlanetary cartridge, 4:1",
+      "sku": "REV-41-1602",
+      "category": "motors",
+      "aliases": [
+        "ultraplanetary",
+        "cartridge",
+        "4:1"
+      ],
+      "url": "https://www.revrobotics.com/rev-41-1602/"
+    },
+    {
+      "id": "rev-41-1603",
+      "brand": "REV Robotics",
+      "name": "UltraPlanetary cartridge, 5:1",
+      "sku": "REV-41-1603",
+      "category": "motors",
+      "aliases": [
+        "ultraplanetary",
+        "cartridge",
+        "5:1"
+      ],
+      "url": "https://www.revrobotics.com/rev-41-1603/"
+    },
+    {
+      "id": "rev-41-1600",
+      "brand": "REV Robotics",
+      "name": "UltraPlanetary Gearbox Kit & HD Hex Motor",
+      "sku": "REV-41-1600",
+      "category": "motors",
+      "aliases": [
+        "ultraplanetary",
+        "hd hex",
+        "planetary kit"
+      ],
+      "url": "https://www.revrobotics.com/rev-41-1600/"
+    },
+    {
+      "id": "rev-41-1097",
+      "brand": "REV Robotics",
+      "name": "Smart Robot Servo (V1, discontinued)",
+      "sku": "REV-41-1097",
+      "category": "servos",
+      "aliases": [
+        "srs",
+        "smart robot servo",
+        "srs v1"
+      ],
+      "url": null
+    },
+    {
+      "id": "rev-41-3334",
+      "brand": "REV Robotics",
+      "name": "Smart Robot Servo V2, Balanced",
+      "sku": "REV-41-3334",
+      "category": "servos",
+      "aliases": [
+        "srs",
+        "smart robot servo",
+        "srs v2"
+      ],
+      "url": "https://www.revrobotics.com/Smart-servo-v2/"
+    },
+    {
+      "id": "rev-41-3336",
+      "brand": "REV Robotics",
+      "name": "Smart Robot Servo V2, UltraSpeed",
+      "sku": "REV-41-3336",
+      "category": "servos",
+      "aliases": [
+        "srs",
+        "smart robot servo",
+        "srs v2",
+        "fast servo"
+      ],
+      "url": "https://www.revrobotics.com/Smart-servo-v2/"
+    },
+    {
+      "id": "rev-31-1595",
+      "brand": "REV Robotics",
+      "name": "Control Hub",
+      "sku": "REV-31-1595",
+      "category": "control",
+      "aliases": [
+        "control hub",
+        "ch",
+        "rev hub"
+      ],
+      "url": "https://www.revrobotics.com/rev-31-1595/"
+    },
+    {
+      "id": "rev-31-1596",
+      "brand": "REV Robotics",
+      "name": "Driver Hub",
+      "sku": "REV-31-1596",
+      "category": "control",
+      "aliases": [
+        "driver hub",
+        "driver station",
+        "ds"
+      ],
+      "url": "https://www.revrobotics.com/rev-31-1596/"
+    },
+    {
+      "id": "rev-31-1153",
+      "brand": "REV Robotics",
+      "name": "Expansion Hub",
+      "sku": "REV-31-1153",
+      "category": "control",
+      "aliases": [
+        "expansion hub",
+        "eh",
+        "rev hub"
+      ],
+      "url": "https://www.revrobotics.com/rev-31-1153/"
+    },
+    {
+      "id": "rev-11-1855",
+      "brand": "REV Robotics",
+      "name": "Servo Hub",
+      "sku": "REV-11-1855",
+      "category": "control",
+      "aliases": [
+        "servo hub"
+      ],
+      "url": "https://www.revrobotics.com/rev-11-1855/"
+    },
+    {
+      "id": "rev-11-1144",
+      "brand": "REV Robotics",
+      "name": "Servo Power Module",
+      "sku": "REV-11-1144",
+      "category": "control",
+      "aliases": [
+        "spm",
+        "servo power module"
+      ],
+      "url": "https://www.revrobotics.com/rev-11-1144/"
+    },
+    {
+      "id": "rev-31-1108",
+      "brand": "REV Robotics",
+      "name": "SRS Programmer",
+      "sku": "REV-31-1108",
+      "category": "control",
+      "aliases": [
+        "srs programmer",
+        "servo programmer"
+      ],
+      "url": "https://www.revrobotics.com/rev-31-1108/"
+    },
+    {
+      "id": "rev-31-1387",
+      "brand": "REV Robotics",
+      "name": "Switch Cable and Bracket",
+      "sku": "REV-31-1387",
+      "category": "control",
+      "aliases": [
+        "power switch",
+        "switch",
+        "rev switch"
+      ],
+      "url": "https://www.revrobotics.com/rev-31-1387/"
+    },
+    {
+      "id": "rev-31-1293",
+      "brand": "REV Robotics",
+      "name": "XT30 Power Distribution Block",
+      "sku": "REV-31-1293",
+      "category": "control",
+      "aliases": [
+        "pdb",
+        "power distribution",
+        "xt30 block"
+      ],
+      "url": "https://www.revrobotics.com/rev-31-1293/"
+    },
+    {
+      "id": "rev-31-1505",
+      "brand": "REV Robotics",
+      "name": "2m Distance Sensor",
+      "sku": "REV-31-1505",
+      "category": "sensors",
+      "aliases": [
+        "distance sensor",
+        "tof",
+        "2m"
+      ],
+      "url": "https://www.revrobotics.com/rev-31-1505/"
+    },
+    {
+      "id": "rev-31-3332",
+      "brand": "REV Robotics",
+      "name": "9-Axis IMU",
+      "sku": "REV-31-3332",
+      "category": "sensors",
+      "aliases": [
+        "imu",
+        "gyro",
+        "9 axis"
+      ],
+      "url": "https://www.revrobotics.com/rev-31-3332/"
+    },
+    {
+      "id": "rev-31-1557",
+      "brand": "REV Robotics",
+      "name": "Color Sensor V3",
+      "sku": "REV-31-1557",
+      "category": "sensors",
+      "aliases": [
+        "color sensor",
+        "colour sensor",
+        "v3"
+      ],
+      "url": "https://www.revrobotics.com/rev-31-1557/"
+    },
+    {
+      "id": "rev-31-1462",
+      "brand": "REV Robotics",
+      "name": "Magnetic Limit Switch",
+      "sku": "REV-31-1462",
+      "category": "sensors",
+      "aliases": [
+        "limit switch",
+        "magnetic switch",
+        "hall effect"
+      ],
+      "url": "https://www.revrobotics.com/rev-31-1462/"
+    },
+    {
+      "id": "rev-11-1271",
+      "brand": "REV Robotics",
+      "name": "Through Bore Encoder V1",
+      "sku": "REV-11-1271",
+      "category": "sensors",
+      "aliases": [
+        "through bore",
+        "encoder"
+      ],
+      "url": "https://www.revrobotics.com/rev-11-1271/"
+    },
+    {
+      "id": "rev-11-3174",
+      "brand": "REV Robotics",
+      "name": "Through Bore Encoder V2",
+      "sku": "REV-11-3174",
+      "category": "sensors",
+      "aliases": [
+        "through bore",
+        "encoder",
+        "odometry encoder"
+      ],
+      "url": "https://www.revrobotics.com/rev-11-3174/"
+    },
+    {
+      "id": "rev-31-1425",
+      "brand": "REV Robotics",
+      "name": "Touch Sensor",
+      "sku": "REV-31-1425",
+      "category": "sensors",
+      "aliases": [
+        "touch sensor",
+        "button"
+      ],
+      "url": "https://www.revrobotics.com/rev-31-1425/"
+    },
+    {
+      "id": "rev-31-1302",
+      "brand": "REV Robotics",
+      "name": "12V Slim Battery",
+      "sku": "REV-31-1302",
+      "category": "batteries",
+      "aliases": [
+        "slim battery",
+        "12v battery",
+        "rev battery"
+      ],
+      "url": "https://www.revrobotics.com/rev-31-1302/"
+    },
+    {
+      "id": "rev-31-1299",
+      "brand": "REV Robotics",
+      "name": "12V Slim Battery charger",
+      "sku": "REV-31-1299",
+      "category": "batteries",
+      "aliases": [
+        "charger",
+        "battery charger"
+      ],
+      "url": "https://www.revrobotics.com/12V-Slim-Battery-Accessories/"
+    },
+    {
+      "id": "rev-31-1876",
+      "brand": "REV Robotics",
+      "name": "Driver Hub battery",
+      "sku": "REV-31-1876",
+      "category": "batteries",
+      "aliases": [
+        "driver hub battery"
+      ],
+      "url": "https://www.revrobotics.com/rev-31-1876/"
+    },
+    {
+      "id": "rev-41-1431-pk2",
+      "brand": "REV Robotics",
+      "name": "15mm extrusion, 225mm (2 pack)",
+      "sku": "REV-41-1431-PK2",
+      "category": "structure",
+      "aliases": [
+        "extrusion",
+        "15mm extrusion",
+        "225mm"
+      ],
+      "url": "https://www.revrobotics.com/15mm-extrusions/"
+    },
+    {
+      "id": "rev-41-1432-pk4",
+      "brand": "REV Robotics",
+      "name": "15mm extrusion, 420mm (4 pack)",
+      "sku": "REV-41-1432-PK4",
+      "category": "structure",
+      "aliases": [
+        "extrusion",
+        "15mm extrusion",
+        "420mm"
+      ],
+      "url": "https://www.revrobotics.com/15mm-extrusions/"
+    },
+    {
+      "id": "rev-41-1480-pk8",
+      "brand": "REV Robotics",
+      "name": "15mm metal 90 degree bracket V2 (8 pack)",
+      "sku": "REV-41-1480-PK8",
+      "category": "structure",
+      "aliases": [
+        "90 degree bracket",
+        "bracket",
+        "l bracket"
+      ],
+      "url": "https://www.revrobotics.com/15mm-Metal-Brackets/"
+    },
+    {
+      "id": "rev-41-1433-pk4",
+      "brand": "REV Robotics",
+      "name": "15mm metal bent Core Hex motor bracket V2 (4 pack)",
+      "sku": "REV-41-1433-PK4",
+      "category": "structure",
+      "aliases": [
+        "motor bracket",
+        "core hex bracket"
+      ],
+      "url": "https://www.revrobotics.com/15mm-Metal-Motion-Brackets/"
+    },
+    {
+      "id": "rev-41-1487-pk4",
+      "brand": "REV Robotics",
+      "name": "15mm metal bent HD Hex motor bracket V2 (4 pack)",
+      "sku": "REV-41-1487-PK4",
+      "category": "structure",
+      "aliases": [
+        "motor bracket",
+        "hd hex bracket"
+      ],
+      "url": "https://www.revrobotics.com/15mm-Metal-Motion-Brackets/"
+    },
+    {
+      "id": "rev-41-1479-pk8",
+      "brand": "REV Robotics",
+      "name": "15mm metal inside corner bracket V2 (8 pack)",
+      "sku": "REV-41-1479-PK8",
+      "category": "structure",
+      "aliases": [
+        "corner bracket",
+        "bracket"
+      ],
+      "url": "https://www.revrobotics.com/15mm-corner-brackets/"
+    },
+    {
+      "id": "rev-41-1305-pk8",
+      "brand": "REV Robotics",
+      "name": "15mm plastic 90 degree bracket (8 pack)",
+      "sku": "REV-41-1305-PK8",
+      "category": "structure",
+      "aliases": [
+        "plastic bracket",
+        "90 degree bracket"
+      ],
+      "url": "https://www.revrobotics.com/15mm-Plastic-Brackets/"
+    },
+    {
+      "id": "rev-41-1747",
+      "brand": "REV Robotics",
+      "name": "45mm U Channel, 248mm",
+      "sku": "REV-41-1747",
+      "category": "structure",
+      "aliases": [
+        "u channel",
+        "duo channel"
+      ],
+      "url": "https://www.revrobotics.com/45mm-u-channels/"
+    },
+    {
+      "id": "rev-41-1742",
+      "brand": "REV Robotics",
+      "name": "45mm U Channel, 408mm",
+      "sku": "REV-41-1742",
+      "category": "structure",
+      "aliases": [
+        "u channel",
+        "duo channel"
+      ],
+      "url": "https://www.revrobotics.com/45mm-u-channels/"
+    },
+    {
+      "id": "rev-41-1366-pk5",
+      "brand": "REV Robotics",
+      "name": "#25 connecting links (5 pack)",
+      "sku": "REV-41-1366-PK5",
+      "category": "motion",
+      "aliases": [
+        "master link",
+        "connecting link"
+      ],
+      "url": "https://www.revrobotics.com/rev-41-1366-pk5/"
+    },
+    {
+      "id": "rev-41-1365",
+      "brand": "REV Robotics",
+      "name": "#25 roller chain, 10 ft",
+      "sku": "REV-41-1365",
+      "category": "motion",
+      "aliases": [
+        "chain",
+        "#25 chain"
+      ],
+      "url": "https://www.revrobotics.com/rev-41-1365/"
+    },
+    {
+      "id": "rev-41-1349-pk4",
+      "brand": "REV Robotics",
+      "name": "5mm hex shaft, 135mm (4 pack)",
+      "sku": "REV-41-1349-PK4",
+      "category": "motion",
+      "aliases": [
+        "hex shaft",
+        "5mm hex"
+      ],
+      "url": "https://www.revrobotics.com/5mm-Hex-Shafts/"
+    },
+    {
+      "id": "rev-41-1362-pk4",
+      "brand": "REV Robotics",
+      "name": "5mm hex shaft, 400mm (4 pack)",
+      "sku": "REV-41-1362-PK4",
+      "category": "motion",
+      "aliases": [
+        "hex shaft",
+        "5mm hex"
+      ],
+      "url": "https://www.revrobotics.com/5mm-Hex-Shafts/"
+    },
+    {
+      "id": "rev-41-1347-pk4",
+      "brand": "REV Robotics",
+      "name": "5mm hex shaft, 75mm (4 pack)",
+      "sku": "REV-41-1347-PK4",
+      "category": "motion",
+      "aliases": [
+        "hex shaft",
+        "5mm hex"
+      ],
+      "url": "https://www.revrobotics.com/5mm-Hex-Shafts/"
+    },
+    {
+      "id": "rev-41-1147-pk2",
+      "brand": "REV Robotics",
+      "name": "High strength hex hub (2 pack)",
+      "sku": "REV-41-1147-PK2",
+      "category": "motion",
+      "aliases": [
+        "hex hub",
+        "hub"
+      ],
+      "url": "https://www.revrobotics.com/rev-41-1147-pk2/"
+    },
+    {
+      "id": "rev-41-1717",
+      "brand": "REV Robotics",
+      "name": "Metal #25 sprocket, 15 tooth",
+      "sku": "REV-41-1717",
+      "category": "motion",
+      "aliases": [
+        "sprocket",
+        "#25",
+        "15t sprocket"
+      ],
+      "url": "https://www.revrobotics.com/DUO-25-metal-sprockets/"
+    },
+    {
+      "id": "rev-41-1720",
+      "brand": "REV Robotics",
+      "name": "Metal #25 sprocket, 20 tooth",
+      "sku": "REV-41-1720",
+      "category": "motion",
+      "aliases": [
+        "sprocket",
+        "#25",
+        "20t sprocket"
+      ],
+      "url": "https://www.revrobotics.com/DUO-25-metal-sprockets/"
+    },
+    {
+      "id": "rev-41-1331-pk8",
+      "brand": "REV Robotics",
+      "name": "Plastic gear, 15 tooth, 5mm hex (8 pack)",
+      "sku": "REV-41-1331-PK8",
+      "category": "motion",
+      "aliases": [
+        "15t gear",
+        "plastic gear"
+      ],
+      "url": "https://www.revrobotics.com/5mm-Plastic-Hex-Bore-Gears/"
+    },
+    {
+      "id": "rev-41-1332-pk4",
+      "brand": "REV Robotics",
+      "name": "Plastic gear, 30 tooth, 5mm hex (4 pack)",
+      "sku": "REV-41-1332-PK4",
+      "category": "motion",
+      "aliases": [
+        "30t gear",
+        "plastic gear"
+      ],
+      "url": "https://www.revrobotics.com/5mm-Plastic-Hex-Bore-Gears/"
+    },
+    {
+      "id": "rev-41-1334-pk4",
+      "brand": "REV Robotics",
+      "name": "Plastic gear, 45 tooth, 5mm hex (4 pack)",
+      "sku": "REV-41-1334-PK4",
+      "category": "motion",
+      "aliases": [
+        "45t gear",
+        "plastic gear"
+      ],
+      "url": "https://www.revrobotics.com/5mm-Plastic-Hex-Bore-Gears/"
+    },
+    {
+      "id": "rev-41-1335-pk4",
+      "brand": "REV Robotics",
+      "name": "Plastic gear, 60 tooth, 5mm hex (4 pack)",
+      "sku": "REV-41-1335-PK4",
+      "category": "motion",
+      "aliases": [
+        "60t gear",
+        "plastic gear"
+      ],
+      "url": "https://www.revrobotics.com/5mm-Plastic-Hex-Bore-Gears/"
+    },
+    {
+      "id": "rev-41-1337-pk2",
+      "brand": "REV Robotics",
+      "name": "Plastic gear, 90 tooth, 5mm hex (2 pack)",
+      "sku": "REV-41-1337-PK2",
+      "category": "motion",
+      "aliases": [
+        "90t gear",
+        "plastic gear"
+      ],
+      "url": "https://www.revrobotics.com/5mm-Plastic-Hex-Bore-Gears/"
+    },
+    {
+      "id": "rev-41-1329-pk12",
+      "brand": "REV Robotics",
+      "name": "Through bore bearing, long (12 pack)",
+      "sku": "REV-41-1329-PK12",
+      "category": "motion",
+      "aliases": [
+        "bearing",
+        "through bore bearing"
+      ],
+      "url": "https://www.revrobotics.com/Through-Bore-Bearings/"
+    },
+    {
+      "id": "rev-41-1326-pk12",
+      "brand": "REV Robotics",
+      "name": "Through bore bearing, short (12 pack)",
+      "sku": "REV-41-1326-PK12",
+      "category": "motion",
+      "aliases": [
+        "bearing",
+        "through bore bearing"
+      ],
+      "url": "https://www.revrobotics.com/Through-Bore-Bearings/"
+    },
+    {
+      "id": "rev-45-1655",
+      "brand": "REV Robotics",
+      "name": "DUO Mecanum Wheel Set (75mm)",
+      "sku": "REV-45-1655",
+      "category": "wheels",
+      "aliases": [
+        "mecanum",
+        "rev mecanum",
+        "75mm mecanum"
+      ],
+      "url": "https://www.revrobotics.com/rev-45-1655/"
+    },
+    {
+      "id": "rev-41-1267",
+      "brand": "REV Robotics",
+      "name": "Grip wheel, 90mm",
+      "sku": "REV-41-1267",
+      "category": "wheels",
+      "aliases": [
+        "grip wheel",
+        "90mm wheel"
+      ],
+      "url": "https://www.revrobotics.com/rev-41-1267/"
+    },
+    {
+      "id": "rev-41-1160-pk2",
+      "brand": "REV Robotics",
+      "name": "Omni wheel, 60mm (2 pack)",
+      "sku": "REV-41-1160-PK2",
+      "category": "wheels",
+      "aliases": [
+        "omni",
+        "60mm omni"
+      ],
+      "url": "https://www.revrobotics.com/DUO-Omni-Wheels/"
+    },
+    {
+      "id": "rev-41-1190-pk2",
+      "brand": "REV Robotics",
+      "name": "Omni wheel, 90mm (2 pack)",
+      "sku": "REV-41-1190-PK2",
+      "category": "wheels",
+      "aliases": [
+        "omni",
+        "90mm omni"
+      ],
+      "url": "https://www.revrobotics.com/DUO-Omni-Wheels/"
+    },
+    {
+      "id": "rev-41-1354-pk2",
+      "brand": "REV Robotics",
+      "name": "Traction wheel, 90mm (2 pack)",
+      "sku": "REV-41-1354-PK2",
+      "category": "wheels",
+      "aliases": [
+        "traction wheel",
+        "90mm wheel"
+      ],
+      "url": "https://www.revrobotics.com/DUO-Traction-Wheels/"
+    },
+    {
+      "id": "rev-45-1900",
+      "brand": "REV Robotics",
+      "name": "15mm Extrusion Lift Kit",
+      "sku": "REV-45-1900",
+      "category": "linear",
+      "aliases": [
+        "lift kit",
+        "elevator",
+        "slides"
+      ],
+      "url": "https://www.revrobotics.com/rev-45-1900/"
+    },
+    {
+      "id": "rev-45-1507",
+      "brand": "REV Robotics",
+      "name": "15mm Linear Motion Kit V2",
+      "sku": "REV-45-1507",
+      "category": "linear",
+      "aliases": [
+        "linear motion kit",
+        "slide kit",
+        "lift"
+      ],
+      "url": "https://www.revrobotics.com/rev-45-1507/"
+    },
+    {
+      "id": "rev-41-1323-pk12",
+      "brand": "REV Robotics",
+      "name": "5mm hex shaft spacer, 15mm (12 pack)",
+      "sku": "REV-41-1323-PK12",
+      "category": "hardware",
+      "aliases": [
+        "hex spacer",
+        "shaft spacer"
+      ],
+      "url": "https://www.revrobotics.com/5mm-Hex-Spacers/"
+    },
+    {
+      "id": "rev-45-1905",
+      "brand": "REV Robotics",
+      "name": "M3 Hardware Bundle",
+      "sku": "REV-45-1905",
+      "category": "hardware",
+      "aliases": [
+        "hardware kit",
+        "m3 kit"
+      ],
+      "url": "https://www.revrobotics.com/rev-45-1905/"
+    },
+    {
+      "id": "rev-41-1361-pk100",
+      "brand": "REV Robotics",
+      "name": "M3 nyloc nut (100 pack)",
+      "sku": "REV-41-1361-PK100",
+      "category": "hardware",
+      "aliases": [
+        "m3 nyloc",
+        "lock nut"
+      ],
+      "url": "https://www.revrobotics.com/M3-Nuts/"
+    },
+    {
+      "id": "rev-41-1490-pk4",
+      "brand": "REV Robotics",
+      "name": "M3 standoff, 25mm (4 pack)",
+      "sku": "REV-41-1490-PK4",
+      "category": "hardware",
+      "aliases": [
+        "standoff",
+        "m3 standoff"
+      ],
+      "url": "https://www.revrobotics.com/M3-Standoffs/"
+    },
+    {
+      "id": "rev-41-1360-pk100",
+      "brand": "REV Robotics",
+      "name": "M3 x 16mm hex cap screws (100 pack)",
+      "sku": "REV-41-1360-PK100",
+      "category": "hardware",
+      "aliases": [
+        "m3 screw",
+        "m3x16"
+      ],
+      "url": "https://www.revrobotics.com/M3-Hex-Cap-Screws/"
+    },
+    {
+      "id": "rev-41-1359-pk100",
+      "brand": "REV Robotics",
+      "name": "M3 x 8mm hex cap screws (100 pack)",
+      "sku": "REV-41-1359-PK100",
+      "category": "hardware",
+      "aliases": [
+        "m3 screw",
+        "m3x8"
+      ],
+      "url": "https://www.revrobotics.com/M3-Hex-Cap-Screws/"
+    },
+    {
+      "id": "rev-41-1907-pk25",
+      "brand": "REV Robotics",
+      "name": "M3 x 8mm T-slot screw (25 pack)",
+      "sku": "REV-41-1907-PK25",
+      "category": "hardware",
+      "aliases": [
+        "t-slot screw",
+        "m3 tslot"
+      ],
+      "url": "https://www.revrobotics.com/rev-41-1907-pk25/"
+    },
+    {
+      "id": "rev-31-1815",
+      "brand": "REV Robotics",
+      "name": "Encoder adapter cable, JST PH 6-pin to 4-pin, 50cm",
+      "sku": "REV-31-1815",
+      "category": "cables",
+      "aliases": [
+        "encoder cable",
+        "through bore cable"
+      ],
+      "url": "https://www.revrobotics.com/rev-31-1815/"
+    },
+    {
+      "id": "rev-31-1417-pk2",
+      "brand": "REV Robotics",
+      "name": "JST PH 3-pin communication cable, 30cm (2 pack)",
+      "sku": "REV-31-1417-PK2",
+      "category": "cables",
+      "aliases": [
+        "rs485 cable",
+        "hub cable",
+        "jst ph 3 pin"
+      ],
+      "url": "https://www.revrobotics.com/JST-PH-3-Pin-Communication-Cables/"
+    },
+    {
+      "id": "rev-31-1407-pk4",
+      "brand": "REV Robotics",
+      "name": "JST PH 4-pin sensor cable, 30cm (4 pack)",
+      "sku": "REV-31-1407-PK4",
+      "category": "cables",
+      "aliases": [
+        "sensor cable",
+        "jst ph",
+        "i2c cable"
+      ],
+      "url": "https://www.revrobotics.com/JST-PH-4-pin-Sensor-Cables/"
+    },
+    {
+      "id": "rev-31-1412-pk4",
+      "brand": "REV Robotics",
+      "name": "JST VH 2-pin motor cable, 30cm (4 pack)",
+      "sku": "REV-31-1412-PK4",
+      "category": "cables",
+      "aliases": [
+        "motor cable",
+        "jst vh"
+      ],
+      "url": "https://www.revrobotics.com/JST-VH-2-pin-Motor-Cables/"
+    },
+    {
+      "id": "rev-11-1130-pk4",
+      "brand": "REV Robotics",
+      "name": "PWM servo cable, 36in (4 pack)",
+      "sku": "REV-11-1130-PK4",
+      "category": "cables",
+      "aliases": [
+        "pwm cable",
+        "servo extension"
+      ],
+      "url": "https://www.revrobotics.com/PWM-Cables/"
+    },
+    {
+      "id": "rev-31-1392-pk2",
+      "brand": "REV Robotics",
+      "name": "XT30 extension cable, 30cm (2 pack)",
+      "sku": "REV-31-1392-PK2",
+      "category": "cables",
+      "aliases": [
+        "xt30 extension",
+        "power cable"
+      ],
+      "url": "https://www.revrobotics.com/XT30-Extension-Cables/"
+    },
+    {
+      "id": "rev-45-1882",
+      "brand": "REV Robotics",
+      "name": "Allen wrench pack",
+      "sku": "REV-45-1882",
+      "category": "other",
+      "aliases": [
+        "allen key",
+        "hex key",
+        "tools"
+      ],
+      "url": "https://www.revrobotics.com/rev-45-1882/"
+    },
+    {
+      "id": "rev-31-2983",
+      "brand": "REV Robotics",
+      "name": "REV USB PS4-compatible gamepad",
+      "sku": "REV-31-2983",
+      "category": "other",
+      "aliases": [
+        "gamepad",
+        "controller",
+        "ps4"
+      ],
+      "url": "https://www.revrobotics.com/rev-31-2983/"
+    },
+    {
+      "id": "studica-75001",
+      "brand": "Studica",
+      "name": "Maverick 12V DC gear motor with encoder, 61:1",
+      "sku": "75001",
+      "category": "motors",
+      "aliases": [
+        "maverick",
+        "studica motor"
+      ],
+      "url": "https://www.studica.com/maverick-12v-dc-gear-motor-with-encoder"
+    },
+    {
+      "id": "studica-maverick-planetary-gear-motor-with-encoder-13-7-1",
+      "brand": "Studica",
+      "name": "Maverick planetary gear motor with encoder, 13.7:1",
+      "sku": null,
+      "category": "motors",
+      "aliases": [
+        "maverick",
+        "planetary"
+      ],
+      "url": "https://www.studica.com/maverick-planetary-dc-gearbox-motor-wencoder-1371-ratio-gearbox"
+    },
+    {
+      "id": "studica-maverick-planetary-gear-motor-with-encoder-1-1",
+      "brand": "Studica",
+      "name": "Maverick planetary gear motor with encoder, 1:1",
+      "sku": null,
+      "category": "motors",
+      "aliases": [
+        "maverick",
+        "planetary"
+      ],
+      "url": "https://www.studica.com/maverick-planetary-dc-gear-motor-wencoder-11-ratio-gearbox"
+    },
+    {
+      "id": "studica-maverick-planetary-gear-motor-with-encoder-3-7-1",
+      "brand": "Studica",
+      "name": "Maverick planetary gear motor with encoder, 3.7:1",
+      "sku": null,
+      "category": "motors",
+      "aliases": [
+        "maverick",
+        "planetary"
+      ],
+      "url": "https://www.studica.com/maverick-planetary-dc-gear-motor-wencoder-371-ratio-gearbox"
+    },
+    {
+      "id": "studica-maverick-planetary-gear-motor-19-2-1",
+      "brand": "Studica",
+      "name": "Maverick planetary gear motor, 19.2:1",
+      "sku": null,
+      "category": "motors",
+      "aliases": [
+        "maverick",
+        "planetary"
+      ],
+      "url": "https://www.studica.com/maverick-planetary-dc-gear-motor-1921-ratio-gearbox"
+    },
+    {
+      "id": "studica-75002",
+      "brand": "Studica",
+      "name": "Multi-Mode Smart Servo",
+      "sku": "75002",
+      "category": "servos",
+      "aliases": [
+        "mmss",
+        "studica servo",
+        "smart servo"
+      ],
+      "url": "https://www.studica.com/Multi-Mode-Smart-Servo"
+    },
+    {
+      "id": "studica-75007",
+      "brand": "Studica",
+      "name": "Multi-Mode Smart Servo 200 (200 RPM)",
+      "sku": "75007",
+      "category": "servos",
+      "aliases": [
+        "mmss 200",
+        "studica servo",
+        "fast servo"
+      ],
+      "url": "https://www.studica.com/multi-mode-smart-servo-200"
+    },
+    {
+      "id": "studica-smart-servo-programmer",
+      "brand": "Studica",
+      "name": "Smart Servo Programmer",
+      "sku": null,
+      "category": "control",
+      "aliases": [
+        "servo programmer",
+        "studica programmer"
+      ],
+      "url": "https://www.studica.com/smart-robot-servo-programmer-2"
+    },
+    {
+      "id": "studica-low-profile-u-channel-192mm",
+      "brand": "Studica",
+      "name": "Low-profile U-Channel, 192mm",
+      "sku": null,
+      "category": "structure",
+      "aliases": [
+        "low profile channel",
+        "studica channel"
+      ],
+      "url": "https://www.studica.co/192mm-low-profile-u-channel"
+    },
+    {
+      "id": "studica-u-channel-48-x-48mm-240mm",
+      "brand": "Studica",
+      "name": "U-Channel 48 x 48mm, 240mm",
+      "sku": null,
+      "category": "structure",
+      "aliases": [
+        "u channel",
+        "studica channel"
+      ],
+      "url": "https://www.studica.com/240mm-u-channel-3"
+    },
+    {
+      "id": "studica-u-channel-48-x-48mm-336mm",
+      "brand": "Studica",
+      "name": "U-Channel 48 x 48mm, 336mm",
+      "sku": null,
+      "category": "structure",
+      "aliases": [
+        "u channel",
+        "studica channel"
+      ],
+      "url": "https://www.studica.com/336mm-u-channel-3"
+    },
+    {
+      "id": "studica-u-channel-48-x-48mm-432mm",
+      "brand": "Studica",
+      "name": "U-Channel 48 x 48mm, 432mm",
+      "sku": null,
+      "category": "structure",
+      "aliases": [
+        "u channel",
+        "studica channel"
+      ],
+      "url": "https://www.studica.co/432mm-u-channel"
+    },
+    {
+      "id": "studica-u-channel-48-x-48mm-96mm",
+      "brand": "Studica",
+      "name": "U-Channel 48 x 48mm, 96mm",
+      "sku": null,
+      "category": "structure",
+      "aliases": [
+        "u channel",
+        "studica channel"
+      ],
+      "url": "https://www.studica.com/96mm-u-channel-2"
+    },
+    {
+      "id": "studica-100mm-omni-wheel",
+      "brand": "Studica",
+      "name": "100mm omni wheel",
+      "sku": null,
+      "category": "wheels",
+      "aliases": [
+        "omni",
+        "studica omni"
+      ],
+      "url": "https://www.studica.com/studica-robotics-brand/100mm-omni-wheel"
+    },
+    {
+      "id": "studica-100mm-slim-mecanum-wheel-set-bearing-rollers-2-left-2-right",
+      "brand": "Studica",
+      "name": "100mm slim mecanum wheel set (bearing rollers, 2 left + 2 right)",
+      "sku": null,
+      "category": "wheels",
+      "aliases": [
+        "mecanum",
+        "studica mecanum",
+        "100mm mecanum"
+      ],
+      "url": "https://www.studica.com/100mm-slim-mecanum-wheel-set-bearing-rollers-2-left-2-right"
+    },
+    {
+      "id": "andymark-am-2964a",
+      "brand": "AndyMark",
+      "name": "NeveRest Classic 40 gearmotor (Anderson Powerpole)",
+      "sku": "am-2964a",
+      "category": "motors",
+      "aliases": [
+        "neverest",
+        "neverest 40",
+        "classic 40"
+      ],
+      "url": "https://andymark.com/products/neverest-classic-40-gearmotor"
+    },
+    {
+      "id": "andymark-am-2964b",
+      "brand": "AndyMark",
+      "name": "NeveRest Classic 40 gearmotor (JST-VH connector)",
+      "sku": "am-2964b",
+      "category": "motors",
+      "aliases": [
+        "neverest",
+        "neverest 40",
+        "classic 40"
+      ],
+      "url": "https://andymark.com/products/neverest-classic-40-gearmotor"
+    },
+    {
+      "id": "andymark-am-3103",
+      "brand": "AndyMark",
+      "name": "NeveRest Classic 60 gearmotor",
+      "sku": "am-3103",
+      "category": "motors",
+      "aliases": [
+        "neverest",
+        "neverest 60",
+        "classic 60"
+      ],
+      "url": "https://andymark.com/products/neverest-classic-60-gearmotor"
+    },
+    {
+      "id": "andymark-am-3637b",
+      "brand": "AndyMark",
+      "name": "NeveRest Orbital 20 gearmotor, 19.2:1 (~344 RPM, JST-VH)",
+      "sku": "am-3637b",
+      "category": "motors",
+      "aliases": [
+        "neverest",
+        "orbital 20",
+        "19.2:1"
+      ],
+      "url": "https://andymark.com/products/neverest-orbital-gearmotors"
+    },
+    {
+      "id": "andymark-am-3461b",
+      "brand": "AndyMark",
+      "name": "NeveRest Orbital 3.7 gearmotor, 3.7:1 (~1784 RPM, JST-VH)",
+      "sku": "am-3461b",
+      "category": "motors",
+      "aliases": [
+        "neverest",
+        "orbital 3.7"
+      ],
+      "url": "https://andymark.com/products/neverest-orbital-gearmotors"
+    },
+    {
+      "id": "andymark-am-4044-blue",
+      "brand": "AndyMark",
+      "name": "2 in. Dualie omni wheel (5mm hex, 50A)",
+      "sku": "am-4044_blue",
+      "category": "wheels",
+      "aliases": [
+        "omni",
+        "dualie",
+        "2 inch omni"
+      ],
+      "url": "https://andymark.com/products/2-in-dualie-omni-wheel"
+    },
+    {
+      "id": "andymark-am-5502",
+      "brand": "AndyMark",
+      "name": "3 in. BB mecanum wheel full set (3/8 in. hex)",
+      "sku": "am-5502",
+      "category": "wheels",
+      "aliases": [
+        "mecanum",
+        "3 inch mecanum"
+      ],
+      "url": "https://andymark.com/products/3-in-bb-mecanum-wheels"
+    },
+    {
+      "id": "andymark-am-3067",
+      "brand": "AndyMark",
+      "name": "4 in. HD mecanum wheel full set (bearing bore)",
+      "sku": "am-3067",
+      "category": "wheels",
+      "aliases": [
+        "mecanum",
+        "hd mecanum",
+        "4 inch mecanum"
+      ],
+      "url": "https://andymark.com/products/4-in-hd-mecanum-wheels"
+    },
+    {
+      "id": "andymark-am-2626",
+      "brand": "AndyMark",
+      "name": "4 in. SD mecanum wheel set of four",
+      "sku": "am-2626",
+      "category": "wheels",
+      "aliases": [
+        "mecanum",
+        "sd mecanum",
+        "4 inch mecanum"
+      ],
+      "url": "https://andymark.com/products/4-in-sd-mecanum-wheel"
+    },
+    {
+      "id": "andymark-am-3047",
+      "brand": "AndyMark",
+      "name": "DuraOmni wheel, 4 in.",
+      "sku": "am-3047",
+      "category": "wheels",
+      "aliases": [
+        "omni",
+        "duraomni"
+      ],
+      "url": "https://andymark.com/products/duraomni-wheel"
+    },
+    {
+      "id": "andymark-am-5198-1200",
+      "brand": "AndyMark",
+      "name": "JST-VH 2-pin NeveRest motor power cable, 12 in.",
+      "sku": "am-5198-1200",
+      "category": "cables",
+      "aliases": [
+        "motor cable",
+        "jst vh"
+      ],
+      "url": "https://andymark.com/products/jst-vh-2-pin-neverest-motor-power-cables"
+    },
+    {
+      "id": "andymark-am-3926a",
+      "brand": "AndyMark",
+      "name": "NeveRest motor encoder cable for REV hub, 20 in.",
+      "sku": "am-3926a",
+      "category": "cables",
+      "aliases": [
+        "encoder cable",
+        "neverest cable"
+      ],
+      "url": "https://andymark.com/products/neverest-motor-rev-expansion-hub-encoder-cable"
+    },
+    {
+      "id": "axon-3221-0016-0003",
+      "brand": "Axon",
+      "name": "Axon MAX 1:3.2 overdrive kit",
+      "sku": "3221-0016-0003",
+      "category": "servos",
+      "aliases": [
+        "axon overdrive",
+        "axon max"
+      ],
+      "url": "https://www.gobilda.com/axon-max-1-3-2-overdrive-kit/"
+    },
+    {
+      "id": "axon-2004-0025-0002",
+      "brand": "Axon",
+      "name": "Axon MAX servo MK2",
+      "sku": "2004-0025-0002",
+      "category": "servos",
+      "aliases": [
+        "axon max",
+        "axon",
+        "max mk2"
+      ],
+      "url": "https://www.gobilda.com/axon-max-servo-mk2/"
+    },
+    {
+      "id": "axon-2004-0025-0001",
+      "brand": "Axon",
+      "name": "Axon MINI servo MK2",
+      "sku": "2004-0025-0001",
+      "category": "servos",
+      "aliases": [
+        "axon mini",
+        "axon",
+        "mini mk2"
+      ],
+      "url": "https://www.gobilda.com/axon-mini-servo-mk2/"
+    },
+    {
+      "id": "axon-3102-0002-0001",
+      "brand": "Axon",
+      "name": "Axon servo programmer MK2",
+      "sku": "3102-0002-0001",
+      "category": "control",
+      "aliases": [
+        "axon programmer",
+        "servo programmer"
+      ],
+      "url": "https://www.gobilda.com/axon-servo-programmer-mk2/"
+    },
+    {
+      "id": "tetrix-44260",
+      "brand": "TETRIX",
+      "name": "MAX TorqueNADO motor with encoder (60:1, 100 RPM)",
+      "sku": "44260",
+      "category": "motors",
+      "aliases": [
+        "torquenado",
+        "tetrix motor"
+      ],
+      "url": "https://www.pitsco.com/products/tetrix-max-torquenado-motor-with-encoder"
+    },
+    {
+      "id": "tetrix-45424",
+      "brand": "TETRIX",
+      "name": "TorqueNADO replacement gearbox, 20:1",
+      "sku": "45424",
+      "category": "motors",
+      "aliases": [
+        "torquenado gearbox",
+        "20:1"
+      ],
+      "url": "https://www.pitsco.com/products/tetrix-max-torquenado-motor-gearboxes"
+    },
+    {
+      "id": "tetrix-45423",
+      "brand": "TETRIX",
+      "name": "TorqueNADO replacement gearbox, 40:1",
+      "sku": "45423",
+      "category": "motors",
+      "aliases": [
+        "torquenado gearbox",
+        "40:1"
+      ],
+      "url": "https://www.pitsco.com/products/tetrix-max-torquenado-motor-gearboxes"
+    },
+    {
+      "id": "tetrix-39197",
+      "brand": "TETRIX",
+      "name": "MAX standard-scale servo motor",
+      "sku": "39197",
+      "category": "servos",
+      "aliases": [
+        "tetrix servo"
+      ],
+      "url": "https://www.pitsco.com/products/tetrix-max-standard-scale-servo-motor"
+    },
+    {
+      "id": "tetrix-39057",
+      "brand": "TETRIX",
+      "name": "MAX 12V rechargeable NiMH battery pack",
+      "sku": "39057",
+      "category": "batteries",
+      "aliases": [
+        "tetrix battery",
+        "12v battery"
+      ],
+      "url": "https://www.pitsco.com/products/tetrix-12-volt-rechargeable-nimh-battery-pack"
+    },
+    {
+      "id": "tetrix-39067",
+      "brand": "TETRIX",
+      "name": "MAX channel, 160mm (2 pack)",
+      "sku": "39067",
+      "category": "structure",
+      "aliases": [
+        "tetrix channel",
+        "channel"
+      ],
+      "url": "https://www.pitsco.com/products/tetrix-channels"
+    },
+    {
+      "id": "tetrix-39068",
+      "brand": "TETRIX",
+      "name": "MAX channel, 288mm (2 pack)",
+      "sku": "39068",
+      "category": "structure",
+      "aliases": [
+        "tetrix channel",
+        "channel"
+      ],
+      "url": "https://www.pitsco.com/products/tetrix-channels"
+    },
+    {
+      "id": "tetrix-39069",
+      "brand": "TETRIX",
+      "name": "MAX channel, 416mm",
+      "sku": "39069",
+      "category": "structure",
+      "aliases": [
+        "tetrix channel",
+        "channel"
+      ],
+      "url": "https://www.pitsco.com/products/tetrix-channels"
+    },
+    {
+      "id": "tetrix-39066",
+      "brand": "TETRIX",
+      "name": "MAX channel, 96mm (2 pack)",
+      "sku": "39066",
+      "category": "structure",
+      "aliases": [
+        "tetrix channel",
+        "channel"
+      ],
+      "url": "https://www.pitsco.com/products/tetrix-channels"
+    },
+    {
+      "id": "tetrix-39376",
+      "brand": "TETRIX",
+      "name": "MAX DC motor mount (37mm)",
+      "sku": "39376",
+      "category": "structure",
+      "aliases": [
+        "motor mount",
+        "tetrix mount"
+      ],
+      "url": "https://www.pitsco.com/products/tetrix-dc-motor-mount"
+    },
+    {
+      "id": "tetrix-39073",
+      "brand": "TETRIX",
+      "name": "MAX flat building plate",
+      "sku": "39073",
+      "category": "structure",
+      "aliases": [
+        "tetrix plate",
+        "flat plate"
+      ],
+      "url": "https://www.pitsco.com/products/tetrix-flat-building-plates"
+    },
+    {
+      "id": "tetrix-45320",
+      "brand": "TETRIX",
+      "name": "MAX mecanum wheel set",
+      "sku": "45320",
+      "category": "wheels",
+      "aliases": [
+        "mecanum",
+        "tetrix mecanum"
+      ],
+      "url": "https://www.pitsco.com/products/tetrix-max-mecanum-wheels"
+    },
+    {
+      "id": "tetrix-36466",
+      "brand": "TETRIX",
+      "name": "MAX omni wheel pack",
+      "sku": "36466",
+      "category": "wheels",
+      "aliases": [
+        "omni",
+        "tetrix omni"
+      ],
+      "url": "https://www.pitsco.com/products/tetrix-omni-wheel-packs"
+    },
+    {
+      "id": "tetrix-41352",
+      "brand": "TETRIX",
+      "name": "MAX Powerpole motor cable",
+      "sku": "41352",
+      "category": "cables",
+      "aliases": [
+        "powerpole cable",
+        "motor cable"
+      ],
+      "url": "https://www.pitsco.com/products/tetrix-max-powerpole-motor-cable"
+    },
+    {
+      "id": "other-ll-3a",
+      "brand": "Other",
+      "name": "Limelight 3A camera",
+      "sku": "LL_3A",
+      "category": "other",
+      "aliases": [
+        "limelight",
+        "vision camera",
+        "ll3a"
+      ],
+      "url": "https://limelightvision.io/products/limelight-3a"
+    },
+    {
+      "id": "other-960-000694",
+      "brand": "Other",
+      "name": "Logitech C270 HD webcam",
+      "sku": "960-000694",
+      "category": "other",
+      "aliases": [
+        "c270",
+        "logitech",
+        "webcam"
+      ],
+      "url": "https://www.logitech.com/en-us/shop/p/c270-hd-webcam.960-000694"
+    },
+    {
+      "id": "other-940-000110",
+      "brand": "Other",
+      "name": "Logitech F310 gamepad",
+      "sku": "940-000110",
+      "category": "other",
+      "aliases": [
+        "f310",
+        "logitech",
+        "gamepad",
+        "controller"
+      ],
+      "url": "https://www.logitechg.com/en-us/shop/p/f310-gamepad.940-000110"
+    },
+    {
+      "id": "other-sony-dualshock-4-wireless-controller-ps4",
+      "brand": "Other",
+      "name": "Sony DualShock 4 wireless controller (PS4)",
+      "sku": null,
+      "category": "other",
+      "aliases": [
+        "ps4",
+        "dualshock",
+        "gamepad",
+        "controller"
+      ],
+      "url": null
+    }
+  ]
+}

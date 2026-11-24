@@ -7,7 +7,7 @@ import {
   searchText, activeFilterCount,
 } from './filter.js';
 import {
-  TYPE_LABELS, CONDITION_LABELS, formatAge, haveLabel, wantLabel, teamLabel, partLabel, plural,
+  TYPE_LABELS, CONDITION_LABELS, formatAge, haveLabel, wantLabel, budgetLabel, teamLabel, partLabel, plural,
 } from './format.js';
 
 /** @type {import('./data.js').Catalog} */
@@ -201,15 +201,21 @@ function typeChip(type) {
   return h('span', { class: `chip type-${type}` }, TYPE_LABELS[type]);
 }
 
-/** The have/want block: what the team offers, and what they ask for it. */
-function exchange(listing) {
+/**
+ * The terms block in the detail dialog. The dialog heading already names the main
+ * part, so this lists the rest: what a team wants for its part, what a wanted listing
+ * offers in trade, and a wanted listing's budget.
+ */
+function terms(listing) {
+  const isWanted = listing.type === 'wanted';
   const have = haveLabel(listing);
   const want = wantLabel(listing);
-  const rows = [];
-  if (have) rows.push(h('div', { class: 'ex-row' }, h('dt', null, 'Has'), h('dd', null, have)));
-  if (have && want) rows.push(h('div', { class: 'ex-swap', 'aria-hidden': 'true' }, svg(UI_ICONS.swap, { size: 16 })));
-  if (want) rows.push(h('div', { class: 'ex-row' }, h('dt', null, listing.type === 'wanted' ? 'Looking for' : 'Wants'), h('dd', null, want)));
-  return h('dl', { class: 'exchange' }, rows);
+  const budget = budgetLabel(listing);
+  const row = (label, value) => h('div', { class: 'ex-row' }, h('dt', null, label), h('dd', null, value));
+  const rows = isWanted
+    ? [want && have ? row('Can trade', have) : null, budget ? row('Budget', budget) : null]
+    : [have && want ? row('Wants', want) : null];
+  return rows.some(Boolean) ? h('dl', { class: 'exchange' }, rows) : null;
 }
 
 function contact(listing) {
@@ -221,19 +227,26 @@ function contact(listing) {
     svg(UI_ICONS.telegram, { size: 18 }), `Message @${listing.username}`);
 }
 
-/** On a card the title is what the team has (or wants, if it has nothing), and the ask goes under it. */
+/**
+ * On a card the title is the part on offer, or for a wanted listing the part sought.
+ * Under it, in saffron, is what the team asks in return (or a wanted listing's budget).
+ */
 function card(listing) {
   const have = haveLabel(listing);
   const want = wantLabel(listing);
-  const title = have ?? want;
-  const ask = have && want
-    ? h('div', { class: 'card-ask' }, svg(UI_ICONS.swap, { size: 16 }), h('span', null, h('span', { class: 'ask-label' }, 'Wants '), want))
+  const isWanted = listing.type === 'wanted';
+  const title = isWanted ? want ?? have : have ?? want;
+  const kicker = isWanted ? 'Looking for' : have ? 'Has' : 'Wants';
+  const [askLabel, askValue] = isWanted ? ['Budget', budgetLabel(listing)] : ['Wants', have ? want : null];
+  const ask = askValue
+    ? h('div', { class: 'card-ask' }, svg(UI_ICONS.swap, { size: 16 }), h('span', null, h('span', { class: 'ask-label' }, `${askLabel} `), askValue))
     : null;
   return h('li', { class: 'card' },
-    h('div', { class: 'card-media' }, media(listing), typeChip(listing.type)),
+    h('div', { class: 'card-media' }, media(listing)),
     h('div', { class: 'card-body' },
+      typeChip(listing.type),
       h('div', null,
-        h('p', { class: 'card-kicker' }, have ? 'Has' : 'Looking for'),
+        h('p', { class: 'card-kicker' }, kicker),
         h('h3', { class: 'card-title' },
           h('button', { type: 'button', class: 'card-open', dataset: { open: listing.id } }, title))),
       ask,
@@ -255,7 +268,9 @@ function openDetail(id, { fromUrl = false } = {}) {
     return;
   }
   const dialog = /** @type {HTMLDialogElement} */ ($('detail'));
-  const title = haveLabel(listing) ?? wantLabel(listing);
+  const title = listing.type === 'wanted'
+    ? wantLabel(listing) ?? haveLabel(listing)
+    : haveLabel(listing) ?? wantLabel(listing);
   const part = listing.have?.part ?? listing.want?.part;
   const photos = listing.photos.length > 1
     ? h('div', { class: 'detail-thumbs' }, listing.photos.slice(1).map((src, i) =>
@@ -267,20 +282,23 @@ function openDetail(id, { fromUrl = false } = {}) {
     h('div', { class: 'detail-media' }, media(listing, { large: true }), typeChip(listing.type)),
     photos,
     h('div', { class: 'detail-body' },
-      h('h2', { id: 'detail-title' }, title),
-      exchange(listing),
+      h('div', null,
+        h('p', { class: 'card-kicker' }, listing.type === 'wanted' ? 'Looking for' : 'Has'),
+        h('h2', { id: 'detail-title' }, title)),
+      terms(listing),
       listing.notes ? h('p', { class: 'detail-notes' }, listing.notes) : null,
       h('dl', { class: 'facts' },
         fact('Team', teamLabel(listing.team)),
         fact('City', listing.city),
         listing.condition ? fact('Condition', CONDITION_LABELS[listing.condition]) : null,
-        part?.sku ? fact('Part number', `${part.brand} ${part.sku}`) : null,
+        part?.sku ? fact('Part number', part.sku) : null,
         fact('Posted', formatAge(listing.createdAt))),
       h('div', { class: 'detail-actions' },
         contact(listing),
         part ? h('a', { class: 'link-button', href: `?part=${encodeURIComponent(part.id)}` }, 'Other listings with this part') : null),
     ),
-    h('button', { type: 'button', class: 'detail-close', 'aria-label': 'Close', onclick: () => dialog.close() },
+    // autofocus keeps the dialog scrolled to the top instead of jumping to the first link.
+    h('button', { type: 'button', class: 'detail-close', 'aria-label': 'Close', autofocus: true, onclick: () => dialog.close() },
       svg(UI_ICONS.close, { size: 20 })),
   ));
   if (!dialog.open) dialog.showModal();

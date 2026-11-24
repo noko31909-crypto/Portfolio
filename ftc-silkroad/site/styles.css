@@ -449,7 +449,7 @@ select {
 .card-media,
 .detail-media {
   position: relative;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 3 / 2;
   background: var(--plate);
 }
 .card-media img,
@@ -475,10 +475,13 @@ select {
   border-radius: 50%;
 }
 
+/* The chip sits over the photo: card chips are placed against the card's top-left
+   corner (the photo is at the top), dialog chips against the dialog photo. */
 .chip {
   position: absolute;
   top: 10px;
   left: 10px;
+  z-index: 1;
   padding: 3px 10px;
   border-radius: 999px;
   font-size: 0.8125rem;
@@ -526,20 +529,6 @@ select {
   font-weight: 500;
   overflow-wrap: anywhere;
 }
-.ex-swap {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin: 4px 0;
-  color: var(--saffron);
-}
-.ex-swap::after {
-  content: '';
-  flex: 1;
-  height: 2px;
-  background: linear-gradient(to right, var(--saffron), transparent);
-  border-radius: 2px;
-}
 
 .card-kicker {
   font-size: 0.8125rem;
@@ -570,6 +559,28 @@ select {
 .card-meta .team { color: var(--ink); font-weight: 500; }
 
 .card-foot { padding: 0 16px 16px; }
+
+/* Phones: each card becomes a compact row with a thumbnail, so a list of 15 fits in a
+   few screens instead of fifteen. */
+@media (max-width: 559px) {
+  .cards { gap: 12px; }
+  .card {
+    display: grid;
+    grid-template-columns: 88px minmax(0, 1fr);
+    grid-template-areas: 'media body' 'foot foot';
+  }
+  .card-media {
+    grid-area: media;
+    aspect-ratio: 1;
+    margin: 12px 0 0 12px;
+    border-radius: var(--radius-s);
+    overflow: hidden;
+  }
+  .card-media .glyph .icon { width: 36px; height: 36px; padding: 6px; }
+  .card-body { grid-area: body; gap: 8px; padding: 12px 12px 10px; }
+  .card .chip { position: static; align-self: flex-start; }
+  .card-foot { grid-area: foot; padding: 0 12px 12px; }
+}
 
 .contact {
   position: relative;
@@ -638,7 +649,7 @@ select {
 }
 
 .detail-inner { position: relative; }
-.detail-media { max-height: 50dvh; aspect-ratio: 4 / 3; }
+.detail-media { aspect-ratio: 16 / 9; max-height: 40dvh; }
 
 .detail-thumbs {
   display: flex;

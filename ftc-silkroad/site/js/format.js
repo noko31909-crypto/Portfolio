@@ -22,7 +22,9 @@ export function formatAge(iso, now = Date.now()) {
   return new Date(iso).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
 }
 
+/** "goBILDA Grid plate…", but "Axon MAX servo" (not "Axon Axon…") and no "Other" prefix. */
 export function partLabel(part) {
+  if (part.brand === 'Other' || part.name.toLowerCase().startsWith(part.brand.toLowerCase())) return part.name;
   return `${part.brand} ${part.name}`;
 }
 
@@ -33,16 +35,23 @@ export function haveLabel(listing) {
   return h.part ? partLabel(h.part) : h.text;
 }
 
-/** What a listing asks for, as one line: a part, a price, or both. */
+/**
+ * What a listing asks for, as one line. For trades and sales that's a part, a price,
+ * or "part or price". For a wanted listing it's only the part; its price is a budget
+ * (see budgetLabel). A giveaway asks for nothing; the "Free" chip says so.
+ */
 export function wantLabel(listing) {
   const w = listing.want;
-  // A giveaway asks for nothing; the "Free" chip already says so.
   if (!w) return null;
-  const bits = [];
-  if (w.part) bits.push(partLabel(w.part));
-  else if (w.text) bits.push(w.text);
-  if (w.priceKzt !== null) bits.push(w.part || w.text ? `or ${formatPrice(w.priceKzt)}` : formatPrice(w.priceKzt));
-  return bits.join(' ');
+  const item = w.part ? partLabel(w.part) : w.text;
+  if (listing.type === 'wanted') return item;
+  if (w.priceKzt === null) return item;
+  return item ? `${item} or ${formatPrice(w.priceKzt)}` : formatPrice(w.priceKzt);
+}
+
+/** A wanted listing's price is what the team can pay. */
+export function budgetLabel(listing) {
+  return listing.type === 'wanted' && listing.want?.priceKzt != null ? formatPrice(listing.want.priceKzt) : null;
 }
 
 export function teamLabel(team) {

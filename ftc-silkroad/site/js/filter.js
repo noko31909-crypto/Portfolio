@@ -118,13 +118,18 @@ export function applyFilters(listings, state, textIndex) {
   return sortListings(result, state.sort);
 }
 
-/** Newest first; "price" puts priced listings cheapest-first and the rest after, newest first. */
+/** Asking price, or null. A wanted listing's price is a budget, so it doesn't count. */
+function askingPrice(listing) {
+  return listing.type === 'wanted' ? null : listing.want?.priceKzt ?? null;
+}
+
+/** Newest first; "price" puts listings with an asking price cheapest-first and the rest after, newest first. */
 export function sortListings(listings, sort) {
   const byDate = (a, b) => b.createdAt.localeCompare(a.createdAt);
   if (sort !== 'price') return [...listings].sort(byDate);
   return [...listings].sort((a, b) => {
-    const pa = a.want?.priceKzt ?? null;
-    const pb = b.want?.priceKzt ?? null;
+    const pa = askingPrice(a);
+    const pb = askingPrice(b);
     if (pa !== null && pb !== null && pa !== pb) return pa - pb;
     if (pa === null && pb !== null) return 1;
     if (pb === null && pa !== null) return -1;
