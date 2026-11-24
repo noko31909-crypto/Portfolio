@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600&family=Unbounded:wght@500;700&display=swap">
   <link rel="stylesheet" href="styles.css">
   <script type="module" src="js/listings-page.js"></script>
+  <script type="module" src="js/intro.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#results">Skip to listings</a>
@@ -31,16 +32,30 @@
         </ul>
       </nav>
 
-      <div class="hero">
-        <h1>Spare FTC parts from teams across Kazakhstan</h1>
-        <p class="hero-sub">Find the part, then message the team on Telegram. Trade, buy, or pick it up for free.</p>
-        <form class="search" role="search" id="search-form">
-          <label for="q">Search by part, SKU, team or city</label>
-          <div class="search-field">
-            <span class="search-icon" data-icon="search"></span>
-            <input id="q" name="q" type="search" autocomplete="off" spellcheck="false" placeholder="Core Hex, 5203-2402-0019, мотор">
+      <div class="hero-row">
+        <div class="hero">
+          <h1>Spare FTC parts from teams across Kazakhstan</h1>
+          <p class="hero-sub">Find the part, then message the team on Telegram. Trade, buy, or pick it up for free.</p>
+          <form class="search" role="search" id="search-form">
+            <label for="q">Search by part, SKU, team or city</label>
+            <div class="search-field">
+              <span class="search-icon" data-icon="search"></span>
+              <input id="q" name="q" type="search" autocomplete="off" spellcheck="false" placeholder="Core Hex, 5203-2402-0019, мотор">
+            </div>
+          </form>
+          <button type="button" class="intro-open" id="intro-open" hidden>
+            <span class="intro-open-icon" aria-hidden="true"></span>Watch the 30-second intro
+          </button>
+        </div>
+
+        <!-- Intro video: shown only once assets/intro.mp4 loads (export it from the Motion film). -->
+        <figure class="intro" id="intro" hidden>
+          <video class="intro-video" id="intro-video" muted loop playsinline preload="metadata" aria-label="FTC Silkroad intro video"></video>
+          <div class="intro-controls">
+            <button type="button" class="intro-btn" id="intro-toggle" aria-pressed="false">Pause</button>
+            <button type="button" class="intro-btn" id="intro-sound" aria-pressed="false">Sound on</button>
           </div>
-        </form>
+        </figure>
       </div>
     </div>
   </header>
@@ -136,5 +151,12 @@
   </footer>
 
   <dialog class="detail" id="detail" aria-labelledby="detail-title"></dialog>
+
+  <dialog class="intro-dialog" id="intro-dialog" aria-label="FTC Silkroad intro video">
+    <video class="intro-video" id="intro-dialog-video" controls playsinline preload="none"></video>
+    <button type="button" class="detail-close" id="intro-close" aria-label="Close">
+      <span data-icon="close"></span>
+    </button>
+  </dialog>
 </body>
 </html>

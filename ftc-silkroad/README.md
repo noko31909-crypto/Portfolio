@@ -40,6 +40,10 @@ The tests use Node's built-in runner (Node 22 or newer) and have no dependencies
 
 The anon key is meant to be public. The schema only lets it read active listings, team names and numbers, and the parts catalog. The service-role key belongs to the bot's server and must never go in this folder.
 
+## Intro video
+
+The listings page has a slot for a 30-second vertical intro (1080×1920). It stays hidden until `site/assets/intro.mp4` exists. To add it, open the FTC Silkroad intro film on claude.ai, use Export to save an MP4, and save it as `site/assets/intro.mp4`. Keep it small (a few MB) because it loads on the home page. On wide screens it plays muted in the header; on phones a "Watch the 30-second intro" button opens it.
+
 ## Deploy
 
 `site/` is plain static files, so any static host works. On Vercel or Netlify, set the root directory to `ftc-silkroad/site` with no build command. `site/vercel.json` sets the security headers on Vercel. On other hosts, copy the same headers from it.

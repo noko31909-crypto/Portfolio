@@ -217,6 +217,90 @@ a:hover { text-decoration-thickness: 2px; }
 
 .plate-short .hero { padding-bottom: 32px; }
 
+/* Hero with the intro video beside it on wide screens. */
+.hero-row { display: grid; gap: 32px; align-items: center; }
+@media (min-width: 1040px) {
+  .hero-row:has(.intro:not([hidden])) { grid-template-columns: minmax(0, 1fr) 280px; }
+}
+
+/* The intro sits in a phone-shaped frame, like a clip someone is showing you. */
+.intro {
+  position: relative;
+  display: none;
+  margin: 24px 0 40px;
+  width: 280px;
+  aspect-ratio: 9 / 16;
+  border-radius: 28px;
+  overflow: hidden;
+  background: var(--ink);
+  border: 6px solid var(--ink);
+  box-shadow: 0 30px 60px rgb(0 0 0 / 0.3);
+}
+@media (min-width: 1040px) {
+  .intro:not([hidden]) { display: block; }
+}
+.intro-video { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+.intro-controls {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  display: flex;
+  gap: 6px;
+}
+.intro-btn {
+  min-height: 36px;
+  padding: 0 12px;
+  border: 0;
+  border-radius: 999px;
+  background: rgb(15 23 29 / 0.72);
+  color: #fff;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.intro-btn:hover { background: rgb(15 23 29 / 0.9); }
+
+/* Narrow screens: a button under the search opens the intro in a dialog. */
+.intro-open {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  margin-top: 16px;
+  padding: 0 4px;
+  background: none;
+  border: 0;
+  color: var(--tile);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+  cursor: pointer;
+}
+.intro-open[hidden] { display: none; }
+@media (min-width: 1040px) {
+  .intro-open { display: none !important; }
+}
+.intro-open-icon {
+  width: 0;
+  height: 0;
+  border-left: 11px solid currentColor;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+}
+
+.intro-dialog {
+  width: min(360px, calc(100% - 2 * var(--gutter)));
+  aspect-ratio: 9 / 16;
+  max-height: calc(100dvh - 32px);
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-l);
+  overflow: hidden;
+  background: var(--ink);
+}
+.intro-dialog::backdrop { background: var(--backdrop); }
+
 .hero-sub {
   margin-top: 14px;
   max-width: 52ch;
