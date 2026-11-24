@@ -1,0 +1,446 @@
+{
+  "rev-41-1300": {
+    "image": "https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/640w/products/195/2675/REV-41-1300_Core_Hex5_not_lm__05075.1661790332.png?c=2",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Main/first gallery image of product page (same file as og:image), 640w srcset entry. Served as image/webp, 640x640."
+  },
+  "rev-41-1291": {
+    "image": "https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/640w/products/597/3613/HD_Hex_HERO_FINAL__95404.1761255494.png?c=2",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Main/first gallery image of product page (same file as og:image), 640w srcset entry. Served as image/webp, 640x640."
+  },
+  "rev-41-1301": {
+    "image": "https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/640w/products/594/2931/Lone_HDHex-New_Sticker-noflag__98232.1659470612.png?c=2",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Main/first gallery image of product page (same file as og:image), 640w srcset entry. Served as image/webp, 640x652."
+  },
+  "rev-41-1601": {
+    "image": "https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/640w/products/480/1339/UltraPlanetary_Cartridge_Laying_Down__37922.1618525009.png?c=2",
+    "status": 200,
+    "shared_variant_image": true,
+    "note": "Main/first gallery image of product page (same file as og:image), 640w srcset entry. Byte-identical image to rev-41-1602/1603 (same cartridge photo used on all three separate product pages; ratio not distinguishable). Served as image/webp, 640x640."
+  },
+  "rev-41-1602": {
+    "image": "https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/640w/products/481/1342/UltraPlanetary_Cartridge_Laying_Down__58665.1565907803.png?c=2",
+    "status": 200,
+    "shared_variant_image": true,
+    "note": "Main/first gallery image of product page (same file as og:image), 640w srcset entry. Byte-identical image to rev-41-1601/1603 (same generic cartridge photo). Served as image/webp, 640x640."
+  },
+  "rev-41-1603": {
+    "image": "https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/640w/products/482/1345/UltraPlanetary_Cartridge_Laying_Down__17448.1613072762.png?c=2",
+    "status": 200,
+    "shared_variant_image": true,
+    "note": "Main/first gallery image of product page (same file as og:image), 640w srcset entry. Byte-identical image to rev-41-1601/1602 (same generic cartridge photo). Served as image/webp, 640x640."
+  },
+  "rev-41-1600": {
+    "image": "https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/640w/products/479/2739/Ultraplanetary-noflag-FINAL__33728.1650563601.png?c=2",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Main/first gallery image of product page (same file as og:image), 640w srcset entry. Served as image/webp, 640x640."
+  },
+  "rev-41-1097": {
+    "image": "https://docs.revrobotics.com/~gitbook/image?url=https%3A%2F%2F756878072-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FH9K1InCLC1ZxIkdPJt31%252Fuploads%252Ffwp3XUN2kdEREt4RvYfq%252Fimage.png%3Falt%3Dmedia%26token%3Df2fed2de-d550-4f23-9940-6b4aa73c2be8&width=768&dpr=1&quality=100&sign=e1e2a0fc91017fab3ccfea88f5f65a0b&sv=3",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "No product page on revrobotics.com (rev-41-1097 slug 404s). Image taken from REV docs page https://docs.revrobotics.com/duo-build/motion/servos/smart-robot-servo, whose text names the Smart Robot Servo as REV-41-1097; it is the only content image on that page (685x382 PNG, black V1 SRS). Served via REV GitBook image proxy with a signed URL that may change if the docs page is republished."
+  },
+  "rev-41-3334": {
+    "image": "https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/640w/attribute_rule_images/2408_source_1752704514.jpg",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Variant-specific image from REV store variant data (BigCommerce attribute rule image for SKU REV-41-3334); {:size} template rendered at 640w. Variant image from Smart Robot Servos V2 group page (REV-41-3334 option). Served as image/jpeg, 640x640."
+  },
+  "rev-41-3336": {
+    "image": "https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/640w/attribute_rule_images/2409_source_1752680026.jpg",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Variant-specific image from REV store variant data (BigCommerce attribute rule image for SKU REV-41-3336); {:size} template rendered at 640w. Variant image from Smart Robot Servos V2 group page (REV-41-3336 option). Served as image/webp, 640x640."
+  },
+  "rev-31-1595": {
+    "image": "https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/640w/products/391/2736/IMG_20170502_154043_not_lm__25913.1650563042.png?c=2",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Main/first gallery image of product page (same file as og:image), 640w srcset entry. Served as image/webp, 640x640."
+  },
+  "rev-31-1596": {
+    "image": "https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/640w/products/598/2741/REV-31-1596-Driver_Hub-Iso_View-FINAL__03867.1650564025.png?c=2",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Main/first gallery image of product page (same file as og:image), 640w srcset entry. Served as image/webp, 640x640."
+  },
+  "rev-31-1153": {
+    "image": "https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/640w/products/216/2784/Expansion_Hub_One-noflag__63205.1650572103.png?c=2",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Main/first gallery image of product page (same file as og:image), 640w srcset entry. Served as image/webp, 640x640."
+  },
+  "rev-11-1855": {
+    "image": "https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/640w/products/834/3472/REV-11-1855-Servo_Hub-FINAL__22851.1736875921.png?c=2",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Main/first gallery image of product page (same file as og:image), 640w srcset entry. Served as image/webp, 640x640."
+  },
+  "rev-11-1144": {
+    "image": "https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/640w/products/209/2764/ServoPowerModuleAngled-800-Web__59220.1650570152.png?c=2",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Main/first gallery image of product page (same file as og:image), 640w srcset entry. Served as image/webp, 640x640."
+  },
+  "rev-31-1108": {
+    "image": "https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/640w/products/116/634/REV-31-1108-1__84485.1603470088.JPG?c=2",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Main/first gallery image of product page (same file as og:image), 640w srcset entry. Served as image/webp, 640x640."
+  },
+  "rev-31-1387": {
+    "image": "https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/640w/products/256/2679/REV-31-1387-Switch-Cable-and-Bracket-1-NoFlag-FINAL__58356.1650554802.png?c=2",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Main/first gallery image of product page (same file as og:image), 640w srcset entry. Served as image/webp, 640x640."
+  },
+  "rev-31-1293": {
+    "image": "https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/640w/products/341/2695/XT30_Power_Distribution_Block_Hero_noflag__79425.1650555542.png?c=2",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Main/first gallery image of product page (same file as og:image), 640w srcset entry. Served as image/webp, 640x640."
+  },
+  "rev-31-1505": {
+    "image": "https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/640w/products/340/2734/2M_Distance_Sensor__87798.1650562207.png?c=2",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Main/first gallery image of product page (same file as og:image), 640w srcset entry. Served as image/webp, 640x640."
+  },
+  "rev-31-3332": {
+    "image": "https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/640w/products/848/3367/REV-31-3332-9AxisIMU-HERO-FINAL__79949.1731351709.png?c=2",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Main/first gallery image of product page (same file as og:image), 640w srcset entry. Served as image/webp, 640x640."
+  },
+  "rev-31-1557": {
+    "image": "https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/640w/products/507/2717/Color_Sensor_V2__58545.1650559332.png?c=2",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Main/first gallery image of product page (same file as og:image), 640w srcset entry. Served as image/webp, 640x640."
+  },
+  "rev-31-1462": {
+    "image": "https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/640w/products/285/2690/Lone_Hall_Sensor__00715.1650555551.png?c=2",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Main/first gallery image of product page (same file as og:image), 640w srcset entry. Served as image/webp, 640x643."
+  },
+  "rev-11-1271": {
+    "image": "https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/640w/products/404/1487/Through_Bore_Encoder_Both_Shots_Sml__30025.1574098624.png?c=2",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Main/first gallery image of product page (same file as og:image), 640w srcset entry. Served as image/webp, 640x640."
+  },
+  "rev-11-3174": {
+    "image": "https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/640w/products/910/3574/REV-11-3174-ThroughBoreEncoderV2_HERO_FINAL__64112.1763159842.png?c=2",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Main/first gallery image of product page (same file as og:image), 640w srcset entry. Served as image/webp, 640x640."
+  },
+  "rev-31-1425": {
+    "image": "https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/640w/products/242/2785/Button_Sensor_REV-31-1425_2_not_lm__15755.1650572167.png?c=2",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Main/first gallery image of product page (same file as og:image), 640w srcset entry. Served as image/webp, 640x640."
+  },
+  "rev-31-1302": {
+    "image": "https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/640w/products/193/2367/REV-31-1302-12VSlimBattery-New-FINAL__87390.1636579008.png?c=2",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Main/first gallery image of product page (same file as og:image), 640w srcset entry. Served as image/webp, 640x640."
+  },
+  "rev-31-1299": {
+    "image": "https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/640w/attribute_rule_images/2542_source_1778527744.jpg",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Variant-specific image from REV store variant data (BigCommerce attribute rule image for SKU REV-31-1299); {:size} template rendered at 640w. Variant image from 12V Slim Battery Accessories page (Battery Charger REV-31-1299 option). Served as image/webp, 640x640."
+  },
+  "rev-31-1876": {
+    "image": "https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/640w/products/609/2179/REV-31-1876---Driver-Hub-Battery-FINAL__71069.1631043369.png?c=2",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Main/first gallery image of product page (same file as og:image), 640w srcset entry. Served as image/webp, 640x640."
+  },
+  "rev-41-1431-pk2": {
+    "image": "https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/640w/attribute_rule_images/2475_source_1757624016.jpg",
+    "status": 200,
+    "shared_variant_image": true,
+    "note": "Variant-specific image from REV store variant data (BigCommerce attribute rule image for SKU REV-41-1431-PK2); {:size} template rendered at 640w. Variant image (attribute rule 2475) is byte-identical to the 420mm variant image (2476): effectively a generic extrusion photo. Served as image/webp, 640x640."
+  },
+  "rev-41-1432-pk4": {
+    "image": "https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/640w/attribute_rule_images/2476_source_1757624016.jpg",
+    "status": 200,
+    "shared_variant_image": true,
+    "note": "Variant-specific image from REV store variant data (BigCommerce attribute rule image for SKU REV-41-1432-PK4); {:size} template rendered at 640w. Variant image (attribute rule 2476) is byte-identical to the 225mm variant image (2475): effectively a generic extrusion photo. Served as image/webp, 640x640."
+  },
+  "rev-41-1480-pk8": {
+    "image": "https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/640w/attribute_rule_images/1181_source_1689565457.png",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Variant-specific image from REV store variant data (BigCommerce attribute rule image for SKU REV-41-1480-PK8); {:size} template rendered at 640w. Served as image/png, 640x640."
+  },
+  "rev-41-1433-pk4": {
+    "image": "https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/640w/attribute_rule_images/1438_source_1689565524.png",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Variant-specific image from REV store variant data (BigCommerce attribute rule image for SKU REV-41-1433-PK4); {:size} template rendered at 640w. Served as image/png, 640x640."
+  },
+  "rev-41-1487-pk4": {
+    "image": "https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/640w/attribute_rule_images/1478_source_1689565534.png",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Variant-specific image from REV store variant data (BigCommerce attribute rule image for SKU REV-41-1487-PK4); {:size} template rendered at 640w. Served as image/png, 640x640."
+  },
+  "rev-41-1479-pk8": {
+    "image": "https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/640w/attribute_rule_images/2434_source_1756844719.png",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Variant-specific image from REV store variant data (BigCommerce attribute rule image for SKU REV-41-1479-PK8); {:size} template rendered at 640w. Served as image/webp, 640x641."
+  },
+  "rev-41-1305-pk8": {
+    "image": "https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/640w/attribute_rule_images/1081_source_1689565431.jpg",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Variant-specific image from REV store variant data (BigCommerce attribute rule image for SKU REV-41-1305-PK8); {:size} template rendered at 640w. Served as image/jpeg, 640x640."
+  },
+  "rev-41-1747": {
+    "image": "https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/640w/attribute_rule_images/2461_source_1757365882.png",
+    "status": 200,
+    "shared_variant_image": true,
+    "note": "Variant-specific image from REV store variant data (BigCommerce attribute rule image for SKU REV-41-1747); {:size} template rendered at 640w. Variant image (rule 2461) is byte-identical to the 408mm variant image (2463). Served as image/png, 640x640."
+  },
+  "rev-41-1742": {
+    "image": "https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/640w/attribute_rule_images/2463_source_1757365882.png",
+    "status": 200,
+    "shared_variant_image": true,
+    "note": "Variant-specific image from REV store variant data (BigCommerce attribute rule image for SKU REV-41-1742); {:size} template rendered at 640w. Variant image (rule 2463) is byte-identical to the 248mm variant image (2461). Served as image/png, 640x640."
+  },
+  "rev-41-1366-pk5": {
+    "image": "https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/640w/products/202/748/REV-41-1366-1__24852.1615482297.JPG?c=2",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Main/first gallery image of product page (same file as og:image), 640w srcset entry. Served as image/jpeg, 640x640."
+  },
+  "rev-41-1365": {
+    "image": "https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/640w/products/203/749/REV-41-1365-1__17582.1472785904.JPG?c=2",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Main/first gallery image of product page (same file as og:image), 640w srcset entry. Served as image/webp, 640x640."
+  },
+  "rev-41-1349-pk4": {
+    "image": "https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/640w/products/723/2895/REV-41-0000-5mm-Hex-Shafts-Hero-FINAL__26864.1654542780.png?c=2",
+    "status": 200,
+    "shared_variant_image": true,
+    "note": "Main/first gallery image of product page (same file as og:image), 640w srcset entry. No variant image on REV store; only the group hero (filename REV-41-0000-5mm-Hex-Shafts-Hero). Served as image/webp, 640x640."
+  },
+  "rev-41-1362-pk4": {
+    "image": "https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/640w/products/723/2895/REV-41-0000-5mm-Hex-Shafts-Hero-FINAL__26864.1654542780.png?c=2",
+    "status": 200,
+    "shared_variant_image": true,
+    "note": "Main/first gallery image of product page (same file as og:image), 640w srcset entry. No variant image on REV store; only the group hero (filename REV-41-0000-5mm-Hex-Shafts-Hero). Served as image/webp, 640x640."
+  },
+  "rev-41-1347-pk4": {
+    "image": "https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/640w/products/723/2895/REV-41-0000-5mm-Hex-Shafts-Hero-FINAL__26864.1654542780.png?c=2",
+    "status": 200,
+    "shared_variant_image": true,
+    "note": "Main/first gallery image of product page (same file as og:image), 640w srcset entry. No variant image on REV store; only the group hero (filename REV-41-0000-5mm-Hex-Shafts-Hero). Served as image/webp, 640x640."
+  },
+  "rev-41-1147-pk2": {
+    "image": "https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/640w/products/217/802/REV-41-1147_High_Strength_Hex_Adapter2__41896.1615482340.png?c=2",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Main/first gallery image of product page (same file as og:image), 640w srcset entry. Served as image/webp, 640x640."
+  },
+  "rev-41-1717": {
+    "image": "https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/640w/attribute_rule_images/2466_source_1757615648.png",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Variant-specific image from REV store variant data (BigCommerce attribute rule image for SKU REV-41-1717); {:size} template rendered at 640w. Served as image/png, 640x640."
+  },
+  "rev-41-1720": {
+    "image": "https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/640w/attribute_rule_images/2467_source_1757615648.png",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Variant-specific image from REV store variant data (BigCommerce attribute rule image for SKU REV-41-1720); {:size} template rendered at 640w. Served as image/png, 640x640."
+  },
+  "rev-41-1331-pk8": {
+    "image": "https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/640w/attribute_rule_images/1482_source_1757613917.png",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Variant-specific image from REV store variant data (BigCommerce attribute rule image for SKU REV-41-1331-PK8); {:size} template rendered at 640w. Served as image/webp, 640x640."
+  },
+  "rev-41-1332-pk4": {
+    "image": "https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/640w/attribute_rule_images/1483_source_1757613917.png",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Variant-specific image from REV store variant data (BigCommerce attribute rule image for SKU REV-41-1332-PK4); {:size} template rendered at 640w. Served as image/webp, 640x640."
+  },
+  "rev-41-1334-pk4": {
+    "image": "https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/640w/attribute_rule_images/1484_source_1757613917.png",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Variant-specific image from REV store variant data (BigCommerce attribute rule image for SKU REV-41-1334-PK4); {:size} template rendered at 640w. Served as image/png, 640x640."
+  },
+  "rev-41-1335-pk4": {
+    "image": "https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/640w/attribute_rule_images/1485_source_1757613917.png",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Variant-specific image from REV store variant data (BigCommerce attribute rule image for SKU REV-41-1335-PK4); {:size} template rendered at 640w. Served as image/png, 640x640."
+  },
+  "rev-41-1337-pk2": {
+    "image": "https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/640w/attribute_rule_images/1487_source_1757613917.png",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Variant-specific image from REV store variant data (BigCommerce attribute rule image for SKU REV-41-1337-PK2); {:size} template rendered at 640w. Served as image/png, 640x640."
+  },
+  "rev-41-1329-pk12": {
+    "image": "https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/640w/attribute_rule_images/1228_source_1689565471.png",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Variant-specific image from REV store variant data (BigCommerce attribute rule image for SKU REV-41-1329-PK12); {:size} template rendered at 640w. Served as image/webp, 640x640."
+  },
+  "rev-41-1326-pk12": {
+    "image": "https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/640w/attribute_rule_images/1224_source_1689565470.png",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Variant-specific image from REV store variant data (BigCommerce attribute rule image for SKU REV-41-1326-PK12); {:size} template rendered at 640w. Served as image/webp, 640x640."
+  },
+  "rev-45-1655": {
+    "image": "https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/640w/products/453/1399/75mm_Mecanum_Wheel_Set_4_Wheels__36318.1788291024.png?c=2",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Main/first gallery image of product page (same file as og:image), 640w srcset entry. Served as image/webp, 640x640."
+  },
+  "rev-41-1267": {
+    "image": "https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/640w/products/344/1192/90mm_Grip_Wheel__30858.1533945208.png?c=2",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Main/first gallery image of product page (same file as og:image), 640w srcset entry. Served as image/webp, 640x640."
+  },
+  "rev-41-1160-pk2": {
+    "image": "https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/640w/attribute_rule_images/1118_source_1689565439.png",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Variant-specific image from REV store variant data (BigCommerce attribute rule image for SKU REV-41-1160-PK2); {:size} template rendered at 640w. Served as image/png, 640x640."
+  },
+  "rev-41-1190-pk2": {
+    "image": "https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/640w/attribute_rule_images/1124_source_1689565440.png",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Variant-specific image from REV store variant data (BigCommerce attribute rule image for SKU REV-41-1190-PK2); {:size} template rendered at 640w. Served as image/webp, 640x640."
+  },
+  "rev-41-1354-pk2": {
+    "image": "https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/640w/attribute_rule_images/1410_source_1689565517.png",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Variant-specific image from REV store variant data (BigCommerce attribute rule image for SKU REV-41-1354-PK2); {:size} template rendered at 640w. Served as image/png, 640x640."
+  },
+  "rev-45-1900": {
+    "image": "https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/640w/products/542/2963/REV-45-1900-15mm-Extrusion-Lift-Kit-FINAL-09-27-2022__82718.1664292467.png?c=2",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Main/first gallery image of product page (same file as og:image), 640w srcset entry. Served as image/webp, 640x640."
+  },
+  "rev-45-1507": {
+    "image": "https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/640w/products/347/1199/Linear_Motion__71955.1533944999.png?c=2",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Main/first gallery image of product page (same file as og:image), 640w srcset entry. Served as image/webp, 640x640."
+  },
+  "rev-41-1323-pk12": {
+    "image": "https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/640w/attribute_rule_images/1138_source_1689565444.png",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Variant-specific image from REV store variant data (BigCommerce attribute rule image for SKU REV-41-1323-PK12); {:size} template rendered at 640w. Served as image/png, 640x640."
+  },
+  "rev-45-1905": {
+    "image": "https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/640w/products/552/1704/M3_Hardware_Bundle_V3__29076.1603470270.png?c=2",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Main/first gallery image of product page (same file as og:image), 640w srcset entry. Served as image/webp, 640x640."
+  },
+  "rev-41-1361-pk100": {
+    "image": "https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/640w/attribute_rule_images/2546_source_1778681905.jpg",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Variant-specific image from REV store variant data (BigCommerce attribute rule image for SKU REV-41-1361-PK100); {:size} template rendered at 640w. Served as image/webp, 640x640."
+  },
+  "rev-41-1490-pk4": {
+    "image": "https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/640w/products/707/2862/REV-41-1489-M3_Standoff-Hero-FINAL__97606.1653061938.png?c=2",
+    "status": 200,
+    "shared_variant_image": true,
+    "note": "Main/first gallery image of product page (same file as og:image), 640w srcset entry. No variant image; group hero filename is REV-41-1489-M3_Standoff (a different standoff length), so it may not show the 25mm size. Served as image/webp, 640x640."
+  },
+  "rev-41-1360-pk100": {
+    "image": "https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/640w/products/722/2894/M3x10mm_Hex_Cap_Screws_Pack_Photo_From_Bundle_Shot__18790.1614451259.1280.1280__98672.1654289750.png?c=2",
+    "status": 200,
+    "shared_variant_image": true,
+    "note": "Main/first gallery image of product page (same file as og:image), 640w srcset entry. No variant image; group photo filename is M3x10mm_Hex_Cap_Screws (shows a 10mm pack, not 16mm). Served as image/webp, 640x640."
+  },
+  "rev-41-1359-pk100": {
+    "image": "https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/640w/products/722/2894/M3x10mm_Hex_Cap_Screws_Pack_Photo_From_Bundle_Shot__18790.1614451259.1280.1280__98672.1654289750.png?c=2",
+    "status": 200,
+    "shared_variant_image": true,
+    "note": "Main/first gallery image of product page (same file as og:image), 640w srcset entry. No variant image; group photo filename is M3x10mm_Hex_Cap_Screws (shows a 10mm pack, not 8mm). Served as image/webp, 640x640."
+  },
+  "rev-41-1907-pk25": {
+    "image": "https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/640w/products/536/1624/REV-41-1907_M3_X_8mm_T-Slot_Screw-2__07783.1595265762.png?c=2",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Main/first gallery image of product page (same file as og:image), 640w srcset entry. Served as image/webp, 640x640."
+  },
+  "rev-31-1815": {
+    "image": "https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/640w/products/513/1542/JST_PH_6-Pin_to_JST_PH_4-Pin_Cable_50cm__22889.1578591885.png?c=2",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Main/first gallery image of product page (same file as og:image), 640w srcset entry. Served as image/webp, 640x640."
+  },
+  "rev-31-1417-pk2": {
+    "image": "https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/640w/products/363/1223/JST_PH_3-Pin_Comm__91198.1618525045.jpg?c=2",
+    "status": 200,
+    "shared_variant_image": true,
+    "note": "Main/first gallery image of product page (same file as og:image), 640w srcset entry. No variant image; generic group photo (JST_PH_3-Pin_Comm). Served as image/webp, 640x613."
+  },
+  "rev-31-1407-pk4": {
+    "image": "https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/640w/products/263/876/JST_PH_4pin_30cm_REV-31-1407__92491.1613072598.png?c=2",
+    "status": 200,
+    "shared_variant_image": true,
+    "note": "Main/first gallery image of product page (same file as og:image), 640w srcset entry. No variant image; group photo filename JST_PH_4pin_30cm_REV-31-1407 matches this exact 30cm variant. Served as image/webp, 640x640."
+  },
+  "rev-31-1412-pk4": {
+    "image": "https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/640w/products/265/2345/REV-31-1413-JSTVH-Hero-FINAL__66749.1636397287.png?c=2",
+    "status": 200,
+    "shared_variant_image": true,
+    "note": "Main/first gallery image of product page (same file as og:image), 640w srcset entry. No variant image; group hero filename REV-31-1413-JSTVH (a different length), not REV-31-1412. Served as image/webp, 640x640."
+  },
+  "rev-11-1130-pk4": {
+    "image": "https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/640w/attribute_rule_images/2536_source_1778258226.jpg",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Variant-specific image from REV store variant data (BigCommerce attribute rule image for SKU REV-11-1130-PK4); {:size} template rendered at 640w. Served as image/webp, 640x640."
+  },
+  "rev-31-1392-pk2": {
+    "image": "https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/640w/products/267/905/XT30_extension__07089.1603473877.jpg?c=2",
+    "status": 200,
+    "shared_variant_image": true,
+    "note": "Main/first gallery image of product page (same file as og:image), 640w srcset entry. No variant image; generic group photo (XT30_extension). Served as image/jpeg, 640x640."
+  },
+  "rev-45-1882": {
+    "image": "https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/640w/products/593/1869/REV-45-1882-Allen-Wrench-Pack-FINAL__44020.1614353715.png?c=2",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Main/first gallery image of product page (same file as og:image), 640w srcset entry. Served as image/webp, 640x640."
+  },
+  "rev-31-2983": {
+    "image": "https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/640w/products/829/3518/REV-31-2983-REVUSBPS4CompatibleGamepad-Hero-FINAL-new__77925.1753717119.png?c=2",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Main/first gallery image of product page (same file as og:image), 640w srcset entry. Served as image/webp, 640x640."
+  }
+}

@@ -1,0 +1,296 @@
+{
+  "studica-75001": {
+    "image": null,
+    "status": null,
+    "shared_variant_image": false,
+    "note": "studica.com / studica.co pages and every path on those hosts (incl. /images/thumbs/*, favicon) return HTTP 403 with a Cloudflare managed challenge (cf-mitigated: challenge) to curl and WebFetch; no separate reachable image CDN host was found; web.archive.org unreachable from this machine. Not substituted with reseller images."
+  },
+  "studica-maverick-planetary-gear-motor-with-encoder-13-7-1": {
+    "image": null,
+    "status": null,
+    "shared_variant_image": false,
+    "note": "studica.com / studica.co pages and every path on those hosts (incl. /images/thumbs/*, favicon) return HTTP 403 with a Cloudflare managed challenge (cf-mitigated: challenge) to curl and WebFetch; no separate reachable image CDN host was found; web.archive.org unreachable from this machine. Not substituted with reseller images."
+  },
+  "studica-maverick-planetary-gear-motor-with-encoder-1-1": {
+    "image": null,
+    "status": null,
+    "shared_variant_image": false,
+    "note": "studica.com / studica.co pages and every path on those hosts (incl. /images/thumbs/*, favicon) return HTTP 403 with a Cloudflare managed challenge (cf-mitigated: challenge) to curl and WebFetch; no separate reachable image CDN host was found; web.archive.org unreachable from this machine. Not substituted with reseller images."
+  },
+  "studica-maverick-planetary-gear-motor-with-encoder-3-7-1": {
+    "image": null,
+    "status": null,
+    "shared_variant_image": false,
+    "note": "studica.com / studica.co pages and every path on those hosts (incl. /images/thumbs/*, favicon) return HTTP 403 with a Cloudflare managed challenge (cf-mitigated: challenge) to curl and WebFetch; no separate reachable image CDN host was found; web.archive.org unreachable from this machine. Not substituted with reseller images."
+  },
+  "studica-maverick-planetary-gear-motor-19-2-1": {
+    "image": null,
+    "status": null,
+    "shared_variant_image": false,
+    "note": "studica.com / studica.co pages and every path on those hosts (incl. /images/thumbs/*, favicon) return HTTP 403 with a Cloudflare managed challenge (cf-mitigated: challenge) to curl and WebFetch; no separate reachable image CDN host was found; web.archive.org unreachable from this machine. Not substituted with reseller images."
+  },
+  "studica-75002": {
+    "image": null,
+    "status": null,
+    "shared_variant_image": false,
+    "note": "studica.com / studica.co pages and every path on those hosts (incl. /images/thumbs/*, favicon) return HTTP 403 with a Cloudflare managed challenge (cf-mitigated: challenge) to curl and WebFetch; no separate reachable image CDN host was found; web.archive.org unreachable from this machine. Not substituted with reseller images."
+  },
+  "studica-75007": {
+    "image": null,
+    "status": null,
+    "shared_variant_image": false,
+    "note": "studica.com / studica.co pages and every path on those hosts (incl. /images/thumbs/*, favicon) return HTTP 403 with a Cloudflare managed challenge (cf-mitigated: challenge) to curl and WebFetch; no separate reachable image CDN host was found; web.archive.org unreachable from this machine. Not substituted with reseller images."
+  },
+  "studica-smart-servo-programmer": {
+    "image": null,
+    "status": null,
+    "shared_variant_image": false,
+    "note": "studica.com / studica.co pages and every path on those hosts (incl. /images/thumbs/*, favicon) return HTTP 403 with a Cloudflare managed challenge (cf-mitigated: challenge) to curl and WebFetch; no separate reachable image CDN host was found; web.archive.org unreachable from this machine. Not substituted with reseller images."
+  },
+  "studica-low-profile-u-channel-192mm": {
+    "image": null,
+    "status": null,
+    "shared_variant_image": false,
+    "note": "studica.com / studica.co pages and every path on those hosts (incl. /images/thumbs/*, favicon) return HTTP 403 with a Cloudflare managed challenge (cf-mitigated: challenge) to curl and WebFetch; no separate reachable image CDN host was found; web.archive.org unreachable from this machine. Not substituted with reseller images."
+  },
+  "studica-u-channel-48-x-48mm-240mm": {
+    "image": null,
+    "status": null,
+    "shared_variant_image": false,
+    "note": "studica.com / studica.co pages and every path on those hosts (incl. /images/thumbs/*, favicon) return HTTP 403 with a Cloudflare managed challenge (cf-mitigated: challenge) to curl and WebFetch; no separate reachable image CDN host was found; web.archive.org unreachable from this machine. Not substituted with reseller images."
+  },
+  "studica-u-channel-48-x-48mm-336mm": {
+    "image": null,
+    "status": null,
+    "shared_variant_image": false,
+    "note": "studica.com / studica.co pages and every path on those hosts (incl. /images/thumbs/*, favicon) return HTTP 403 with a Cloudflare managed challenge (cf-mitigated: challenge) to curl and WebFetch; no separate reachable image CDN host was found; web.archive.org unreachable from this machine. Not substituted with reseller images."
+  },
+  "studica-u-channel-48-x-48mm-432mm": {
+    "image": null,
+    "status": null,
+    "shared_variant_image": false,
+    "note": "studica.com / studica.co pages and every path on those hosts (incl. /images/thumbs/*, favicon) return HTTP 403 with a Cloudflare managed challenge (cf-mitigated: challenge) to curl and WebFetch; no separate reachable image CDN host was found; web.archive.org unreachable from this machine. Not substituted with reseller images."
+  },
+  "studica-u-channel-48-x-48mm-96mm": {
+    "image": null,
+    "status": null,
+    "shared_variant_image": false,
+    "note": "studica.com / studica.co pages and every path on those hosts (incl. /images/thumbs/*, favicon) return HTTP 403 with a Cloudflare managed challenge (cf-mitigated: challenge) to curl and WebFetch; no separate reachable image CDN host was found; web.archive.org unreachable from this machine. Not substituted with reseller images."
+  },
+  "studica-100mm-omni-wheel": {
+    "image": null,
+    "status": null,
+    "shared_variant_image": false,
+    "note": "studica.com / studica.co pages and every path on those hosts (incl. /images/thumbs/*, favicon) return HTTP 403 with a Cloudflare managed challenge (cf-mitigated: challenge) to curl and WebFetch; no separate reachable image CDN host was found; web.archive.org unreachable from this machine. Not substituted with reseller images."
+  },
+  "studica-100mm-slim-mecanum-wheel-set-bearing-rollers-2-left-2-right": {
+    "image": null,
+    "status": null,
+    "shared_variant_image": false,
+    "note": "studica.com / studica.co pages and every path on those hosts (incl. /images/thumbs/*, favicon) return HTTP 403 with a Cloudflare managed challenge (cf-mitigated: challenge) to curl and WebFetch; no separate reachable image CDN host was found; web.archive.org unreachable from this machine. Not substituted with reseller images."
+  },
+  "andymark-am-2964a": {
+    "image": "https://andymark.com/cdn/shop/files/am-2964a_4d14bdab-4c42-4409-886d-a606795c7e00.jpg?v=1772141360",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Variant-specific image for SKU am-2964a (Anderson Powerpole 15A) from the Shopify product data of https://andymark.com/products/neverest-classic-40-gearmotor; page og:image is https://andymark.com/cdn/shop/files/am-2964a_1_8075faef-0d71-4e9f-a580-bf0dce404726.jpg?v=1772141360"
+  },
+  "andymark-am-2964b": {
+    "image": "https://andymark.com/cdn/shop/files/am-2964b_6e242470-5cee-492b-a529-852227f40a6c.jpg?v=1772141360",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Variant-specific image for SKU am-2964b (JST-VH-2) from the Shopify product data of https://andymark.com/products/neverest-classic-40-gearmotor; page og:image is https://andymark.com/cdn/shop/files/am-2964a_1_8075faef-0d71-4e9f-a580-bf0dce404726.jpg?v=1772141360"
+  },
+  "andymark-am-3103": {
+    "image": "https://andymark.com/cdn/shop/files/am-3103_e2e377ae-526e-4c38-a406-fdd4db8fa146.jpg?v=1772140964",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Variant-specific image for SKU am-3103 (Default Title) from the Shopify product data of https://andymark.com/products/neverest-classic-60-gearmotor; page og:image is https://andymark.com/cdn/shop/files/am-3103_1_f5bab635-f7ad-4bd8-9853-4904f5328d84.jpg?v=1772140964"
+  },
+  "andymark-am-3637b": {
+    "image": "https://andymark.com/cdn/shop/files/am-3637b_500cde5d-60c1-46fa-bbdf-3642239d14cf.jpg?v=1772134657",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Variant-specific image for SKU am-3637b (19.2 to 1 (~344 RPM) / JST-VH-2) from the Shopify product data of https://andymark.com/products/neverest-orbital-gearmotors; page og:image is https://andymark.com/cdn/shop/files/am-NeveRest-Orbital_1_9cc6d370-56e0-4669-b0b3-2a5d7c10d637.jpg?v=1772134656"
+  },
+  "andymark-am-3461b": {
+    "image": "https://andymark.com/cdn/shop/files/am-3461b_68781be3-bf2b-4a97-a28f-f668f040c455.jpg?v=1772134656",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Variant-specific image for SKU am-3461b (3.7 to 1 (~1784 RPM) / JST-VH-2) from the Shopify product data of https://andymark.com/products/neverest-orbital-gearmotors; page og:image is https://andymark.com/cdn/shop/files/am-NeveRest-Orbital_1_9cc6d370-56e0-4669-b0b3-2a5d7c10d637.jpg?v=1772134656"
+  },
+  "andymark-am-4044-blue": {
+    "image": "https://andymark.com/cdn/shop/files/am-4044_blue_acae0934-f6ce-413b-a30f-94c7a9709916.jpg?v=1772141280",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Variant-specific image for SKU am-4044_blue (5 mm Hex / 50A) from the Shopify product data of https://andymark.com/products/2-in-dualie-omni-wheel; page og:image is https://andymark.com/cdn/shop/files/am-2inDualieOmni_1_78ada5ff-9b07-42e5-b800-63c15e12fee8.jpg?v=1772141280"
+  },
+  "andymark-am-5502": {
+    "image": "https://andymark.com/cdn/shop/files/am-5502R_3ddc5b03-3ef7-4b87-b1d3-7fe19af6fb43.jpg?v=1772138466",
+    "status": 200,
+    "shared_variant_image": true,
+    "note": "Product main image (og:image / first gallery image) of https://andymark.com/products/3-in-bb-mecanum-wheels; variant has no own image, so this image is shared by all variants on the page"
+  },
+  "andymark-am-3067": {
+    "image": "https://andymark.com/cdn/shop/files/am-3067_8ac5b41a-42a5-470e-ad47-5f492a609cf6.jpg?v=1772136226",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Variant-specific image for SKU am-3067 (Bearing Bore / Full Set) from the Shopify product data of https://andymark.com/products/4-in-hd-mecanum-wheels; page og:image is https://andymark.com/cdn/shop/files/am-4inHDmec_3_73806e2e-7c03-47b8-8162-42ef41657007.jpg?v=1772136226"
+  },
+  "andymark-am-2626": {
+    "image": "https://andymark.com/cdn/shop/files/am-2626_af4e8e76-f5f8-4767-ac81-0b9ad74b7c22.jpg?v=1772141930",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Variant-specific image for SKU am-2626 (Set of Four) from the Shopify product data of https://andymark.com/products/4-in-sd-mecanum-wheel; page og:image is https://andymark.com/cdn/shop/files/am-2626_1_6ac2d190-61c2-42ba-a565-65da65d3b552.jpg?v=1772141930"
+  },
+  "andymark-am-3047": {
+    "image": "https://andymark.com/cdn/shop/files/am-3047_3_5c50bc93-4833-44a8-a117-60f3fc18aba2.jpg?v=1772135090",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Variant-specific image for SKU am-3047 (4 in.) from the Shopify product data of https://andymark.com/products/duraomni-wheel; page og:image is https://andymark.com/cdn/shop/files/am-DuraOmni_1_6cbca9ef-a545-428c-82f1-4d6c48e7744a.jpg?v=1772135090"
+  },
+  "andymark-am-5198-1200": {
+    "image": "https://andymark.com/cdn/shop/files/am-5198-1200_2d797c44-2cb3-4d42-96c2-f107322e77ba.jpg?v=1772135889",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Variant-specific image for SKU am-5198-1200 (12 in.) from the Shopify product data of https://andymark.com/products/jst-vh-2-pin-neverest-motor-power-cables; page og:image is https://andymark.com/cdn/shop/files/am-5198_1_b08c7bc7-9972-4a7c-90f2-f3bdf98eeb72.jpg?v=1772135888"
+  },
+  "andymark-am-3926a": {
+    "image": "https://andymark.com/cdn/shop/files/am-3926a_88e9e9e0-8fcc-4317-bf77-02e13780ee4e.jpg?v=1772138650",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Variant-specific image for SKU am-3926a (20 in.) from the Shopify product data of https://andymark.com/products/neverest-motor-rev-expansion-hub-encoder-cable; page og:image is https://andymark.com/cdn/shop/files/am-3926b_1_86df38d5-3ed8-4de4-af96-6893aa347421.jpg?v=1772138650"
+  },
+  "axon-3221-0016-0003": {
+    "image": "https://cdn11.bigcommerce.com/s-x56mtydx1w/images/stencil/1280x1280/products/2565/17153/3221-0016-0003-Axon-Max-Overdrive-Kit-Ang1__62092.1792702716.1280.1280__58447.1792774999.jpg?c=1",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "goBILDA (BigCommerce CDN) first gallery image, 1280x1280 stencil of the og:image asset https://cdn11.bigcommerce.com/s-x56mtydx1w/products/2565/images/17153/3221-0016-0003-Axon-Max-Overdrive-Kit-Ang1__62092.1792702716.1280.1280__58447.1792774999.386.513.jpg?c=1; axon-robotics.com lists only MAX MK2, MINI MK2 and Programmer MK2 product pages, no overdrive kit page/image found"
+  },
+  "axon-2004-0025-0002": {
+    "image": "https://cdn11.bigcommerce.com/s-x56mtydx1w/images/stencil/1280x1280/products/2548/16945/q%252F917%252FAng1__13593__78125.1783711202.jpg?c=1",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "goBILDA (BigCommerce CDN) first gallery image, 1280x1280 stencil of the og:image asset https://cdn11.bigcommerce.com/s-x56mtydx1w/products/2548/images/16945/q%25252F917%25252FAng1__13593__78125.1783711202.386.513.jpg?c=1; axon-robotics.com has its own image: og:image of https://axon-robotics.com/products/max = https://cdn.shopify.com/s/files/1/0657/9182/0008/files/Perspective.png?v=1755499769 (HTTP 200 image/png)"
+  },
+  "axon-2004-0025-0001": {
+    "image": "https://cdn11.bigcommerce.com/s-x56mtydx1w/images/stencil/1280x1280/products/2547/16931/r%252F299%252FAng1__60509__84822.1783711196.jpg?c=1",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "goBILDA (BigCommerce CDN) first gallery image, 1280x1280 stencil of the og:image asset https://cdn11.bigcommerce.com/s-x56mtydx1w/products/2547/images/16931/r%25252F299%25252FAng1__60509__84822.1783711196.386.513.jpg?c=1; axon-robotics.com has its own image: og:image of https://axon-robotics.com/products/mini = https://cdn.shopify.com/s/files/1/0657/9182/0008/files/Perspective_1b9841ad-db95-4986-9501-7c6478750401.png?v=1755500172 (HTTP 200 image/png)"
+  },
+  "axon-3102-0002-0001": {
+    "image": "https://cdn11.bigcommerce.com/s-x56mtydx1w/images/stencil/1280x1280/products/2546/16919/s%252F702%252FAng1__00924__87954.1783710998.jpg?c=1",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "goBILDA (BigCommerce CDN) first gallery image, 1280x1280 stencil of the og:image asset https://cdn11.bigcommerce.com/s-x56mtydx1w/products/2546/images/16919/s%25252F702%25252FAng1__00924__87954.1783710998.386.513.jpg?c=1; axon-robotics.com has its own image: og:image of https://axon-robotics.com/products/programmer = https://cdn.shopify.com/s/files/1/0657/9182/0008/files/Isometric.png?v=1755496617 (HTTP 200 image/png)"
+  },
+  "tetrix-44260": {
+    "image": "https://www.pitsco.com/cdn/shop/files/44260_featured.jpg?v=1718133569",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Product main image (og:image / first gallery image) of https://www.pitsco.com/products/tetrix-max-torquenado-motor-with-encoder"
+  },
+  "tetrix-45424": {
+    "image": "https://www.pitsco.com/cdn/shop/files/45424_featured.jpg?v=1718224583",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Variant-specific image for SKU 45424 (20:1) from the Shopify product data of https://www.pitsco.com/products/tetrix-max-torquenado-motor-gearboxes; page og:image is https://www.pitsco.com/cdn/shop/files/v13635_featured.jpg?v=1718224583"
+  },
+  "tetrix-45423": {
+    "image": "https://www.pitsco.com/cdn/shop/files/45423_featured.jpg?v=1718224583",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Variant-specific image for SKU 45423 (40:1) from the Shopify product data of https://www.pitsco.com/products/tetrix-max-torquenado-motor-gearboxes; page og:image is https://www.pitsco.com/cdn/shop/files/v13635_featured.jpg?v=1718224583"
+  },
+  "tetrix-39197": {
+    "image": "https://www.pitsco.com/cdn/shop/files/39197_featured.jpg?v=1718132306",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Product main image (og:image / first gallery image) of https://www.pitsco.com/products/tetrix-max-standard-scale-servo-motor"
+  },
+  "tetrix-39057": {
+    "image": "https://www.pitsco.com/cdn/shop/files/39057_featured.jpg?v=1718132158",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Product main image (og:image / first gallery image) of https://www.pitsco.com/products/tetrix-12-volt-rechargeable-nimh-battery-pack"
+  },
+  "tetrix-39067": {
+    "image": "https://www.pitsco.com/cdn/shop/files/39067_featured.jpg?v=1718224538",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Variant-specific image for SKU 39067 (160 mm (pkg of 2)) from the Shopify product data of https://www.pitsco.com/products/tetrix-channels; page og:image is https://www.pitsco.com/cdn/shop/files/v2232_featured.jpg?v=1718224538"
+  },
+  "tetrix-39068": {
+    "image": "https://www.pitsco.com/cdn/shop/files/39068_featured.jpg?v=1718224538",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Variant-specific image for SKU 39068 (288 mm (pkg of 2)) from the Shopify product data of https://www.pitsco.com/products/tetrix-channels; page og:image is https://www.pitsco.com/cdn/shop/files/v2232_featured.jpg?v=1718224538"
+  },
+  "tetrix-39069": {
+    "image": "https://www.pitsco.com/cdn/shop/files/39069_featured.jpg?v=1718224539",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Variant-specific image for SKU 39069 (416 mm) from the Shopify product data of https://www.pitsco.com/products/tetrix-channels; page og:image is https://www.pitsco.com/cdn/shop/files/v2232_featured.jpg?v=1718224538"
+  },
+  "tetrix-39066": {
+    "image": "https://www.pitsco.com/cdn/shop/files/39066_featured.jpg?v=1718224538",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Variant-specific image for SKU 39066 (96 mm (pkg of 2)) from the Shopify product data of https://www.pitsco.com/products/tetrix-channels; page og:image is https://www.pitsco.com/cdn/shop/files/v2232_featured.jpg?v=1718224538"
+  },
+  "tetrix-39376": {
+    "image": "https://www.pitsco.com/cdn/shop/files/39376_featured.jpg?v=1718132398",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Product main image (og:image / first gallery image) of https://www.pitsco.com/products/tetrix-dc-motor-mount"
+  },
+  "tetrix-39073": {
+    "image": "https://www.pitsco.com/cdn/shop/files/39073_featured.jpg?v=1718132183",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Product main image (og:image / first gallery image) of https://www.pitsco.com/products/tetrix-flat-building-plates"
+  },
+  "tetrix-45320": {
+    "image": "https://www.pitsco.com/cdn/shop/files/45320_featured.jpg?v=1718224574",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Variant-specific image for SKU 45320 (Wheel Set) from the Shopify product data of https://www.pitsco.com/products/tetrix-max-mecanum-wheels; page og:image is https://www.pitsco.com/cdn/shop/files/v13634_featured.jpg?v=1718224574"
+  },
+  "tetrix-36466": {
+    "image": "https://www.pitsco.com/cdn/shop/files/v2234_featured.jpg?v=1718224592",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Product main image (og:image / first gallery image) of https://www.pitsco.com/products/tetrix-omni-wheel-packs; the page gallery also contains a SKU-named file 36466_featured.jpg (same CDN path), but the og:image/first gallery image is v2234_featured.jpg"
+  },
+  "tetrix-41352": {
+    "image": "https://www.pitsco.com/cdn/shop/files/41352_featured.jpg?v=1718132845",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "Product main image (og:image / first gallery image) of https://www.pitsco.com/products/tetrix-max-powerpole-motor-cable"
+  },
+  "other-ll-3a": {
+    "image": "https://limelightvision.io/cdn/shop/files/3A_RENDER_ISO_1.png?v=1725724978&width=2048",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "og:image:secure_url of limelightvision.io/products/limelight-3a (only image on the product); same file at cdn.shopify.com/s/files/1/2478/0822/files/3A_RENDER_ISO_1.png"
+  },
+  "other-960-000694": {
+    "image": "https://resource.logitech.com/content/dam/products/logitech/webcams/c270-hd-webcam/gallery/c270-hd-webcam-1-0224.png",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "First gallery image on logitech.com C270 page (page uses Cloudinary transform prefix c_fill,q_auto,f_auto,...; this is the untransformed asset). Page og:image is a generic Logitech brand image, not the product."
+  },
+  "other-940-000110": {
+    "image": "https://resource.logitechg.com/content/dam/gaming/en/products/f310/f310-gallery-1.png",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "First gallery image on logitechg.com F310 page (untransformed asset). Page og:image is a generic Logitech G brand image, not the product."
+  },
+  "other-sony-dualshock-4-wireless-controller-ps4": {
+    "image": "https://gmedia.playstation.com/is/image/SIEPDC/dualshock-controller-product-thumbnail-01-en-14sep21?$facebook$",
+    "status": 200,
+    "shared_variant_image": false,
+    "note": "og:image of https://www.playstation.com/en-us/accessories/dualshock-4-wireless-controller/ (catalog has no url for this part). Scene7 '$facebook$' preset = social-share rendition (PNG); without the preset the server returns a small default JPEG."
+  }
+}
